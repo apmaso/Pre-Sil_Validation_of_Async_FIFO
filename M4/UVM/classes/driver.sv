@@ -44,37 +44,11 @@ class fifo_driver extends uvm_driver #(fifo_transaction);
       @(posedge bfm.clk_wr);
         bfm.data_in   <= tx_wr.data_in; 
         bfm.wr_en     <= tx_wr.wr_en; 
-      // Update flags in this transaction
-      @(negedge bfm.clk_wr); 
-        tx_wr.full      = bfm.full;
-        tx_wr.empty     = bfm.empty;
-        tx_wr.half      = bfm.half;
       
-      `uvm_info(get_type_name(), $sformatf("Driver tx_wr \t\t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  |  data_out: %h  |  full: %b  |  empty: %b  |  half: %b", tx_wr.wr_en, tx_wr.rd_en, tx_wr.data_in, tx_wr.data_out, tx_wr.full, tx_wr.empty, tx_wr.half), UVM_DEBUG);
+      `uvm_info(get_type_name(), $sformatf("|  wr_en: %b  |  rd_en: %b  |  data_in: %h  |", tx_wr.wr_en, tx_wr.rd_en, tx_wr.data_in), UVM_DEBUG);
       seq_item_port.item_done(); 
     end
   endtask : run_phase
-
-/*
-  task execute();
-    $display("********** Driver Started **********");
-    bfm.reset_fifo();  // reset takes 2 RD_CLKs
-    repeat(TX_COUNT_WR) begin
-      gen2drv.get(tx_wr);
-      // Drive data to FIFO
-      @(posedge bfm.clk_wr);
-        bfm.data_in <= tx_wr.data_in; 
-        bfm.wr_en   <= tx_wr.wr_en; 
-      // Update flags in this transaction
-      @(negedge bfm.clk_wr); 
-        tx_wr.full      = bfm.full;
-        tx_wr.empty     = bfm.empty;
-        tx_wr.half      = bfm.half;
-        $display("Driver tx_wr \t\t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  |  data_out: %h  |  full: %b  |  empty: %b  |  half: %b", tx_wr.wr_en, tx_wr.rd_en, tx_wr.data_in, tx_wr.data_out, tx_wr.full, tx_wr.empty, tx_wr.half);
-        drv2scb.put(tx_wr);
-    end
-    $display("********** Driver Ended **********");
-  endtask : execute
-*/  
+ 
 
 endclass

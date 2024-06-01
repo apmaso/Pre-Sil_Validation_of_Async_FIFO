@@ -23,21 +23,8 @@ class fifo_sequence extends uvm_sequence #(fifo_transaction);
       if (!tx_wr.randomize())
         `uvm_error("RANDOMIZE", "Failed to randomize transaction")
       
-      tx_wr.wr_en = 0;
-      tx_wr.rd_en = 1;
-      
-      `uvm_info("GENERATE", tx_wr.convert2string(), UVM_MEDIUM)
-      finish_item(tx_wr);
-    end
-
-    repeat(TX_COUNT_RD) begin
-      start_item(tx_wr);
-      
-      //if (!tx_wr.randomize())
-      //  `uvm_error("RANDOMIZE", "Failed to randomize transaction")
-      
-      tx_wr.wr_en = 0;
-      tx_wr.rd_en = 1;
+      //tx_wr.wr_en = 1;
+      //tx_wr.rd_en = 0;
       
       `uvm_info("GENERATE", tx_wr.convert2string(), UVM_MEDIUM)
       finish_item(tx_wr);

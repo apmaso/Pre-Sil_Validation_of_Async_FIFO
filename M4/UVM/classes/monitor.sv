@@ -51,11 +51,12 @@ class fifo_monitor extends uvm_monitor;
   task run_phase(uvm_phase phase);
     super.run_phase(phase); 
     `uvm_info(get_type_name(), $sformatf("Running %s", get_full_name()), UVM_HIGH);
-
-    @(posedge bfm.clk_rd);
-    bfm.rd_en <= 1'b0;
-    // TODO: This should be a forever loop if I can work the timing out
-    #((READ_DELAY+8)*CYCLE_TIME_RD); // wait for the driver to reset and for some data to be put on the FIFO (8 RD_CLK min...)
+    
+    repeat((READ_DELAY+8)*CYCLE_TIME_RD) begin // wait for the driver to reset and for some data to be put on the FIFO (8 RD_CLK min...)
+      @(posedge bfm.clk_rd);
+      bfm.rd_en <= 1'b0;
+    end
+    
     repeat(TX_COUNT_RD+2) begin
       tx_rd = fifo_transaction::type_id::create("tx_rd");
       @(posedge bfm.clk_rd);

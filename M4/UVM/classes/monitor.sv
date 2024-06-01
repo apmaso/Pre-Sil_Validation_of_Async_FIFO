@@ -52,13 +52,13 @@ class fifo_monitor extends uvm_monitor;
     super.run_phase(phase); 
     `uvm_info(get_type_name(), $sformatf("Running %s", get_full_name()), UVM_HIGH);
     
-    repeat((READ_DELAY+8)*CYCLE_TIME_RD) begin // wait for the driver to reset and for some data to be put on the FIFO (8 RD_CLK min...)
+    repeat(READ_DELAY+8) begin // wait for the driver to reset and for some data to be put on the FIFO (8 RD_CLK min...)
       @(posedge bfm.clk_rd);
       bfm.rd_en <= 1'b0;
     end
     
+    tx_rd = fifo_transaction::type_id::create("tx_rd");
     repeat(TX_COUNT_RD+2) begin
-      tx_rd = fifo_transaction::type_id::create("tx_rd");
       @(posedge bfm.clk_rd);
         bfm.rd_en <= 1'b1;
         // If the last transaction was also a read, then we must wait for the next read clock edge
@@ -83,7 +83,7 @@ class fifo_monitor extends uvm_monitor;
         end
         //bfm.rd_en <= 1'b1;
         last_rd_en = tx_rd.rd_en;
-        `uvm_info(get_type_name(), $sformatf("Monitor tx_rd \t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  |  data_out: %h  |  full: %b  |  empty: %b  |  half: %b", tx_rd.wr_en, tx_rd.rd_en, tx_rd.data_in, tx_rd.data_out, tx_rd.full, tx_rd.empty, tx_rd.half), UVM_DEBUG);
+        `uvm_info(get_type_name(), $sformatf("Monitor tx_rd \t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  |  data_out: %h  |  full: %b  |  empty: %b  |  half: %b", tx_rd.wr_en, tx_rd.rd_en, tx_rd.data_in, tx_rd.data_out, tx_rd.full, tx_rd.empty, tx_rd.half), UVM_MEDIUM);
         monitor_port.write(tx_rd);
     end
 

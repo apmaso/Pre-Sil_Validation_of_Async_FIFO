@@ -9,12 +9,12 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/amaso/common/Documents/ECE593/final_project/pre_silicon_final_project/UVM
+Z0 d/u/amaso/Documents/ECE593/final_project/pre_silicon_final_project/M4/UVM
 Yfifo_bfm
 Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
 Z2 DXx6 mtiUvm 7 uvm_pkg 0 22 8V[`8]Q0W57le7Z>zYaAj1
-Z3 DXx4 work 8 fifo_pkg 0 22 0mWUe7mbR?Hi]W7I0X<>K2
-Z4 !s110 1717216090
+Z3 DXx4 work 8 fifo_pkg 0 22 P1_@VP<aSX5Dc<1Wcemza0
+Z4 !s110 1717274883
 !i10b 1
 !s100 >hDkhfmN;BP6Z9S2Olh?Q1
 IecENM6UJU0jD^[_l8l<nL1
@@ -30,8 +30,8 @@ Z7 OL;L;2021.3_1;73
 r1
 !s85 0
 31
-Z8 !s108 1717216088.000000
-Z9 !s107 classes/test.sv|classes/environment.sv|classes/agent.sv|classes/monitor.sv|classes/driver.sv|classes/sequencer.sv|classes/sequence.sv|classes/transaction.sv|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|top.sv|fifo_bfm.sv|fifo_pkg.sv|
+Z8 !s108 1717274882.000000
+Z9 !s107 classes/test.sv|classes/environment.sv|classes/scoreboard.sv|classes/agent.sv|classes/monitor.sv|classes/driver.sv|classes/sequencer.sv|classes/sequence.sv|classes/transaction.sv|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|top.sv|fifo_bfm.sv|fifo_pkg.sv|
 Z10 !s90 -reportprogress|300|-f|tb.f|
 !i113 0
 Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
@@ -39,7 +39,7 @@ Z12 !s92 +incdir+classes -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L in
 Z13 tCvgOpt 0
 vfifo_memory
 R1
-Z14 !s110 1717216087
+Z14 !s110 1717274882
 !i10b 1
 !s100 JWcz==]LSaf==XGE43]R51
 IT?d8R1z_7D;aghflh>6<T0
@@ -55,7 +55,7 @@ R7
 r1
 !s85 0
 31
-Z15 !s108 1717216087.000000
+Z15 !s108 1717274881.000000
 !s107 dut/fifo_memory.sv|
 !s90 -reportprogress|300|-lint|dut/fifo_memory.sv|
 !i113 0
@@ -67,11 +67,11 @@ R1
 R2
 R4
 !i10b 1
-!s100 6C6[R:R9[C0mkO_[TTh:T3
-I0mWUe7mbR?Hi]W7I0X<>K2
+!s100 VI>m>]fW[jh2bTQkh=A010
+IP1_@VP<aSX5Dc<1Wcemza0
 S1
 R0
-w1717215099
+w1717274863
 8fifo_pkg.sv
 Ffifo_pkg.sv
 F/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh
@@ -92,11 +92,12 @@ Fclasses/sequencer.sv
 Fclasses/driver.sv
 Fclasses/monitor.sv
 Fclasses/agent.sv
+Fclasses/scoreboard.sv
 Fclasses/environment.sv
 Fclasses/test.sv
 !i122 5
 L0 1 0
-V0mWUe7mbR?Hi]W7I0X<>K2
+VP1_@VP<aSX5Dc<1Wcemza0
 R7
 r1
 !s85 0
@@ -110,7 +111,7 @@ R12
 R13
 vfifo_top
 R1
-R14
+!s110 1717274881
 !i10b 1
 !s100 3ZdjXlM^]0GmI_Zjo?E=50
 I>m>G[2@bzScMRX[zLZIfY2
@@ -134,7 +135,7 @@ R16
 R13
 vread_pointer
 R1
-Z17 !s110 1717216088
+R14
 !i10b 1
 !s100 fLf0g:aa;@YWb7h21>okM2
 IQV0[X2HeWo<g]ZPNE6Kbh1
@@ -150,7 +151,7 @@ R7
 r1
 !s85 0
 31
-R15
+R8
 !s107 dut/read_pointer.sv|
 !s90 -reportprogress|300|-lint|dut/read_pointer.sv|
 !i113 0
@@ -158,7 +159,7 @@ R16
 R13
 vsync
 R1
-R17
+R14
 !i10b 1
 !s100 P;6<M59X8:nEiM>1[MR8b0
 IAC4>1oV1i_C]Qk>oYLd2E3
@@ -208,9 +209,9 @@ R11
 R12
 R13
 Ttop_optimized
-!s11d fifo_pkg /home/amaso/common/Documents/ECE593/final_project/pre_silicon_final_project/UVM/work 1 fifo_bfm 1 /home/amaso/common/Documents/ECE593/final_project/pre_silicon_final_project/UVM/work 
-!s110 1717216092
-V8X_0iW8jaIH^X9HIIMMkP1
+!s11d fifo_pkg /home/amaso/common/Documents/ECE593/final_project/pre_silicon_final_project/M4/UVM/work 1 fifo_bfm 1 /home/amaso/common/Documents/ECE593/final_project/pre_silicon_final_project/M4/UVM/work 
+!s110 1717274886
+VRalemT?f86f_^7^KJ9>M92
 04 3 4 work top fast 0
 !s124 OEM100
 o+acc +cover=sbfec+fifo_top(rtl).
@@ -219,7 +220,7 @@ ntop_optimized
 OL;O;2021.3_1;73
 vwrite_pointer
 R1
-R17
+R14
 !i10b 1
 !s100 099Z2U@L@WWA]TncMQVKa0
 I:4b7c14HjL8C_PMOm?:H`1

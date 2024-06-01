@@ -51,16 +51,21 @@ class fifo_monitor extends uvm_monitor;
   task run_phase(uvm_phase phase);
     super.run_phase(phase); 
     `uvm_info(get_type_name(), $sformatf("Running %s", get_full_name()), UVM_HIGH);
-
-    // TODO: This should be a forever loop if I can work the timing out
-    #((READ_DELAY+8)*CYCLE_TIME_RD); // wait for the driver to reset and for some data to be put on the FIFO (8 RD_CLK min...)
-    repeat(TX_COUNT_RD) begin
-      tx_rd = fifo_transaction::type_id::create("fifo_transaction");
+    
+    repeat((READ_DELAY+8)*CYCLE_TIME_RD) begin // wait for the driver to reset and for some data to be put on the FIFO (8 RD_CLK min...)
       @(posedge bfm.clk_rd);
-        bfm.rd_en <= tx_rd.rd_en;
+      bfm.rd_en <= 1'b0;
+    end
+    
+    repeat(TX_COUNT_RD+2) begin
+      tx_rd = fifo_transaction::type_id::create("tx_rd");
+      @(posedge bfm.clk_rd);
+        bfm.rd_en <= 1'b1;
         // If the last transaction was also a read, then we must wait for the next read clock edge
-        if (tx_rd.rd_en && last_rd_en) begin
+        if (bfm.rd_en && last_rd_en) begin
           #(CYCLE_TIME_RD);
+          tx_rd.rd_en = bfm.rd_en;
+          tx_rd.wr_en = bfm.wr_en;
           tx_rd.data_out = bfm.data_out;
           tx_rd.empty = bfm.empty;
           tx_rd.full = bfm.full;
@@ -69,11 +74,14 @@ class fifo_monitor extends uvm_monitor;
         // Otherwise, we can sample the data_out on the same cycle as the read
         else begin
           @(posedge bfm.clk_rd);
+          tx_rd.rd_en = bfm.rd_en;
+          tx_rd.wr_en = bfm.wr_en;
           tx_rd.data_out = bfm.data_out;
           tx_rd.empty = bfm.empty;
           tx_rd.full = bfm.full;
           tx_rd.half = bfm.half;
         end
+        //bfm.rd_en <= 1'b1;
         last_rd_en = tx_rd.rd_en;
         `uvm_info(get_type_name(), $sformatf("Monitor tx_rd \t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  |  data_out: %h  |  full: %b  |  empty: %b  |  half: %b", tx_rd.wr_en, tx_rd.rd_en, tx_rd.data_in, tx_rd.data_out, tx_rd.full, tx_rd.empty, tx_rd.half), UVM_DEBUG);
         monitor_port.write(tx_rd);

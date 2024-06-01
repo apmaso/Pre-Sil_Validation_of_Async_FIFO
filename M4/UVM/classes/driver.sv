@@ -44,8 +44,8 @@ class fifo_driver extends uvm_driver #(fifo_transaction);
       @(posedge bfm.clk_wr);
         bfm.data_in <= tx_wr.data_in;
         bfm.wr_en <= tx_wr.wr_en;
-      @(posedge bfm.clk_rd);
-        bfm.rd_en <= tx_wr.rd_en;
+     // @(posedge bfm.clk_rd);
+     //   bfm.rd_en <= tx_wr.rd_en;
          
       `uvm_info(get_type_name(), $sformatf("Driver tx_wr \t\t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  ", tx_wr.wr_en, tx_wr.rd_en, tx_wr.data_in), UVM_MEDIUM);
       seq_item_port.item_done(); 

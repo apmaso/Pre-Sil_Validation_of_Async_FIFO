@@ -5,7 +5,7 @@ class fifo_environment extends uvm_env;
 
     // Declare handles to the components
     fifo_agent  agent_h;
-    //fifo_scoreboard scoreboard_h;
+    fifo_scoreboard scoreboard_h;
 
     // Constructor 
     function new(string name = "fifo_environment", uvm_component parent);
@@ -19,7 +19,7 @@ class fifo_environment extends uvm_env;
         `uvm_info(get_type_name(), $sformatf("Building %s", get_full_name()), UVM_HIGH); 
        
         agent_h         = fifo_agent::type_id::create("agent_h", this);
-        //scoreboard_h    = fifo_scoreboard::type_id::create("scoreboard_h", this);
+        scoreboard_h    = fifo_scoreboard::type_id::create("scoreboard_h", this);
     endfunction : build_phase
 
     // Connect the driver to the sequencer
@@ -28,7 +28,7 @@ class fifo_environment extends uvm_env;
         `uvm_info(get_type_name(), $sformatf("Connecting %s", get_full_name()), UVM_HIGH);
 
         // Connect the analysis port to the scoreboard
-        //agent_h.monitor_h.monitor_port.connect(scoreboard_h.analysis_export);
+        agent_h.monitor_h.monitor_port.connect(scoreboard_h.scoreboard_port);
     endfunction : connect_phase
 
     // Run phase

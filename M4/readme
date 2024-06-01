@@ -1,4 +1,0 @@
-Milestone-4: (15pts)
-4a. Develop UVM testbench, starting with UVM TB architecture. 
-4b. Add a section for UVM verification Plan and add details on UVM architecture, UVM hierarchy, UVM components (sequence, sequencer, driver, monitor, scoreboard, interfaces with DUT, number of agents planned etc.)
-4c. You should be utilizing UVM_MESSAGING, UVM_LOGGING mechanisms to create and log the reports and data

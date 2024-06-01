@@ -41,11 +41,18 @@ class fifo_driver extends uvm_driver #(fifo_transaction);
     forever begin
       seq_item_port.get_next_item(tx_wr); 
       // Drive data to FIFO
-      @(posedge bfm.clk_wr);
-        bfm.data_in   <= tx_wr.data_in; 
-        bfm.wr_en     <= tx_wr.wr_en; 
-      @(posedge bfm.clk_rd); 
-        bfm.rd_en     <= tx_wr.rd_en;
+      if (tx_wr.wr_en) begin
+        @(posedge bfm.clk_wr);
+          bfm.data_in <= tx_wr.data_in;
+          bfm.wr_en <= tx_wr.wr_en;
+      end
+      else if (tx_wr.rd_en) begin
+        @(posedge bfm.clk_rd);
+          bfm.rd_en <= tx_wr.rd_en;
+      end
+      else begin
+        `uvm_error("DRIVER", "Neither read nor write enabled");
+      end
          
       `uvm_info(get_type_name(), $sformatf("Driver tx_wr \t\t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  ", tx_wr.wr_en, tx_wr.rd_en, tx_wr.data_in), UVM_MEDIUM);
       seq_item_port.item_done(); 

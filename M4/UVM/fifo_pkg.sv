@@ -8,8 +8,8 @@ package fifo_pkg;
 	parameter CYCLE_TIME_RD = 20;    // 50 MHz
 	
 	// Parameters for the testbench	
-	parameter TX_COUNT_WR = 120;
-	parameter TX_COUNT_RD = 120;
+	parameter TX_COUNT_WR = 40;
+	parameter TX_COUNT_RD = 40;
 	parameter READ_DELAY = 0;
 
 

@@ -15,6 +15,7 @@ class fifo_read_monitor extends uvm_monitor;
 
   // Declare analysis port
   uvm_analysis_port #(fifo_transaction) monitor_port_rd;
+  uvm_analysis_port #(fifo_transaction) monitor_port_wr;
 
   // This variable is used to determine if the last transaction was a read
   //bit last_rd_en = 0;
@@ -74,7 +75,7 @@ class fifo_read_monitor extends uvm_monitor;
         last_rd_en = bfm.rd_en;*/
         
         `uvm_info(get_type_name(), $sformatf("Monitor mon_tx_rd \t|  rd_en: %b  |  data_out: %h  |  full: %b  |  empty: %b  |  half: %b", mon_tx_rd.rd_en, mon_tx_rd.data_out, mon_tx_rd.full, mon_tx_rd.empty, mon_tx_rd.half), UVM_MEDIUM);
-        //monitor_port_rd.write(mon_tx_rd);
+        monitor_port_rd.write(mon_tx_rd);
     end
   endtask : run_phase
 endclass : fifo_read_monitor
@@ -130,7 +131,7 @@ class fifo_write_monitor extends uvm_monitor;
         mon_tx_wr.full = bfm.full;
         mon_tx_wr.half = bfm.half;
         `uvm_info(get_type_name(), $sformatf("Monitor mon_tx_wr \t|  wr_en: %b  |  data_in: %h  |  full: %b  |  empty: %b  |  half: %b", mon_tx_wr.wr_en, mon_tx_wr.data_in, mon_tx_wr.full, mon_tx_wr.empty, mon_tx_wr.half), UVM_MEDIUM);
-        //monitor_port_wr.write(mon_tx_wr);
+        monitor_port_wr.write(mon_tx_wr);
     end
   endtask : run_phase
 endclass : fifo_write_monitor 

@@ -52,10 +52,10 @@ class fifo_scoreboard extends uvm_scoreboard;
         super.run_phase(phase);  
         `uvm_info(get_type_name(), $sformatf("Running %s", get_full_name()), UVM_HIGH);
         
-        fifo_transaction current_tx_rd;
-        fifo_transaction current_tx_wr;
-
         forever begin        
+            fifo_transaction current_tx_rd;
+            fifo_transaction current_tx_wr;
+
             wait(tx_stack_wr.size() > 0);
             wait(tx_stack_rd.size() > 0);
         

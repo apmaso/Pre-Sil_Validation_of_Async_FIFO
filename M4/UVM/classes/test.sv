@@ -46,8 +46,8 @@ class my_first_test extends uvm_test;
             `uvm_error("RANDOMIZE", "Failed to randomize read sequence")
 */
         fork
-            write_sequence_h.start(environment_h.agent_h.sequencer_h);
-            read_sequence_h.start(environment_h.agent_h.sequencer_h);
+            write_sequence_h.start(environment_h.agent_h.sequencer_wr_h);
+            read_sequence_h.start(environment_h.agent_h.sequencer_rd_h);
         join
 
         phase.drop_objection(this); 

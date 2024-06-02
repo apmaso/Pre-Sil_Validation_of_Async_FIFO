@@ -76,10 +76,10 @@ class fifo_scoreboard extends uvm_scoreboard;
 
     function void write(fifo_transaction tx);
         forever begin
-            if (tx.op=READ) begin
+            if (tx.op==READ) begin
                 tx_stack_rd.push_back(tx);
             end
-            if (tx.op=WRITE) begin
+            if (tx.op==WRITE) begin
                 tx_stack_wr.push_back(tx);
             end
         end

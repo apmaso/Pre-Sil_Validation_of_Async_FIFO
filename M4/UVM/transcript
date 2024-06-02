@@ -14,52 +14,52 @@
 # //
 do run.do
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 13:48:01 on Jun 01,2024
+# Start time: 18:26:14 on Jun 01,2024
 # vlog -reportprogress 300 -lint dut/fifo_top.sv 
 # -- Compiling module fifo_top
 # 
 # Top level modules:
 # 	fifo_top
-# End time: 13:48:01 on Jun 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:14 on Jun 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 13:48:01 on Jun 01,2024
+# Start time: 18:26:14 on Jun 01,2024
 # vlog -reportprogress 300 -lint dut/fifo_memory.sv 
 # -- Compiling module fifo_memory
 # 
 # Top level modules:
 # 	fifo_memory
-# End time: 13:48:02 on Jun 01,2024, Elapsed time: 0:00:01
+# End time: 18:26:15 on Jun 01,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 13:48:02 on Jun 01,2024
+# Start time: 18:26:15 on Jun 01,2024
 # vlog -reportprogress 300 -lint dut/read_pointer.sv 
 # -- Compiling module read_pointer
 # 
 # Top level modules:
 # 	read_pointer
-# End time: 13:48:02 on Jun 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:15 on Jun 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 13:48:02 on Jun 01,2024
+# Start time: 18:26:15 on Jun 01,2024
 # vlog -reportprogress 300 -lint dut/write_pointer.sv 
 # -- Compiling module write_pointer
 # 
 # Top level modules:
 # 	write_pointer
-# End time: 13:48:02 on Jun 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:15 on Jun 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 13:48:02 on Jun 01,2024
+# Start time: 18:26:15 on Jun 01,2024
 # vlog -reportprogress 300 -lint dut/sync.sv 
 # -- Compiling module sync
 # 
 # Top level modules:
 # 	sync
-# End time: 13:48:02 on Jun 01,2024, Elapsed time: 0:00:00
+# End time: 18:26:15 on Jun 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 13:48:02 on Jun 01,2024
+# Start time: 18:26:15 on Jun 01,2024
 # vlog -reportprogress 300 -f tb.f 
 # -- Compiling package fifo_pkg
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
@@ -70,10 +70,10 @@ do run.do
 # 
 # Top level modules:
 # 	top
-# End time: 13:48:03 on Jun 01,2024, Elapsed time: 0:00:01
+# End time: 18:26:16 on Jun 01,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vopt 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 13:48:03 on Jun 01,2024
+# Start time: 18:26:16 on Jun 01,2024
 # vopt -reportprogress 300 top -o top_optimized "+acc" "+cover=sbfec+fifo_top(rtl)." 
 # 
 # Top level modules:
@@ -104,10 +104,10 @@ do run.do
 # -- Optimizing module sync(fast)
 # -- Optimizing interface fifo_bfm(fast)
 # Optimized design name is top_optimized
-# End time: 13:48:12 on Jun 01,2024, Elapsed time: 0:00:09
+# End time: 18:26:22 on Jun 01,2024, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 0
 # vsim top_optimized -coverage 
-# Start time: 13:48:12 on Jun 01,2024
+# Start time: 18:26:22 on Jun 01,2024
 # Loading sv_std.std
 # Loading work.fifo_bfm(fast)
 # Loading mtiUvm.uvm_pkg(fast)
@@ -153,12 +153,24 @@ do run.do
 # uvm_test_top               my_first_test           -     @471 
 #   environment_h            fifo_environment        -     @478 
 #     agent_h                fifo_agent              -     @485 
-#       driver_h             fifo_driver             -     @616 
-#         rsp_port           uvm_analysis_port       -     @631 
-#         seq_item_port      uvm_seq_item_pull_port  -     @623 
-#       monitor_h            fifo_monitor            -     @609 
-#         monitor_port       uvm_analysis_port       -     @641 
-#       sequencer_h          fifo_sequencer          -     @500 
+#       driver_rd_h          fifo_read_driver        -     @755 
+#         rsp_port           uvm_analysis_port       -     @770 
+#         seq_item_port      uvm_seq_item_pull_port  -     @762 
+#       driver_wr_h          fifo_write_driver       -     @732 
+#         rsp_port           uvm_analysis_port       -     @747 
+#         seq_item_port      uvm_seq_item_pull_port  -     @739 
+#       monitor_rd_h         fifo_read_monitor       -     @725 
+#         monitor_port_rd    uvm_analysis_port       -     @781 
+#       monitor_wr_h         fifo_write_monitor      -     @718 
+#         monitor_port_wr    uvm_analysis_port       -     @790 
+#       sequencer_rd_h       fifo_sequencer          -     @609 
+#         rsp_export         uvm_analysis_export     -     @616 
+#         seq_item_export    uvm_seq_item_pull_imp   -     @710 
+#         arbitration_queue  array                   0     -    
+#         lock_queue         array                   0     -    
+#         num_last_reqs      integral                32    'd1  
+#         num_last_rsps      integral                32    'd1  
+#       sequencer_wr_h       fifo_sequencer          -     @500 
 #         rsp_export         uvm_analysis_export     -     @507 
 #         seq_item_export    uvm_seq_item_pull_imp   -     @601 
 #         arbitration_queue  array                   0     -    
@@ -166,54 +178,531 @@ do run.do
 #         num_last_reqs      integral                32    'd1  
 #         num_last_rsps      integral                32    'd1  
 #     scoreboard_h           fifo_scoreboard         -     @492 
-#       scoreboard_port      uvm_analysis_imp        -     @654 
+#       scoreboard_port      uvm_analysis_imp        -     @808 
 # --------------------------------------------------------------
 # 
-# UVM_INFO classes/sequence.sv(29) @ 0: uvm_test_top.environment_h.agent_h.sequencer_h@@sequence_h [GENERATE] Writing: 1 or Reading: 1
-# Data in: b9, Data out: xx
+# UVM_INFO classes/sequence.sv(18) @ 0: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [FIFO_WRITE_SEQ] Starting write sequence
+# UVM_INFO classes/sequence.sv(59) @ 0: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [FIFO_READ_SEQ] Starting read sequence
+# UVM_INFO classes/monitor.sv(132) @ 6: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: x  |  data_in: xx  |  full: x  |  empty: x  |  half: x
+# UVM_INFO classes/monitor.sv(76) @ 16: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: x  |  data_out: xx  |  full: x  |  empty: x  |  half: x
+# UVM_INFO classes/monitor.sv(132) @ 38: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: x  |  data_in: xx  |  full: 0  |  empty: 1  |  half: 0
+# UVM_INFO classes/monitor.sv(76) @ 48: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: x  |  data_out: xx  |  full: 0  |  empty: 1  |  half: 0
+# UVM_INFO classes/monitor.sv(132) @ 70: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 0  |  data_in: xx  |  full: 0  |  empty: 1  |  half: 0
+# UVM_INFO classes/monitor.sv(76) @ 80: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 0  |  data_out: xx  |  full: 0  |  empty: 1  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 80: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 14, Data out: xx
 # Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 6: uvm_test_top.environment_h.agent_h.driver_h [fifo_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 1  |  data_in: b9  
-# UVM_INFO classes/sequence.sv(29) @ 6: uvm_test_top.environment_h.agent_h.sequencer_h@@sequence_h [GENERATE] Writing: 1 or Reading: 0
-# Data in: 2c, Data out: xx
+# UVM_INFO classes/sequence.sv(70) @ 80: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 88, Data out: xx
 # Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 38: uvm_test_top.environment_h.agent_h.driver_h [fifo_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 2c  
-# UVM_INFO classes/sequence.sv(29) @ 38: uvm_test_top.environment_h.agent_h.sequencer_h@@sequence_h [GENERATE] Writing: 0 or Reading: 1
-# Data in: ff, Data out: xx
+# UVM_INFO classes/driver.sv(50) @ 102: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 14  
+# UVM_INFO classes/monitor.sv(132) @ 102: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 0  |  data_in: xx  |  full: 0  |  empty: 1  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 102: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: af, Data out: xx
 # Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 70: uvm_test_top.environment_h.agent_h.driver_h [fifo_driver] Driver tx_wr 		|  wr_en: 0  |  rd_en: 1  |  data_in: ff  
-# UVM_INFO classes/sequence.sv(29) @ 70: uvm_test_top.environment_h.agent_h.sequencer_h@@sequence_h [GENERATE] Writing: 1 or Reading: 0
-# Data in: 7c, Data out: xx
+# UVM_INFO classes/driver.sv(95) @ 112: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 88  
+# UVM_INFO classes/monitor.sv(76) @ 112: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 0  |  data_out: xx  |  full: 0  |  empty: 1  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 112: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: c8, Data out: xx
 # Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 102: uvm_test_top.environment_h.agent_h.driver_h [fifo_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 7c  
-# UVM_INFO classes/sequence.sv(29) @ 102: uvm_test_top.environment_h.agent_h.sequencer_h@@sequence_h [GENERATE] Writing: 0 or Reading: 1
+# UVM_INFO classes/driver.sv(50) @ 134: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: af  
+# UVM_INFO classes/monitor.sv(132) @ 134: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 14  |  full: 0  |  empty: 1  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 134: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: ce, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 144: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: c8  
+# UVM_INFO classes/monitor.sv(76) @ 144: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: xx  |  full: 0  |  empty: 1  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 144: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
 # Data in: 6c, Data out: xx
 # Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 134: uvm_test_top.environment_h.agent_h.driver_h [fifo_driver] Driver tx_wr 		|  wr_en: 0  |  rd_en: 1  |  data_in: 6c  
-# UVM_INFO classes/sequence.sv(29) @ 134: uvm_test_top.environment_h.agent_h.sequencer_h@@sequence_h [GENERATE] Writing: 1 or Reading: 0
-# Data in: 83, Data out: xx
+# UVM_INFO classes/driver.sv(50) @ 166: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: ce  
+# UVM_INFO classes/monitor.sv(132) @ 166: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: af  |  full: 0  |  empty: 1  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 166: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: df, Data out: xx
 # Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 166: uvm_test_top.environment_h.agent_h.driver_h [fifo_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 83  
-# UVM_INFO classes/sequence.sv(29) @ 166: uvm_test_top.environment_h.agent_h.sequencer_h@@sequence_h [GENERATE] Writing: 1 or Reading: 0
-# Data in: 9d, Data out: xx
+# UVM_INFO classes/driver.sv(95) @ 176: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 6c  
+# UVM_INFO classes/monitor.sv(76) @ 176: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: xx  |  full: 0  |  empty: 1  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 176: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: a5, Data out: xx
 # Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 198: uvm_test_top.environment_h.agent_h.driver_h [fifo_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 9d  
-# UVM_INFO classes/sequence.sv(29) @ 198: uvm_test_top.environment_h.agent_h.sequencer_h@@sequence_h [GENERATE] Writing: 0 or Reading: 1
+# UVM_INFO classes/driver.sv(50) @ 198: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: df  
+# UVM_INFO classes/monitor.sv(132) @ 198: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: ce  |  full: 0  |  empty: 1  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 198: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 40, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 208: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: a5  
+# UVM_INFO classes/monitor.sv(76) @ 208: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: xx  |  full: 0  |  empty: 1  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 208: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 7e, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 230: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 40  
+# UVM_INFO classes/monitor.sv(132) @ 230: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: df  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 230: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: b3, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 240: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 7e  
+# UVM_INFO classes/monitor.sv(76) @ 240: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: xx  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 240: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: d9, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 262: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: b3  
+# UVM_INFO classes/monitor.sv(132) @ 262: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 40  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 262: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 32, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 272: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: d9  
+# UVM_INFO classes/monitor.sv(76) @ 272: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 14  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 272: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: b6, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 294: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 32  
+# UVM_INFO classes/monitor.sv(132) @ 294: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: b3  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 294: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: e3, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 304: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: b6  
+# UVM_INFO classes/monitor.sv(76) @ 304: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: af  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 304: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 90, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 326: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: e3  
+# UVM_INFO classes/monitor.sv(132) @ 326: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 32  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 326: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 25, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 336: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 90  
+# UVM_INFO classes/monitor.sv(76) @ 336: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: ce  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 336: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 4d, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 358: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 25  
+# UVM_INFO classes/monitor.sv(132) @ 358: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: e3  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 358: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 5d, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 368: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 4d  
+# UVM_INFO classes/monitor.sv(76) @ 368: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: df  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 368: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 0f, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 390: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 5d  
+# UVM_INFO classes/monitor.sv(132) @ 390: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 25  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 390: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: f2, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 400: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 0f  
+# UVM_INFO classes/monitor.sv(76) @ 400: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 40  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 400: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 50, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 422: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: f2  
+# UVM_INFO classes/monitor.sv(132) @ 422: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 5d  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 422: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 06, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 432: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 50  
+# UVM_INFO classes/monitor.sv(76) @ 432: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: b3  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 432: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: e6, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 454: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 06  
+# UVM_INFO classes/monitor.sv(132) @ 454: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: f2  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 454: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: ff, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 464: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: e6  
+# UVM_INFO classes/monitor.sv(76) @ 464: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 32  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 464: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 26, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 486: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: ff  
+# UVM_INFO classes/monitor.sv(132) @ 486: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 06  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 486: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: e0, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 496: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 26  
+# UVM_INFO classes/monitor.sv(76) @ 496: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: e3  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 496: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 3a, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 518: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: e0  
+# UVM_INFO classes/monitor.sv(132) @ 518: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: ff  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 518: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: fe, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 528: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 3a  
+# UVM_INFO classes/monitor.sv(76) @ 528: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 25  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 528: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
 # Data in: 01, Data out: xx
 # Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 230: uvm_test_top.environment_h.agent_h.driver_h [fifo_driver] Driver tx_wr 		|  wr_en: 0  |  rd_en: 1  |  data_in: 01  
-# UVM_INFO classes/sequence.sv(29) @ 230: uvm_test_top.environment_h.agent_h.sequencer_h@@sequence_h [GENERATE] Writing: 0 or Reading: 1
-# Data in: 76, Data out: xx
+# UVM_INFO classes/driver.sv(50) @ 550: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: fe  
+# UVM_INFO classes/monitor.sv(132) @ 550: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: e0  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 550: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 20, Data out: xx
 # Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 262: uvm_test_top.environment_h.agent_h.driver_h [fifo_driver] Driver tx_wr 		|  wr_en: 0  |  rd_en: 1  |  data_in: 76  
-# UVM_INFO classes/sequence.sv(29) @ 262: uvm_test_top.environment_h.agent_h.sequencer_h@@sequence_h [GENERATE] Writing: 1 or Reading: 1
-# Data in: 98, Data out: xx
+# UVM_INFO classes/driver.sv(95) @ 560: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 01  
+# UVM_INFO classes/monitor.sv(76) @ 560: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 5d  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 560: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 54, Data out: xx
 # Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 294: uvm_test_top.environment_h.agent_h.driver_h [fifo_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 1  |  data_in: 98  
-# UVM_INFO classes/sequence.sv(29) @ 294: uvm_test_top.environment_h.agent_h.sequencer_h@@sequence_h [GENERATE] Writing: 0 or Reading: 0
-# Data in: 52, Data out: xx
+# UVM_INFO classes/driver.sv(50) @ 582: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 20  
+# UVM_INFO classes/monitor.sv(132) @ 582: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: fe  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 582: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: c7, Data out: xx
 # Full: x, Half: x, Empty: x
-# UVM_INFO classes/monitor.sv(86) @ 304: uvm_test_top.environment_h.agent_h.monitor_h [fifo_monitor] Monitor tx_rd 	|  wr_en: 1  |  rd_en: 1  |  data_in: xx  |  data_out: xx  |  full: x  |  empty: x  |  half: x
-# Break key hit
-# Break in Function fifo_pkg/fifo_scoreboard::write at classes/scoreboard.sv line 63
-# End time: 13:48:34 on Jun 01,2024, Elapsed time: 0:00:22
+# UVM_INFO classes/driver.sv(95) @ 592: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 54  
+# UVM_INFO classes/monitor.sv(76) @ 592: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: f2  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 592: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 50, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 614: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: c7  
+# UVM_INFO classes/monitor.sv(132) @ 614: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 20  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 614: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 8f, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 624: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 50  
+# UVM_INFO classes/monitor.sv(76) @ 624: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 06  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 624: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: c4, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 646: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 8f  
+# UVM_INFO classes/monitor.sv(132) @ 646: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: c7  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 646: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 69, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 656: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: c4  
+# UVM_INFO classes/monitor.sv(76) @ 656: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: ff  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 656: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 89, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 678: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 69  
+# UVM_INFO classes/monitor.sv(132) @ 678: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 8f  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 678: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: f2, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 688: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 89  
+# UVM_INFO classes/monitor.sv(76) @ 688: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: e0  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 688: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 9c, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 710: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: f2  
+# UVM_INFO classes/monitor.sv(132) @ 710: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 69  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 710: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 8b, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 720: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 9c  
+# UVM_INFO classes/monitor.sv(76) @ 720: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: fe  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 720: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: bb, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 742: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 8b  
+# UVM_INFO classes/monitor.sv(132) @ 742: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: f2  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 742: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 0b, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 752: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: bb  
+# UVM_INFO classes/monitor.sv(76) @ 752: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 20  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 752: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: b9, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 774: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 0b  
+# UVM_INFO classes/monitor.sv(132) @ 774: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 8b  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 774: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 84, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 784: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: b9  
+# UVM_INFO classes/monitor.sv(76) @ 784: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: c7  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 784: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 2a, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 806: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 84  
+# UVM_INFO classes/monitor.sv(132) @ 806: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 0b  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 806: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: cd, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 816: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 2a  
+# UVM_INFO classes/monitor.sv(76) @ 816: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 8f  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 816: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 7b, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 838: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: cd  
+# UVM_INFO classes/monitor.sv(132) @ 838: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 84  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 838: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 0e, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 848: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 7b  
+# UVM_INFO classes/monitor.sv(76) @ 848: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 69  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 848: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 13, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 870: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 0e  
+# UVM_INFO classes/monitor.sv(132) @ 870: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: cd  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 870: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 6b, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 880: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 13  
+# UVM_INFO classes/monitor.sv(76) @ 880: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: f2  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 880: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: e0, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 902: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 6b  
+# UVM_INFO classes/monitor.sv(132) @ 902: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 0e  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 902: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: e2, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 912: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: e0  
+# UVM_INFO classes/monitor.sv(76) @ 912: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 8b  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 912: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 3a, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 934: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: e2  
+# UVM_INFO classes/monitor.sv(132) @ 934: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 6b  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 934: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 34, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 944: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 3a  
+# UVM_INFO classes/monitor.sv(76) @ 944: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 0b  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 944: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 63, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 966: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 34  
+# UVM_INFO classes/monitor.sv(132) @ 966: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: e2  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 966: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 94, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 976: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 63  
+# UVM_INFO classes/monitor.sv(76) @ 976: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 84  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 976: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 89, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 998: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 94  
+# UVM_INFO classes/monitor.sv(132) @ 998: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 34  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 998: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 0a, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1008: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 89  
+# UVM_INFO classes/monitor.sv(76) @ 1008: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: cd  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 1008: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 3d, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1030: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 0a  
+# UVM_INFO classes/monitor.sv(132) @ 1030: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 94  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 1030: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: c4, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1040: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 3d  
+# UVM_INFO classes/monitor.sv(76) @ 1040: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 0e  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 1040: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: df, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1062: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: c4  
+# UVM_INFO classes/monitor.sv(132) @ 1062: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 0a  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 1062: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 10, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1072: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: df  
+# UVM_INFO classes/monitor.sv(76) @ 1072: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 6b  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 1072: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 88, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1094: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 10  
+# UVM_INFO classes/monitor.sv(132) @ 1094: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: c4  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 1094: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 92, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1104: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 88  
+# UVM_INFO classes/monitor.sv(76) @ 1104: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: e2  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 1104: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 9b, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1126: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 92  
+# UVM_INFO classes/monitor.sv(132) @ 1126: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 10  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 1126: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 7f, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1136: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 9b  
+# UVM_INFO classes/monitor.sv(76) @ 1136: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 34  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 1136: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 3e, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1158: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 7f  
+# UVM_INFO classes/monitor.sv(132) @ 1158: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 92  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 1158: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 38, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1168: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 3e  
+# UVM_INFO classes/monitor.sv(76) @ 1168: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 94  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 1168: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 0a, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1190: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 38  
+# UVM_INFO classes/monitor.sv(132) @ 1190: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 7f  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 1190: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: ef, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1200: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 0a  
+# UVM_INFO classes/monitor.sv(76) @ 1200: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 0a  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 1200: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 59, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1222: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: ef  
+# UVM_INFO classes/monitor.sv(132) @ 1222: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 38  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 1222: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: ef, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1232: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 59  
+# UVM_INFO classes/monitor.sv(76) @ 1232: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: c4  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 1232: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 92, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1254: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: ef  
+# UVM_INFO classes/monitor.sv(132) @ 1254: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: ef  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 1254: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: c0, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1264: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 92  
+# UVM_INFO classes/monitor.sv(76) @ 1264: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 10  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 1264: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: cf, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1286: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: c0  
+# UVM_INFO classes/monitor.sv(132) @ 1286: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: ef  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 1286: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 21, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1296: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: cf  
+# UVM_INFO classes/monitor.sv(76) @ 1296: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 92  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 1296: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: ef, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1318: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 21  
+# UVM_INFO classes/monitor.sv(132) @ 1318: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: c0  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(32) @ 1318: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: ee, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1328: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: ef  
+# UVM_INFO classes/monitor.sv(76) @ 1328: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 7f  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/sequence.sv(70) @ 1328: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 29, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1350: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: ee  
+# UVM_INFO classes/monitor.sv(132) @ 1350: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 21  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/driver.sv(95) @ 1360: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 29  
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 1360: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  252
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [FIFO_READ_SEQ]     1
+# [FIFO_WRITE_SEQ]     1
+# [GENERATE]    80
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [fifo_read_driver]    40
+# [fifo_read_monitor]    42
+# [fifo_write_driver]    40
+# [fifo_write_monitor]    43
+# ** Note: $finish    : /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1360 ns  Iteration: 61  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# QuestaSim-64 vcover 2021.3_1 Coverage Utility 2021.08 Aug 15 2021
+# Start time: 18:26:33 on Jun 01,2024
+# vcover report async_fifo.ucdb 
+# Coverage Report Summary Data by instance
+# 
+# =================================================================================
+# === Instance: /top/dut/bfm
+# === Design Unit: work.fifo_bfm
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Statements                      14         7         7    50.00%
+# 
+# =================================================================================
+# === Instance: /top/dut/mem_inst
+# === Design Unit: work.fifo_memory
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         4         4         0   100.00%
+#     Expressions                      2         0         2     0.00%
+#     Statements                       5         5         0   100.00%
+# 
+# =================================================================================
+# === Instance: /top/dut/write_ptr
+# === Design Unit: work.write_pointer
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         2         2         0   100.00%
+#     Expressions                      3         0         3     0.00%
+#     Statements                      11        11         0   100.00%
+# 
+# =================================================================================
+# === Instance: /top/dut/read_ptr
+# === Design Unit: work.read_pointer
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         2         2         0   100.00%
+#     Expressions                      1         1         0   100.00%
+#     Statements                      11        11         0   100.00%
+# 
+# =================================================================================
+# === Instance: /top/dut/sync_w2r
+# === Design Unit: work.sync
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         2         2         0   100.00%
+#     Statements                       5         5         0   100.00%
+# 
+# =================================================================================
+# === Instance: /top/dut/sync_r2w
+# === Design Unit: work.sync
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         2         2         0   100.00%
+#     Statements                       5         5         0   100.00%
+# 
+# =================================================================================
+# === Instance: /top/dut
+# === Design Unit: work.fifo_top
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Expressions                      4         2         2    50.00%
+# 
+# =================================================================================
+# === Instance: /fifo_pkg
+# === Design Unit: work.fifo_pkg
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Assertions                       2         2         0   100.00%
+# 
+# 
+# TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 2
+# 
+# Total Coverage By Instance (filtered view): 79.06%
+# 
+# End time: 18:26:34 on Jun 01,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcover 2021.3_1 Coverage Utility 2021.08 Aug 15 2021
+# Start time: 18:26:34 on Jun 01,2024
+# vcover report async_fifo.ucdb -cvg -details 
+# ** Note: (vcover-17388) No matching coverage data found in file 'async_fifo.ucdb'.
+# End time: 18:26:34 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+add wave -position insertpoint sim:/top/dut/*
+# End time: 18:27:06 on Jun 01,2024, Elapsed time: 0:00:44
 # Errors: 0, Warnings: 0

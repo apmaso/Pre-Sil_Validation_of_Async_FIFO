@@ -38,6 +38,8 @@ class fifo_write_driver extends uvm_driver #(fifo_transaction);
   // Run Phase
   task run_phase(uvm_phase phase);
     super.run_phase(phase);  //Not included in Doulos Video
+    bfm.reset_fifo();
+
     forever begin
       seq_item_port.get_next_item(tx_wr); 
       // Drive data to FIFO
@@ -81,7 +83,9 @@ class fifo_read_driver extends uvm_driver #(fifo_transaction);
   
   // Run Phase
   task run_phase(uvm_phase phase);
-    super.run_phase(phase);  //Not included in Doulos Video
+    super.run_phase(phase);  
+    bfm.reset_fifo();
+
     forever begin
       seq_item_port.get_next_item(tx_rd); 
       // Drive data to FIFO

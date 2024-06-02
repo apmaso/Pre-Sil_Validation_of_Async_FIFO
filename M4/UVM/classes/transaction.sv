@@ -1,16 +1,11 @@
 /****************************************
 *  Transaction Class for the UVM Based 
 *  Testbench for an Asynchronous FIFO Module
-*
-*  This class contains the transaction packet
-*  that is passed between the generator, driver,
-*  monitor, and scoreboard.  It contains inputs
-*  that can be randomized as well as containers
-*  for the outputs and flags of the FIFO module.
 *  
 *  Author: Nick Alleyer
 *  Modifications: Alexander Maso
 ****************************************/
+typedef enum {WRITE, READ} op_type;
 
 class fifo_transaction extends uvm_sequence_item;
 	`uvm_object_utils(fifo_transaction)	//provides type name for factory creation
@@ -18,6 +13,9 @@ class fifo_transaction extends uvm_sequence_item;
 	function new(string name = "fifo_transaction");
 		super.new(name);
 	endfunction: new
+
+	// Op Type
+	rand op_type op;
 
 	// inputs
 	rand logic wr_en;
@@ -33,13 +31,6 @@ class fifo_transaction extends uvm_sequence_item;
 	//constraint wr_con{wr_en dist {1 := 3, 0 := 1};}	//3x more likely to write than not
 	//constraint rd_con{rd_en dist {1 := 1, 0 := 2};}	//2x more likely to not read than read
 
-	/*
-	function void print();
-		$display("Writing: %b or Reading: %b", wr_en, rd_en);
-		$display("Data in: %h, Data out: %h", data_in, data_out);
-		$display("Full: %b, Half: %b, Empty: %b", full, half, empty);
-	endfunction: print
-	*/
 
     // Useful methods suggested by John Aynsley
 

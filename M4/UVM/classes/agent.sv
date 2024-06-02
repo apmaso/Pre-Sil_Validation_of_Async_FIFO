@@ -4,8 +4,10 @@ class fifo_agent extends uvm_agent;
 
     // Declare handles to the components
     fifo_sequencer sequencer_h;
-    fifo_monitor monitor_h;
-    fifo_driver driver_h;
+    fifo_write_monitor monitor_write_h;
+    fifo_read_monitor monitor_read_h;
+    fifo_write_driver driver_write_h;
+    fifo_read_driver driver_read_h;
 
     // Constructor
     function new(string name = "fifo_agent", uvm_component parent);
@@ -21,8 +23,10 @@ class fifo_agent extends uvm_agent;
 
         // Create and configure the components
         sequencer_h = fifo_sequencer::type_id::create("sequencer_h", this);
-        monitor_h = fifo_monitor::type_id::create("monitor_h", this);
-        driver_h = fifo_driver::type_id::create("driver_h", this);
+        monitor_write_h = fifo_write_monitor::type_id::create("monitor_write_h", this);
+        monitor_read_h = fifo_read_monitor::type_id::create("monitor_read_h", this);
+        driver_write_h = fifo_write_driver::type_id::create("driver_write_h", this);
+        driver_read_h = fifo_read_driver::type_id::create("driver_read_h", this);
 
     endfunction : build_phase
 
@@ -33,10 +37,8 @@ class fifo_agent extends uvm_agent;
         `uvm_info(get_type_name(), $sformatf("Connecting %s", get_full_name()), UVM_HIGH);
         
         // Connect the driver to the sequencer
-        driver_h.seq_item_port.connect(sequencer_h.seq_item_export);
+        driver_write_h.seq_item_port.connect(sequencer_h.seq_item_export);
+        driver_read_h.seq_item_port.connect(sequencer_h.seq_item_export);
         
-        // Connect the monitor to the analysis port
-    
     endfunction : connect_phase
-
 endclass

@@ -5,7 +5,8 @@ class my_first_test extends uvm_test;
 
     // Declare handles to the components
     fifo_environment environment_h;
-    fifo_sequence sequence_h;
+    fifo_write_sequence write_sequence_h;
+    fifo_read_sequence read_sequence_h;
 
     // Define the constructor
     function new(string name = "my_first_test", uvm_component parent);
@@ -34,23 +35,20 @@ class my_first_test extends uvm_test;
     task run_phase(uvm_phase phase);
         super.run_phase(phase);
         `uvm_info(get_type_name(), $sformatf("Running %s", get_full_name()), UVM_HIGH);
+        write_sequence_h = fifo_write_sequence::type_id::create("write_sequence_h");
+        read_sequence_h = fifo_read_sequence::type_id::create("read_sequence_h");
 
         phase.raise_objection(this);
-        sequence_h = fifo_sequence::type_id::create("sequence_h");
 
-        if (!sequence_h.randomize())
-            `uvm_error("RANDOMIZE", "Failed to randomize sequence")
-
-        sequence_h.starting_phase = phase;
-
-        sequence_h.start(environment_h.agent_h.sequencer_h);
-        #10; // Example -> Consume some arbitrary time
-
-        // UVM Macro to report a message
-        // 1st argument: The type name of the component
-        // 2nd argument: The message to report
-        // 3rd argument: The verbosity level
-        `uvm_info(get_type_name(), "Hello, World!", UVM_MEDIUM);
+/*        if (!write_sequence_h.randomize())
+            `uvm_error("RANDOMIZE", "Failed to randomize write sequence")
+        if (!read_sequence_h.randomize())
+            `uvm_error("RANDOMIZE", "Failed to randomize read sequence")
+*/
+        fork
+            write_sequence_h.start(environment_h.agent_h.sequencer_h);
+            read_sequence_h.start(environment_h.agent_h.sequencer_h);
+        join
 
         phase.drop_objection(this); 
     endtask

@@ -64,11 +64,11 @@ class fifo_scoreboard extends uvm_scoreboard;
 
             if (current_tx_wr.wr_en && !current_tx_wr.full) begin
                 scb_write(current_tx_wr.data_in);
-                `uvm_info(get_type_name(), $sformatf("Scoreboard tx \t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  |  data_out: %h", tx.wr_en, tx.rd_en, tx.data_in, tx.data_out), UVM_DEBUG);
+                `uvm_info(get_type_name(), $sformatf("Scoreboard tx \t|  wr_en: %b  |  data_in: %h  |", current_tx_wr.wr_en, current_tx_wr.data_in), UVM_MEDIUM);
             end
             if (current_tx_rd.rd_en && !current_tx_rd.empty) begin
                 read_and_check(current_tx_rd.data_out);
-                `uvm_info(get_type_name(), $sformatf("Scoreboard tx \t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  |  data_out: %h", tx.wr_en, tx.rd_en, tx.data_in, tx.data_out), UVM_DEBUG);
+                `uvm_info(get_type_name(), $sformatf("Scoreboard tx \t|  rd_en: %b  |  data_out: %h  |", current_tx_rd.rd_en, current_tx_rd.data_out), UVM_MEDIUM);
             end
         end
 

@@ -3,8 +3,8 @@ class fifo_agent extends uvm_agent;
     `uvm_component_utils(fifo_agent)
 
     // Declare handles to the components
-    fifo_sequencer sequence_wr_h;
-    fifo_sequencer sequence_rd_h;
+    fifo_sequencer sequencer_wr_h;
+    fifo_sequencer sequencer_rd_h;
     fifo_write_monitor monitor_wr_h;
     fifo_read_monitor monitor_rd_h;
     fifo_write_driver driver_wr_h;

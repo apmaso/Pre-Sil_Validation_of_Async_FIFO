@@ -14,7 +14,8 @@ class fifo_scoreboard extends uvm_scoreboard;
 
     // Declare analysis port
     uvm_analysis_imp #(fifo_transaction, fifo_scoreboard) scoreboard_port;
-    fifo_transaction tx;
+    fifo_transaction tx_stack_wr[$];
+    fifo_transaction tx_stack_rd[$];
 
     // Local memory, ptrs and count used to check FIFO
     localparam DEPTH = 2**ADDR_WIDTH;
@@ -50,23 +51,39 @@ class fifo_scoreboard extends uvm_scoreboard;
     task run_phase(uvm_phase phase);
         super.run_phase(phase);  
         `uvm_info(get_type_name(), $sformatf("Running %s", get_full_name()), UVM_HIGH);
-   
-    endtask: run_phase
+        
+        fifo_transaction current_tx_rd;
+        fifo_transaction current_tx_wr;
 
+        forever begin        
+            wait(tx_stack_wr.size() > 0);
+            wait(tx_stack_rd.size() > 0);
+        
+            current_tx_rd = tx_stack_rd.pop_front();
+            current_tx_wr = tx_stack_wr.pop_front();
+
+            if (current_tx_wr.wr_en && !current_tx_wr.full) begin
+                scb_write(current_tx_wr.data_in);
+                `uvm_info(get_type_name(), $sformatf("Scoreboard tx \t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  |  data_out: %h", tx.wr_en, tx.rd_en, tx.data_in, tx.data_out), UVM_DEBUG);
+            end
+            if (current_tx_rd.rd_en && !current_tx_rd.empty) begin
+                read_and_check(current_tx_rd.data_out);
+                `uvm_info(get_type_name(), $sformatf("Scoreboard tx \t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  |  data_out: %h", tx.wr_en, tx.rd_en, tx.data_in, tx.data_out), UVM_DEBUG);
+            end
+        end
+
+    endtask: run_phase
 
     function void write(fifo_transaction tx);
         forever begin
-            if (tx.wr_en && !tx.full) begin
-                scb_write(tx.data_in);
-                `uvm_info(get_type_name(), $sformatf("Scoreboard tx \t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  |  data_out: %h", tx.wr_en, tx.rd_en, tx.data_in, tx.data_out), UVM_DEBUG);
+            if (tx.op=READ) begin
+                tx_stack_rd.push_back(tx);
             end
-            else if (tx.rd_en && !tx.empty) begin
-                read_and_check(tx.data_out);
-                `uvm_info(get_type_name(), $sformatf("Scoreboard tx \t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  |  data_out: %h", tx.wr_en, tx.rd_en, tx.data_in, tx.data_out), UVM_DEBUG);
-            end 
+            if (tx.op=WRITE) begin
+                tx_stack_wr.push_back(tx);
+            end
         end
     endfunction : write
-
     
     function void scb_write(input logic [DATA_WIDTH-1:0] data);
         if (count < DEPTH) begin
@@ -94,5 +111,4 @@ class fifo_scoreboard extends uvm_scoreboard;
         end
     endfunction : read_and_check
 
-     
 endclass 

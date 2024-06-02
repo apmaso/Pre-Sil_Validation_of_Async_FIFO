@@ -67,8 +67,8 @@ class fifo_scoreboard extends uvm_scoreboard;
                 
             wait(tx_stack_wr.size() > 0);
             wait(tx_stack_rd.size() > 0);
-            current_tx_wr = tx_stack_wr.pop_front()
-            current_tx_rd = tx_stack_rd.pop_front()
+            current_tx_wr = tx_stack_wr.pop_front();
+            current_tx_rd = tx_stack_rd.pop_front();
             expected = current_tx_wr.data_in;
             received = current_tx_rd.data_out;
                 

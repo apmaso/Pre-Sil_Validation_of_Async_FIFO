@@ -38,7 +38,8 @@ class fifo_scoreboard extends uvm_scoreboard;
         `uvm_info(get_type_name(), $sformatf("Building %s", get_full_name()), UVM_HIGH);
 
         // Use new constructor to create the analysis ports
-        scoreboard_port = new("scoreboard_port", this);
+        scoreboard_port_wr = new("scoreboard_port_wr", this);
+        scoreboard_port_rd = new("scoreboard_port_rd", this);
     endfunction: build_phase
 
     // Connect phase

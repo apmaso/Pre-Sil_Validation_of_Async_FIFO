@@ -28,8 +28,8 @@ class fifo_environment extends uvm_env;
         `uvm_info(get_type_name(), $sformatf("Connecting %s", get_full_name()), UVM_HIGH);
 
         // Connect the analysis port to the scoreboard
-        agent_h.monitor_write_h.monitor_port_wr.connect(scoreboard_h.scoreboard_port);
-        agent_h.monitor_read_h.monitor_port_rd.connect(scoreboard_h.scoreboard_port);
+        agent_h.monitor_wr_h.monitor_port_wr.connect(scoreboard_h.scoreboard_port);
+        agent_h.monitor_rd_h.monitor_port_rd.connect(scoreboard_h.scoreboard_port);
 
     endfunction : connect_phase
 

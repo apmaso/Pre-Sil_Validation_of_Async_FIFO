@@ -15,7 +15,6 @@ class fifo_read_monitor extends uvm_monitor;
 
   // Declare analysis port
   uvm_analysis_port #(fifo_transaction) monitor_port_rd;
-  uvm_analysis_port #(fifo_transaction) monitor_port_wr;
 
   // This variable is used to determine if the last transaction was a read
   //bit last_rd_en = 0;

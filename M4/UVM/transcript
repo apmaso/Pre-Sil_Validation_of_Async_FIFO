@@ -14,52 +14,52 @@
 # //
 do run.do
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 14:50:25 on Jun 02,2024
+# Start time: 15:59:10 on Jun 02,2024
 # vlog -reportprogress 300 -lint dut/fifo_top.sv 
 # -- Compiling module fifo_top
 # 
 # Top level modules:
 # 	fifo_top
-# End time: 14:50:26 on Jun 02,2024, Elapsed time: 0:00:01
+# End time: 15:59:10 on Jun 02,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 14:50:26 on Jun 02,2024
+# Start time: 15:59:10 on Jun 02,2024
 # vlog -reportprogress 300 -lint dut/fifo_memory.sv 
 # -- Compiling module fifo_memory
 # 
 # Top level modules:
 # 	fifo_memory
-# End time: 14:50:26 on Jun 02,2024, Elapsed time: 0:00:00
+# End time: 15:59:11 on Jun 02,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 14:50:26 on Jun 02,2024
+# Start time: 15:59:11 on Jun 02,2024
 # vlog -reportprogress 300 -lint dut/read_pointer.sv 
 # -- Compiling module read_pointer
 # 
 # Top level modules:
 # 	read_pointer
-# End time: 14:50:26 on Jun 02,2024, Elapsed time: 0:00:00
+# End time: 15:59:11 on Jun 02,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 14:50:26 on Jun 02,2024
+# Start time: 15:59:11 on Jun 02,2024
 # vlog -reportprogress 300 -lint dut/write_pointer.sv 
 # -- Compiling module write_pointer
 # 
 # Top level modules:
 # 	write_pointer
-# End time: 14:50:26 on Jun 02,2024, Elapsed time: 0:00:00
+# End time: 15:59:11 on Jun 02,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 14:50:26 on Jun 02,2024
+# Start time: 15:59:11 on Jun 02,2024
 # vlog -reportprogress 300 -lint dut/sync.sv 
 # -- Compiling module sync
 # 
 # Top level modules:
 # 	sync
-# End time: 14:50:27 on Jun 02,2024, Elapsed time: 0:00:01
+# End time: 15:59:12 on Jun 02,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 14:50:27 on Jun 02,2024
+# Start time: 15:59:12 on Jun 02,2024
 # vlog -reportprogress 300 -f tb.f 
 # -- Compiling package fifo_pkg
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
@@ -70,10 +70,10 @@ do run.do
 # 
 # Top level modules:
 # 	top
-# End time: 14:50:28 on Jun 02,2024, Elapsed time: 0:00:01
+# End time: 15:59:13 on Jun 02,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vopt 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 14:50:28 on Jun 02,2024
+# Start time: 15:59:13 on Jun 02,2024
 # vopt -reportprogress 300 top -o top_optimized "+acc" "+cover=sbfec+fifo_top(rtl)." 
 # 
 # Top level modules:
@@ -104,10 +104,10 @@ do run.do
 # -- Optimizing module sync(fast)
 # -- Optimizing interface fifo_bfm(fast)
 # Optimized design name is top_optimized
-# End time: 14:50:34 on Jun 02,2024, Elapsed time: 0:00:06
+# End time: 15:59:19 on Jun 02,2024, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 0
 # vsim top_optimized -coverage 
-# Start time: 14:50:34 on Jun 02,2024
+# Start time: 15:59:19 on Jun 02,2024
 # Loading sv_std.std
 # Loading work.fifo_bfm(fast)
 # Loading mtiUvm.uvm_pkg(fast)
@@ -715,36 +715,1076 @@ do run.do
 # UVM_INFO classes/driver.sv(50) @ 1350: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: ee  
 # UVM_INFO classes/monitor.sv(132) @ 1350: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 21  |  full: 0  |  empty: 0  |  half: 0
 # UVM_INFO classes/scoreboard.sv(107) @ 1350: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 21  |
+# UVM_INFO classes/sequence.sv(32) @ 1350: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 06, Data out: xx
+# Full: x, Half: x, Empty: x
 # UVM_INFO classes/driver.sv(95) @ 1360: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 29  
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 1360: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO classes/monitor.sv(76) @ 1360: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 38  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1360: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 38  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1360: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 21, got 38
+# UVM_INFO classes/sequence.sv(70) @ 1360: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 05, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1382: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 06  
+# UVM_INFO classes/monitor.sv(132) @ 1382: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: ee  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1382: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: ee  |
+# UVM_INFO classes/sequence.sv(32) @ 1382: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: da, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1392: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 05  
+# UVM_INFO classes/monitor.sv(76) @ 1392: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: ef  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1392: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: ef  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1392: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected ee, got ef
+# UVM_INFO classes/sequence.sv(70) @ 1392: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: f2, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1414: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: da  
+# UVM_INFO classes/monitor.sv(132) @ 1414: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 06  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1414: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 06  |
+# UVM_INFO classes/sequence.sv(32) @ 1414: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 67, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1424: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: f2  
+# UVM_INFO classes/monitor.sv(76) @ 1424: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: ef  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1424: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: ef  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1424: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 06, got ef
+# UVM_INFO classes/sequence.sv(70) @ 1424: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 7f, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1446: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 67  
+# UVM_INFO classes/monitor.sv(132) @ 1446: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: da  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1446: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: da  |
+# UVM_INFO classes/sequence.sv(32) @ 1446: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 85, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1456: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 7f  
+# UVM_INFO classes/monitor.sv(76) @ 1456: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: c0  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1456: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: c0  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1456: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected da, got c0
+# UVM_INFO classes/sequence.sv(70) @ 1456: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: af, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1478: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 85  
+# UVM_INFO classes/monitor.sv(132) @ 1478: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 67  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1478: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 67  |
+# UVM_INFO classes/sequence.sv(32) @ 1478: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 68, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1488: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: af  
+# UVM_INFO classes/monitor.sv(76) @ 1488: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 21  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1488: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 21  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1488: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 67, got 21
+# UVM_INFO classes/sequence.sv(70) @ 1488: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 78, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1510: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 68  
+# UVM_INFO classes/monitor.sv(132) @ 1510: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 85  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1510: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 85  |
+# UVM_INFO classes/sequence.sv(32) @ 1510: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 0a, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1520: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 78  
+# UVM_INFO classes/monitor.sv(76) @ 1520: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: ee  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1520: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: ee  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1520: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 85, got ee
+# UVM_INFO classes/sequence.sv(70) @ 1520: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 60, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1542: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 0a  
+# UVM_INFO classes/monitor.sv(132) @ 1542: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 68  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1542: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 68  |
+# UVM_INFO classes/sequence.sv(32) @ 1542: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 22, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1552: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 60  
+# UVM_INFO classes/monitor.sv(76) @ 1552: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 06  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1552: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 06  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1552: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 68, got 06
+# UVM_INFO classes/sequence.sv(70) @ 1552: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 5c, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1574: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 22  
+# UVM_INFO classes/monitor.sv(132) @ 1574: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 0a  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1574: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 0a  |
+# UVM_INFO classes/sequence.sv(32) @ 1574: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: f6, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1584: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 5c  
+# UVM_INFO classes/monitor.sv(76) @ 1584: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: da  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1584: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: da  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1584: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 0a, got da
+# UVM_INFO classes/sequence.sv(70) @ 1584: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: db, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1606: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: f6  
+# UVM_INFO classes/monitor.sv(132) @ 1606: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 22  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1606: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 22  |
+# UVM_INFO classes/sequence.sv(32) @ 1606: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 5d, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1616: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: db  
+# UVM_INFO classes/monitor.sv(76) @ 1616: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 67  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1616: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 67  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1616: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 22, got 67
+# UVM_INFO classes/sequence.sv(70) @ 1616: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 0c, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1638: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 5d  
+# UVM_INFO classes/monitor.sv(132) @ 1638: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: f6  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1638: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: f6  |
+# UVM_INFO classes/sequence.sv(32) @ 1638: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 6c, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1648: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 0c  
+# UVM_INFO classes/monitor.sv(76) @ 1648: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 85  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1648: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 85  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1648: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected f6, got 85
+# UVM_INFO classes/sequence.sv(70) @ 1648: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: a1, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1670: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 6c  
+# UVM_INFO classes/monitor.sv(132) @ 1670: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 5d  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1670: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 5d  |
+# UVM_INFO classes/sequence.sv(32) @ 1670: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 85, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1680: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: a1  
+# UVM_INFO classes/monitor.sv(76) @ 1680: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 68  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1680: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 68  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1680: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 5d, got 68
+# UVM_INFO classes/sequence.sv(70) @ 1680: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: fe, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1702: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 85  
+# UVM_INFO classes/monitor.sv(132) @ 1702: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 6c  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1702: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 6c  |
+# UVM_INFO classes/sequence.sv(32) @ 1702: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: ec, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1712: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: fe  
+# UVM_INFO classes/monitor.sv(76) @ 1712: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 0a  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1712: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 0a  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1712: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 6c, got 0a
+# UVM_INFO classes/sequence.sv(70) @ 1712: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: c7, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1734: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: ec  
+# UVM_INFO classes/monitor.sv(132) @ 1734: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 85  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1734: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 85  |
+# UVM_INFO classes/sequence.sv(32) @ 1734: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: e1, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1744: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: c7  
+# UVM_INFO classes/monitor.sv(76) @ 1744: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 22  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1744: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 22  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1744: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 85, got 22
+# UVM_INFO classes/sequence.sv(70) @ 1744: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 10, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1766: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: e1  
+# UVM_INFO classes/monitor.sv(132) @ 1766: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: ec  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1766: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: ec  |
+# UVM_INFO classes/sequence.sv(32) @ 1766: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 54, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1776: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 10  
+# UVM_INFO classes/monitor.sv(76) @ 1776: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: f6  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1776: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: f6  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1776: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected ec, got f6
+# UVM_INFO classes/sequence.sv(70) @ 1776: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 3a, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1798: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 54  
+# UVM_INFO classes/monitor.sv(132) @ 1798: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: e1  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1798: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: e1  |
+# UVM_INFO classes/sequence.sv(32) @ 1798: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: f5, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1808: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 3a  
+# UVM_INFO classes/monitor.sv(76) @ 1808: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 5d  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1808: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 5d  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1808: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected e1, got 5d
+# UVM_INFO classes/sequence.sv(70) @ 1808: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: cb, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1830: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: f5  
+# UVM_INFO classes/monitor.sv(132) @ 1830: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 54  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1830: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 54  |
+# UVM_INFO classes/sequence.sv(32) @ 1830: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: f2, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1840: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: cb  
+# UVM_INFO classes/monitor.sv(76) @ 1840: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 6c  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1840: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 6c  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1840: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 54, got 6c
+# UVM_INFO classes/sequence.sv(70) @ 1840: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 3e, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1862: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: f2  
+# UVM_INFO classes/monitor.sv(132) @ 1862: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: f5  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1862: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: f5  |
+# UVM_INFO classes/sequence.sv(32) @ 1862: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: b9, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1872: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 3e  
+# UVM_INFO classes/monitor.sv(76) @ 1872: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 85  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1872: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 85  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1872: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected f5, got 85
+# UVM_INFO classes/sequence.sv(70) @ 1872: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 1e, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1894: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: b9  
+# UVM_INFO classes/monitor.sv(132) @ 1894: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: f2  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1894: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: f2  |
+# UVM_INFO classes/sequence.sv(32) @ 1894: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: c7, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1904: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 1e  
+# UVM_INFO classes/monitor.sv(76) @ 1904: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: ec  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1904: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: ec  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1904: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected f2, got ec
+# UVM_INFO classes/sequence.sv(70) @ 1904: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 68, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1926: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: c7  
+# UVM_INFO classes/monitor.sv(132) @ 1926: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: b9  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1926: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: b9  |
+# UVM_INFO classes/sequence.sv(32) @ 1926: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: ca, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1936: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 68  
+# UVM_INFO classes/monitor.sv(76) @ 1936: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: e1  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1936: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: e1  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1936: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected b9, got e1
+# UVM_INFO classes/sequence.sv(70) @ 1936: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: c5, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1958: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: ca  
+# UVM_INFO classes/monitor.sv(132) @ 1958: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: c7  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1958: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: c7  |
+# UVM_INFO classes/sequence.sv(32) @ 1958: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 77, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 1968: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: c5  
+# UVM_INFO classes/monitor.sv(76) @ 1968: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 54  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 1968: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 54  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 1968: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected c7, got 54
+# UVM_INFO classes/sequence.sv(70) @ 1968: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: e0, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 1990: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 77  
+# UVM_INFO classes/monitor.sv(132) @ 1990: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: ca  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 1990: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: ca  |
+# UVM_INFO classes/sequence.sv(32) @ 1990: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: ab, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2000: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: e0  
+# UVM_INFO classes/monitor.sv(76) @ 2000: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: f5  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2000: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: f5  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2000: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected ca, got f5
+# UVM_INFO classes/sequence.sv(70) @ 2000: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 60, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2022: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: ab  
+# UVM_INFO classes/monitor.sv(132) @ 2022: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 77  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2022: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 77  |
+# UVM_INFO classes/sequence.sv(32) @ 2022: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 3c, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2032: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 60  
+# UVM_INFO classes/monitor.sv(76) @ 2032: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: f2  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2032: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: f2  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2032: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 77, got f2
+# UVM_INFO classes/sequence.sv(70) @ 2032: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: c6, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2054: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 3c  
+# UVM_INFO classes/monitor.sv(132) @ 2054: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: ab  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2054: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: ab  |
+# UVM_INFO classes/sequence.sv(32) @ 2054: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 0a, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2064: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: c6  
+# UVM_INFO classes/monitor.sv(76) @ 2064: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: b9  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2064: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: b9  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2064: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected ab, got b9
+# UVM_INFO classes/sequence.sv(70) @ 2064: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 18, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2086: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 0a  
+# UVM_INFO classes/monitor.sv(132) @ 2086: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 3c  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2086: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 3c  |
+# UVM_INFO classes/sequence.sv(32) @ 2086: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 79, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2096: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 18  
+# UVM_INFO classes/monitor.sv(76) @ 2096: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: c7  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2096: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: c7  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2096: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 3c, got c7
+# UVM_INFO classes/sequence.sv(70) @ 2096: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 6e, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2118: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 79  
+# UVM_INFO classes/monitor.sv(132) @ 2118: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 0a  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2118: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 0a  |
+# UVM_INFO classes/sequence.sv(32) @ 2118: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: c8, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2128: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 6e  
+# UVM_INFO classes/monitor.sv(76) @ 2128: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: ca  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2128: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: ca  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2128: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 0a, got ca
+# UVM_INFO classes/sequence.sv(70) @ 2128: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 7e, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2150: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: c8  
+# UVM_INFO classes/monitor.sv(132) @ 2150: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 79  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2150: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 79  |
+# UVM_INFO classes/sequence.sv(32) @ 2150: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: fa, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2160: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 7e  
+# UVM_INFO classes/monitor.sv(76) @ 2160: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 77  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2160: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 77  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2160: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 79, got 77
+# UVM_INFO classes/sequence.sv(70) @ 2160: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 4c, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2182: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: fa  
+# UVM_INFO classes/monitor.sv(132) @ 2182: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: c8  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2182: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: c8  |
+# UVM_INFO classes/sequence.sv(32) @ 2182: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 17, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2192: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 4c  
+# UVM_INFO classes/monitor.sv(76) @ 2192: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: ab  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2192: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: ab  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2192: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected c8, got ab
+# UVM_INFO classes/sequence.sv(70) @ 2192: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 8f, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2214: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 17  
+# UVM_INFO classes/monitor.sv(132) @ 2214: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: fa  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2214: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: fa  |
+# UVM_INFO classes/sequence.sv(32) @ 2214: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: d5, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2224: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 8f  
+# UVM_INFO classes/monitor.sv(76) @ 2224: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 3c  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2224: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 3c  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2224: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected fa, got 3c
+# UVM_INFO classes/sequence.sv(70) @ 2224: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 8e, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2246: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: d5  
+# UVM_INFO classes/monitor.sv(132) @ 2246: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 17  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2246: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 17  |
+# UVM_INFO classes/sequence.sv(32) @ 2246: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 73, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2256: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 8e  
+# UVM_INFO classes/monitor.sv(76) @ 2256: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 0a  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2256: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 0a  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2256: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 17, got 0a
+# UVM_INFO classes/sequence.sv(70) @ 2256: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 2d, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2278: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 73  
+# UVM_INFO classes/monitor.sv(132) @ 2278: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: d5  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2278: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: d5  |
+# UVM_INFO classes/sequence.sv(32) @ 2278: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 4c, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2288: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 2d  
+# UVM_INFO classes/monitor.sv(76) @ 2288: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 79  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2288: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 79  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2288: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected d5, got 79
+# UVM_INFO classes/sequence.sv(70) @ 2288: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 66, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2310: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 4c  
+# UVM_INFO classes/monitor.sv(132) @ 2310: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 73  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2310: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 73  |
+# UVM_INFO classes/sequence.sv(32) @ 2310: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 1e, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2320: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 66  
+# UVM_INFO classes/monitor.sv(76) @ 2320: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: c8  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2320: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: c8  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2320: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 73, got c8
+# UVM_INFO classes/sequence.sv(70) @ 2320: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: ab, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2342: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 1e  
+# UVM_INFO classes/monitor.sv(132) @ 2342: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 4c  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2342: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 4c  |
+# UVM_INFO classes/sequence.sv(32) @ 2342: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: b2, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2352: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: ab  
+# UVM_INFO classes/monitor.sv(76) @ 2352: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: fa  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2352: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: fa  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2352: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 4c, got fa
+# UVM_INFO classes/sequence.sv(70) @ 2352: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 71, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2374: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: b2  
+# UVM_INFO classes/monitor.sv(132) @ 2374: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 1e  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2374: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 1e  |
+# UVM_INFO classes/sequence.sv(32) @ 2374: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 55, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2384: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 71  
+# UVM_INFO classes/monitor.sv(76) @ 2384: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 17  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2384: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 17  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2384: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 1e, got 17
+# UVM_INFO classes/sequence.sv(70) @ 2384: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 5d, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2406: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 55  
+# UVM_INFO classes/monitor.sv(132) @ 2406: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: b2  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2406: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: b2  |
+# UVM_INFO classes/sequence.sv(32) @ 2406: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 94, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2416: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 5d  
+# UVM_INFO classes/monitor.sv(76) @ 2416: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: d5  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2416: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: d5  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2416: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected b2, got d5
+# UVM_INFO classes/sequence.sv(70) @ 2416: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 21, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2438: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 94  
+# UVM_INFO classes/monitor.sv(132) @ 2438: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 55  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2438: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 55  |
+# UVM_INFO classes/sequence.sv(32) @ 2438: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: cc, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2448: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 21  
+# UVM_INFO classes/monitor.sv(76) @ 2448: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 73  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2448: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 73  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2448: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 55, got 73
+# UVM_INFO classes/sequence.sv(70) @ 2448: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: ff, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2470: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: cc  
+# UVM_INFO classes/monitor.sv(132) @ 2470: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 94  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2470: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 94  |
+# UVM_INFO classes/sequence.sv(32) @ 2470: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 85, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2480: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: ff  
+# UVM_INFO classes/monitor.sv(76) @ 2480: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 4c  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2480: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 4c  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2480: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 94, got 4c
+# UVM_INFO classes/sequence.sv(70) @ 2480: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 9a, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2502: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 85  
+# UVM_INFO classes/monitor.sv(132) @ 2502: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: cc  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2502: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: cc  |
+# UVM_INFO classes/sequence.sv(32) @ 2502: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 76, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2512: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 9a  
+# UVM_INFO classes/monitor.sv(76) @ 2512: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 1e  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2512: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 1e  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2512: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected cc, got 1e
+# UVM_INFO classes/sequence.sv(70) @ 2512: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 44, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2534: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 76  
+# UVM_INFO classes/monitor.sv(132) @ 2534: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 85  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2534: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 85  |
+# UVM_INFO classes/sequence.sv(32) @ 2534: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 2c, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2544: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 44  
+# UVM_INFO classes/monitor.sv(76) @ 2544: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: b2  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2544: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: b2  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2544: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 85, got b2
+# UVM_INFO classes/sequence.sv(70) @ 2544: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: dd, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2566: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 2c  
+# UVM_INFO classes/monitor.sv(132) @ 2566: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 76  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2566: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 76  |
+# UVM_INFO classes/sequence.sv(32) @ 2566: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 74, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2576: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: dd  
+# UVM_INFO classes/monitor.sv(76) @ 2576: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 55  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2576: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 55  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2576: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 76, got 55
+# UVM_INFO classes/sequence.sv(70) @ 2576: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: c1, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2598: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 74  
+# UVM_INFO classes/monitor.sv(132) @ 2598: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 2c  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2598: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 2c  |
+# UVM_INFO classes/sequence.sv(32) @ 2598: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: b4, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2608: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: c1  
+# UVM_INFO classes/monitor.sv(76) @ 2608: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 94  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2608: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 94  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2608: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 2c, got 94
+# UVM_INFO classes/sequence.sv(70) @ 2608: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 8c, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2630: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: b4  
+# UVM_INFO classes/monitor.sv(132) @ 2630: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 74  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2630: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 74  |
+# UVM_INFO classes/sequence.sv(32) @ 2630: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 46, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2640: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 8c  
+# UVM_INFO classes/monitor.sv(76) @ 2640: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: cc  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2640: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: cc  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2640: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 74, got cc
+# UVM_INFO classes/sequence.sv(70) @ 2640: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 8d, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2662: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 46  
+# UVM_INFO classes/monitor.sv(132) @ 2662: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: b4  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2662: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: b4  |
+# UVM_INFO classes/sequence.sv(32) @ 2662: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 03, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2672: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 8d  
+# UVM_INFO classes/monitor.sv(76) @ 2672: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 85  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2672: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 85  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2672: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected b4, got 85
+# UVM_INFO classes/sequence.sv(70) @ 2672: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 1d, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2694: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 03  
+# UVM_INFO classes/monitor.sv(132) @ 2694: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 46  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2694: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 46  |
+# UVM_INFO classes/sequence.sv(32) @ 2694: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 35, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2704: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 1d  
+# UVM_INFO classes/monitor.sv(76) @ 2704: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 76  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2704: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 76  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2704: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 46, got 76
+# UVM_INFO classes/sequence.sv(70) @ 2704: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: d3, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2726: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 35  
+# UVM_INFO classes/monitor.sv(132) @ 2726: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 03  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2726: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 03  |
+# UVM_INFO classes/sequence.sv(32) @ 2726: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: ba, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2736: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: d3  
+# UVM_INFO classes/monitor.sv(76) @ 2736: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 2c  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2736: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 2c  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2736: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 03, got 2c
+# UVM_INFO classes/sequence.sv(70) @ 2736: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: f1, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2758: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: ba  
+# UVM_INFO classes/monitor.sv(132) @ 2758: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 35  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2758: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 35  |
+# UVM_INFO classes/sequence.sv(32) @ 2758: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 27, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2768: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: f1  
+# UVM_INFO classes/monitor.sv(76) @ 2768: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 74  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2768: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 74  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2768: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 35, got 74
+# UVM_INFO classes/sequence.sv(70) @ 2768: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 0c, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2790: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 27  
+# UVM_INFO classes/monitor.sv(132) @ 2790: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: ba  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2790: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: ba  |
+# UVM_INFO classes/sequence.sv(32) @ 2790: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 02, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2800: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 0c  
+# UVM_INFO classes/monitor.sv(76) @ 2800: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: b4  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2800: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: b4  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2800: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected ba, got b4
+# UVM_INFO classes/sequence.sv(70) @ 2800: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 5f, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2822: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 02  
+# UVM_INFO classes/monitor.sv(132) @ 2822: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 27  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2822: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 27  |
+# UVM_INFO classes/sequence.sv(32) @ 2822: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 72, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2832: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 5f  
+# UVM_INFO classes/monitor.sv(76) @ 2832: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 46  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2832: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 46  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2832: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 27, got 46
+# UVM_INFO classes/sequence.sv(70) @ 2832: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 17, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2854: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 72  
+# UVM_INFO classes/monitor.sv(132) @ 2854: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 02  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2854: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 02  |
+# UVM_INFO classes/sequence.sv(32) @ 2854: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 0e, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2864: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 17  
+# UVM_INFO classes/monitor.sv(76) @ 2864: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 03  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2864: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 03  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2864: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 02, got 03
+# UVM_INFO classes/sequence.sv(70) @ 2864: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 29, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2886: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 0e  
+# UVM_INFO classes/monitor.sv(132) @ 2886: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 72  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2886: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 72  |
+# UVM_INFO classes/sequence.sv(32) @ 2886: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: f3, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2896: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 29  
+# UVM_INFO classes/monitor.sv(76) @ 2896: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 35  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2896: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 35  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2896: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 72, got 35
+# UVM_INFO classes/sequence.sv(70) @ 2896: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: cc, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2918: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: f3  
+# UVM_INFO classes/monitor.sv(132) @ 2918: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 0e  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2918: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 0e  |
+# UVM_INFO classes/sequence.sv(32) @ 2918: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: f7, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2928: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: cc  
+# UVM_INFO classes/monitor.sv(76) @ 2928: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: ba  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2928: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: ba  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2928: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 0e, got ba
+# UVM_INFO classes/sequence.sv(70) @ 2928: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: ab, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2950: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: f7  
+# UVM_INFO classes/monitor.sv(132) @ 2950: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: f3  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2950: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: f3  |
+# UVM_INFO classes/sequence.sv(32) @ 2950: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 39, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2960: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: ab  
+# UVM_INFO classes/monitor.sv(76) @ 2960: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 27  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2960: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 27  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2960: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected f3, got 27
+# UVM_INFO classes/sequence.sv(70) @ 2960: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 99, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 2982: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 39  
+# UVM_INFO classes/monitor.sv(132) @ 2982: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: f7  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 2982: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: f7  |
+# UVM_INFO classes/sequence.sv(32) @ 2982: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: fb, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 2992: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 99  
+# UVM_INFO classes/monitor.sv(76) @ 2992: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 02  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 2992: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 02  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 2992: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected f7, got 02
+# UVM_INFO classes/sequence.sv(70) @ 2992: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: c0, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3014: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: fb  
+# UVM_INFO classes/monitor.sv(132) @ 3014: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 39  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3014: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 39  |
+# UVM_INFO classes/sequence.sv(32) @ 3014: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 86, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3024: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: c0  
+# UVM_INFO classes/monitor.sv(76) @ 3024: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 72  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3024: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 72  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3024: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 39, got 72
+# UVM_INFO classes/sequence.sv(70) @ 3024: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: c2, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3046: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 86  
+# UVM_INFO classes/monitor.sv(132) @ 3046: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: fb  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3046: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: fb  |
+# UVM_INFO classes/sequence.sv(32) @ 3046: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 4b, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3056: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: c2  
+# UVM_INFO classes/monitor.sv(76) @ 3056: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 0e  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3056: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 0e  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3056: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected fb, got 0e
+# UVM_INFO classes/sequence.sv(70) @ 3056: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 17, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3078: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 4b  
+# UVM_INFO classes/monitor.sv(132) @ 3078: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 86  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3078: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 86  |
+# UVM_INFO classes/sequence.sv(32) @ 3078: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 11, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3088: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 17  
+# UVM_INFO classes/monitor.sv(76) @ 3088: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: f3  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3088: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: f3  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3088: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 86, got f3
+# UVM_INFO classes/sequence.sv(70) @ 3088: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: d0, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3110: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 11  
+# UVM_INFO classes/monitor.sv(132) @ 3110: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 4b  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3110: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 4b  |
+# UVM_INFO classes/sequence.sv(32) @ 3110: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 56, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3120: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: d0  
+# UVM_INFO classes/monitor.sv(76) @ 3120: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: f7  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3120: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: f7  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3120: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 4b, got f7
+# UVM_INFO classes/sequence.sv(70) @ 3120: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 29, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3142: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 56  
+# UVM_INFO classes/monitor.sv(132) @ 3142: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 11  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3142: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 11  |
+# UVM_INFO classes/sequence.sv(32) @ 3142: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 19, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3152: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 29  
+# UVM_INFO classes/monitor.sv(76) @ 3152: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 39  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3152: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 39  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3152: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 11, got 39
+# UVM_INFO classes/sequence.sv(70) @ 3152: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 40, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3174: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 19  
+# UVM_INFO classes/monitor.sv(132) @ 3174: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 56  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3174: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 56  |
+# UVM_INFO classes/sequence.sv(32) @ 3174: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: d3, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3184: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 40  
+# UVM_INFO classes/monitor.sv(76) @ 3184: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: fb  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3184: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: fb  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3184: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 56, got fb
+# UVM_INFO classes/sequence.sv(70) @ 3184: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 32, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3206: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: d3  
+# UVM_INFO classes/monitor.sv(132) @ 3206: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 19  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3206: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 19  |
+# UVM_INFO classes/sequence.sv(32) @ 3206: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: ea, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3216: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 32  
+# UVM_INFO classes/monitor.sv(76) @ 3216: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 86  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3216: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 86  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3216: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 19, got 86
+# UVM_INFO classes/sequence.sv(70) @ 3216: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 11, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3238: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: ea  
+# UVM_INFO classes/monitor.sv(132) @ 3238: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: d3  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3238: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: d3  |
+# UVM_INFO classes/sequence.sv(32) @ 3238: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: cb, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3248: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 11  
+# UVM_INFO classes/monitor.sv(76) @ 3248: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 4b  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3248: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 4b  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3248: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected d3, got 4b
+# UVM_INFO classes/sequence.sv(70) @ 3248: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 07, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3270: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: cb  
+# UVM_INFO classes/monitor.sv(132) @ 3270: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: ea  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3270: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: ea  |
+# UVM_INFO classes/sequence.sv(32) @ 3270: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 2c, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3280: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 07  
+# UVM_INFO classes/monitor.sv(76) @ 3280: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 11  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3280: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 11  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3280: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected ea, got 11
+# UVM_INFO classes/sequence.sv(70) @ 3280: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 4d, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3302: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 2c  
+# UVM_INFO classes/monitor.sv(132) @ 3302: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: cb  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3302: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: cb  |
+# UVM_INFO classes/sequence.sv(32) @ 3302: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: a7, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3312: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 4d  
+# UVM_INFO classes/monitor.sv(76) @ 3312: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 56  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3312: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 56  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3312: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected cb, got 56
+# UVM_INFO classes/sequence.sv(70) @ 3312: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 5b, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3334: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: a7  
+# UVM_INFO classes/monitor.sv(132) @ 3334: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 2c  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3334: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 2c  |
+# UVM_INFO classes/sequence.sv(32) @ 3334: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: e7, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3344: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 5b  
+# UVM_INFO classes/monitor.sv(76) @ 3344: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 19  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3344: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 19  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3344: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 2c, got 19
+# UVM_INFO classes/sequence.sv(70) @ 3344: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 8d, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3366: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: e7  
+# UVM_INFO classes/monitor.sv(132) @ 3366: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: a7  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3366: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: a7  |
+# UVM_INFO classes/sequence.sv(32) @ 3366: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: f5, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3376: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 8d  
+# UVM_INFO classes/monitor.sv(76) @ 3376: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: d3  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3376: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: d3  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3376: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected a7, got d3
+# UVM_INFO classes/sequence.sv(70) @ 3376: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: a3, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3398: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: f5  
+# UVM_INFO classes/monitor.sv(132) @ 3398: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: e7  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3398: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: e7  |
+# UVM_INFO classes/sequence.sv(32) @ 3398: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 34, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3408: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: a3  
+# UVM_INFO classes/monitor.sv(76) @ 3408: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: ea  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3408: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: ea  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3408: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected e7, got ea
+# UVM_INFO classes/sequence.sv(70) @ 3408: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: ca, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3430: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 34  
+# UVM_INFO classes/monitor.sv(132) @ 3430: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: f5  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3430: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: f5  |
+# UVM_INFO classes/sequence.sv(32) @ 3430: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: b6, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3440: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: ca  
+# UVM_INFO classes/monitor.sv(76) @ 3440: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: cb  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3440: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: cb  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3440: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected f5, got cb
+# UVM_INFO classes/sequence.sv(70) @ 3440: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 3d, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3462: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: b6  
+# UVM_INFO classes/monitor.sv(132) @ 3462: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 34  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3462: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 34  |
+# UVM_INFO classes/sequence.sv(32) @ 3462: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: b7, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3472: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 3d  
+# UVM_INFO classes/monitor.sv(76) @ 3472: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 2c  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3472: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 2c  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3472: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 34, got 2c
+# UVM_INFO classes/sequence.sv(70) @ 3472: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 20, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3494: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: b7  
+# UVM_INFO classes/monitor.sv(132) @ 3494: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: b6  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3494: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: b6  |
+# UVM_INFO classes/sequence.sv(32) @ 3494: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 37, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3504: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 20  
+# UVM_INFO classes/monitor.sv(76) @ 3504: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: a7  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3504: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: a7  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3504: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected b6, got a7
+# UVM_INFO classes/sequence.sv(70) @ 3504: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: d5, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3526: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 37  
+# UVM_INFO classes/monitor.sv(132) @ 3526: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: b7  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3526: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: b7  |
+# UVM_INFO classes/sequence.sv(32) @ 3526: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 0d, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3536: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: d5  
+# UVM_INFO classes/monitor.sv(76) @ 3536: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: e7  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3536: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: e7  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3536: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected b7, got e7
+# UVM_INFO classes/sequence.sv(70) @ 3536: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 06, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3558: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 0d  
+# UVM_INFO classes/monitor.sv(132) @ 3558: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 37  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3558: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 37  |
+# UVM_INFO classes/sequence.sv(32) @ 3558: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: d9, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3568: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 06  
+# UVM_INFO classes/monitor.sv(76) @ 3568: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: f5  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3568: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: f5  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3568: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 37, got f5
+# UVM_INFO classes/sequence.sv(70) @ 3568: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 3b, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3590: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: d9  
+# UVM_INFO classes/monitor.sv(132) @ 3590: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 0d  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3590: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 0d  |
+# UVM_INFO classes/sequence.sv(32) @ 3590: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: b7, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3600: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 3b  
+# UVM_INFO classes/monitor.sv(76) @ 3600: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 34  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3600: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 34  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3600: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 0d, got 34
+# UVM_INFO classes/sequence.sv(70) @ 3600: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: be, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3622: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: b7  
+# UVM_INFO classes/monitor.sv(132) @ 3622: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: d9  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3622: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: d9  |
+# UVM_INFO classes/sequence.sv(32) @ 3622: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 9a, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3632: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: be  
+# UVM_INFO classes/monitor.sv(76) @ 3632: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: b6  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3632: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: b6  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3632: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected d9, got b6
+# UVM_INFO classes/sequence.sv(70) @ 3632: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: b0, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3654: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 9a  
+# UVM_INFO classes/monitor.sv(132) @ 3654: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: b7  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3654: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: b7  |
+# UVM_INFO classes/sequence.sv(32) @ 3654: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: cb, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3664: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: b0  
+# UVM_INFO classes/monitor.sv(76) @ 3664: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: b7  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3664: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: b7  |
+# UVM_INFO classes/scoreboard.sv(79) @ 3664: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected b7, got b7
+# UVM_INFO classes/sequence.sv(70) @ 3664: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 67, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3686: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: cb  
+# UVM_INFO classes/monitor.sv(132) @ 3686: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 9a  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3686: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 9a  |
+# UVM_INFO classes/sequence.sv(32) @ 3686: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 32, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3696: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 67  
+# UVM_INFO classes/monitor.sv(76) @ 3696: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 37  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3696: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 37  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3696: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 9a, got 37
+# UVM_INFO classes/sequence.sv(70) @ 3696: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: cf, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3718: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 32  
+# UVM_INFO classes/monitor.sv(132) @ 3718: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: cb  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3718: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: cb  |
+# UVM_INFO classes/sequence.sv(32) @ 3718: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: aa, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3728: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: cf  
+# UVM_INFO classes/monitor.sv(76) @ 3728: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 0d  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3728: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 0d  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3728: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected cb, got 0d
+# UVM_INFO classes/sequence.sv(70) @ 3728: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: db, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3750: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: aa  
+# UVM_INFO classes/monitor.sv(132) @ 3750: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 32  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3750: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 32  |
+# UVM_INFO classes/sequence.sv(32) @ 3750: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 35, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3760: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: db  
+# UVM_INFO classes/monitor.sv(76) @ 3760: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: d9  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3760: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: d9  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3760: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 32, got d9
+# UVM_INFO classes/sequence.sv(70) @ 3760: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 7b, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3782: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 35  
+# UVM_INFO classes/monitor.sv(132) @ 3782: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: aa  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3782: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: aa  |
+# UVM_INFO classes/sequence.sv(32) @ 3782: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 3e, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3792: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 7b  
+# UVM_INFO classes/monitor.sv(76) @ 3792: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: b7  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3792: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: b7  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3792: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected aa, got b7
+# UVM_INFO classes/sequence.sv(70) @ 3792: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: ee, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3814: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 3e  
+# UVM_INFO classes/monitor.sv(132) @ 3814: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 35  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3814: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 35  |
+# UVM_INFO classes/sequence.sv(32) @ 3814: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: ea, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3824: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: ee  
+# UVM_INFO classes/monitor.sv(76) @ 3824: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 9a  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3824: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 9a  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3824: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 35, got 9a
+# UVM_INFO classes/sequence.sv(70) @ 3824: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: bf, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3846: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: ea  
+# UVM_INFO classes/monitor.sv(132) @ 3846: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 3e  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3846: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 3e  |
+# UVM_INFO classes/sequence.sv(32) @ 3846: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: d5, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3856: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: bf  
+# UVM_INFO classes/monitor.sv(76) @ 3856: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: cb  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3856: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: cb  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3856: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected 3e, got cb
+# UVM_INFO classes/sequence.sv(70) @ 3856: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 13, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3878: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: d5  
+# UVM_INFO classes/monitor.sv(132) @ 3878: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: ea  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3878: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: ea  |
+# UVM_INFO classes/sequence.sv(32) @ 3878: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
+# Data in: 5f, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(95) @ 3888: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 13  
+# UVM_INFO classes/monitor.sv(76) @ 3888: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 32  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(112) @ 3888: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 32  |
+# UVM_ERROR classes/scoreboard.sv(76) @ 3888: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data mismatch!: expected ea, got 32
+# UVM_INFO classes/sequence.sv(70) @ 3888: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
+# Data in: 72, Data out: xx
+# Full: x, Half: x, Empty: x
+# UVM_INFO classes/driver.sv(50) @ 3910: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 5f  
+# UVM_INFO classes/monitor.sv(132) @ 3910: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: d5  |  full: 0  |  empty: 0  |  half: 0
+# UVM_INFO classes/scoreboard.sv(107) @ 3910: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: d5  |
+# UVM_INFO classes/driver.sv(95) @ 3920: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 72  
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 3920: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :  345
+# UVM_INFO :  986
 # UVM_WARNING :    0
-# UVM_ERROR :   34
+# UVM_ERROR :  113
 # UVM_FATAL :    0
 # ** Report counts by id
 # [FIFO_READ_SEQ]     1
 # [FIFO_WRITE_SEQ]     1
-# [GENERATE]    80
+# [GENERATE]   240
 # [Questa UVM]     2
 # [RNTST]     1
-# [SCOREBOARD]    42
+# [SCOREBOARD]   122
 # [TEST_DONE]     1
 # [UVMTOP]     1
-# [fifo_read_driver]    40
-# [fifo_read_monitor]    42
-# [fifo_scoreboard]    85
-# [fifo_write_driver]    40
-# [fifo_write_monitor]    43
+# [fifo_read_driver]   120
+# [fifo_read_monitor]   122
+# [fifo_scoreboard]   245
+# [fifo_write_driver]   120
+# [fifo_write_monitor]   123
 # ** Note: $finish    : /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 1360 ns  Iteration: 61  Instance: /top
+#    Time: 3920 ns  Iteration: 61  Instance: /top
 # 1
 # Break in Task uvm_pkg/uvm_root::run_test at /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
 # QuestaSim-64 vcover 2021.3_1 Coverage Utility 2021.08 Aug 15 2021
-# Start time: 14:50:45 on Jun 02,2024
+# Start time: 15:59:32 on Jun 02,2024
 # vcover report async_fifo.ucdb 
 # Coverage Report Summary Data by instance
 # 
@@ -825,13 +1865,13 @@ do run.do
 # 
 # Total Coverage By Instance (filtered view): 79.06%
 # 
-# End time: 14:50:46 on Jun 02,2024, Elapsed time: 0:00:01
+# End time: 15:59:32 on Jun 02,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcover 2021.3_1 Coverage Utility 2021.08 Aug 15 2021
-# Start time: 14:50:46 on Jun 02,2024
+# Start time: 15:59:33 on Jun 02,2024
 # vcover report async_fifo.ucdb -cvg -details 
 # ** Note: (vcover-17388) No matching coverage data found in file 'async_fifo.ucdb'.
-# End time: 14:50:46 on Jun 02,2024, Elapsed time: 0:00:00
+# End time: 15:59:33 on Jun 02,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 14:50:55 on Jun 02,2024, Elapsed time: 0:00:21
+# End time: 15:59:53 on Jun 02,2024, Elapsed time: 0:00:34
 # Errors: 0, Warnings: 0

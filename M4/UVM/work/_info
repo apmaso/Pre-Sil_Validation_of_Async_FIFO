@@ -13,8 +13,8 @@ Z0 d/u/amaso/Documents/ECE593/final_project/pre_silicon_final_project/M4/UVM
 Yfifo_bfm
 Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
 Z2 DXx6 mtiUvm 7 uvm_pkg 0 22 8V[`8]Q0W57le7Z>zYaAj1
-Z3 DXx4 work 8 fifo_pkg 0 22 jm=znkhER:;iPWWja7ocg1
-Z4 !s110 1717365028
+Z3 DXx4 work 8 fifo_pkg 0 22 2Be[:h_na2Q72XQS?_6591
+Z4 !s110 1717369153
 !i10b 1
 !s100 >hDkhfmN;BP6Z9S2Olh?Q1
 IecENM6UJU0jD^[_l8l<nL1
@@ -30,7 +30,7 @@ Z7 OL;L;2021.3_1;73
 r1
 !s85 0
 31
-Z8 !s108 1717365027.000000
+Z8 !s108 1717369152.000000
 Z9 !s107 classes/test.sv|classes/environment.sv|classes/scoreboard.sv|classes/agent.sv|classes/monitor.sv|classes/driver.sv|classes/sequencer.sv|classes/sequence.sv|classes/transaction.sv|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|top.sv|fifo_bfm.sv|fifo_pkg.sv|
 Z10 !s90 -reportprogress|300|-f|tb.f|
 !i113 0
@@ -39,7 +39,7 @@ Z12 !s92 +incdir+classes -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L in
 Z13 tCvgOpt 0
 vfifo_memory
 R1
-Z14 !s110 1717365026
+Z14 !s110 1717369151
 !i10b 1
 !s100 JWcz==]LSaf==XGE43]R51
 IT?d8R1z_7D;aghflh>6<T0
@@ -55,7 +55,7 @@ R7
 r1
 !s85 0
 31
-Z15 !s108 1717365026.000000
+Z15 !s108 1717369150.000000
 !s107 dut/fifo_memory.sv|
 !s90 -reportprogress|300|-lint|dut/fifo_memory.sv|
 !i113 0
@@ -67,11 +67,11 @@ R1
 R2
 R4
 !i10b 1
-!s100 WYdcFoO5He70Nc0LgeB^n2
-Ijm=znkhER:;iPWWja7ocg1
+!s100 KZmkY7iLH]3SLHLUReo131
+I2Be[:h_na2Q72XQS?_6591
 S1
 R0
-w1717365012
+w1717369137
 8fifo_pkg.sv
 Ffifo_pkg.sv
 F/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh
@@ -97,7 +97,7 @@ Fclasses/environment.sv
 Fclasses/test.sv
 !i122 5
 L0 1 0
-Vjm=znkhER:;iPWWja7ocg1
+V2Be[:h_na2Q72XQS?_6591
 R7
 r1
 !s85 0
@@ -111,7 +111,7 @@ R12
 R13
 vfifo_top
 R1
-R14
+!s110 1717369150
 !i10b 1
 !s100 3ZdjXlM^]0GmI_Zjo?E=50
 I>m>G[2@bzScMRX[zLZIfY2
@@ -127,7 +127,7 @@ R7
 r1
 !s85 0
 31
-!s108 1717365025.000000
+R15
 !s107 dut/fifo_top.sv|
 !s90 -reportprogress|300|-lint|dut/fifo_top.sv|
 !i113 0
@@ -151,7 +151,7 @@ R7
 r1
 !s85 0
 31
-R15
+Z17 !s108 1717369151.000000
 !s107 dut/read_pointer.sv|
 !s90 -reportprogress|300|-lint|dut/read_pointer.sv|
 !i113 0
@@ -159,7 +159,7 @@ R16
 R13
 vsync
 R1
-!s110 1717365027
+!s110 1717369152
 !i10b 1
 !s100 P;6<M59X8:nEiM>1[MR8b0
 IAC4>1oV1i_C]Qk>oYLd2E3
@@ -175,7 +175,7 @@ R7
 r1
 !s85 0
 31
-R15
+R17
 !s107 dut/sync.sv|
 !s90 -reportprogress|300|-lint|dut/sync.sv|
 !i113 0
@@ -210,8 +210,8 @@ R12
 R13
 Ttop_optimized
 !s11d fifo_pkg /home/amaso/common/Documents/ECE593/final_project/pre_silicon_final_project/M4/UVM/work 1 fifo_bfm 1 /home/amaso/common/Documents/ECE593/final_project/pre_silicon_final_project/M4/UVM/work 
-!s110 1717365030
-VJN47z@nMoT@PA@=DYOkza0
+!s110 1717369155
+Vz<Cm2SQ[@KEDJV<]^WaHE0
 04 3 4 work top fast 0
 !s124 OEM100
 o+acc +cover=sbfec+fifo_top(rtl).
@@ -236,7 +236,7 @@ R7
 r1
 !s85 0
 31
-R15
+R17
 !s107 dut/write_pointer.sv|
 !s90 -reportprogress|300|-lint|dut/write_pointer.sv|
 !i113 0

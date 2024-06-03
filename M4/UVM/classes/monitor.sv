@@ -17,7 +17,7 @@ class fifo_read_monitor extends uvm_monitor;
   uvm_analysis_port #(fifo_transaction) monitor_port_rd;
 
   // This variable is used to determine if the last transaction was a read
-  bit first_rd_en = 1;
+  int first_rd_en = 5;
 
   // Constructor
   function new(string name = "fifo_read_monitor", uvm_component parent);
@@ -56,24 +56,23 @@ class fifo_read_monitor extends uvm_monitor;
     forever begin
       mon_tx_rd = fifo_transaction::type_id::create("mon_tx_rd");
       mon_tx_rd.op = READ;
+      @(posedge bfm.clk_rd);
         if (bfm.rd_en) begin
-          if (first_rd_en) begin
+          if (first_rd_en > 0) begin
             #(CYCLE_TIME_RD);
-            @(posedge bfm.clk_rd);
-              first_rd_en = 0;
-              mon_tx_rd.rd_en = bfm.rd_en;
-              mon_tx_rd.data_out = bfm.data_out; 
-              mon_tx_rd.empty = bfm.empty;
-              mon_tx_rd.full = bfm.full;
-              mon_tx_rd.half = bfm.half;
+            first_rd_en--;
+            mon_tx_rd.rd_en = bfm.rd_en;
+            mon_tx_rd.data_out = bfm.data_out; 
+            mon_tx_rd.empty = bfm.empty;
+            mon_tx_rd.full = bfm.full;
+            mon_tx_rd.half = bfm.half;
           end
           else begin
-            @(posedge bfm.clk_rd);
-              mon_tx_rd.rd_en = bfm.rd_en;
-              mon_tx_rd.data_out = bfm.data_out; 
-              mon_tx_rd.empty = bfm.empty;
-              mon_tx_rd.full = bfm.full;
-              mon_tx_rd.half = bfm.half;
+            mon_tx_rd.rd_en = bfm.rd_en;
+            mon_tx_rd.data_out = bfm.data_out; 
+            mon_tx_rd.empty = bfm.empty;
+            mon_tx_rd.full = bfm.full;
+            mon_tx_rd.half = bfm.half;
           end
           `uvm_info(get_type_name(), $sformatf("Monitor mon_tx_rd \t|  rd_en: %b  |  data_out: %h  |  full: %b  |  empty: %b  |  half: %b", mon_tx_rd.rd_en, mon_tx_rd.data_out, mon_tx_rd.full, mon_tx_rd.empty, mon_tx_rd.half), UVM_MEDIUM);
           monitor_port_rd.write(mon_tx_rd);

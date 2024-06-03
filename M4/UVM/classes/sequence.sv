@@ -29,7 +29,7 @@ class fifo_write_sequence extends uvm_sequence #(fifo_transaction);
       tx_wr.wr_en = 1;
       tx_wr.rd_en = 0;
       
-      `uvm_info("GENERATE", tx_wr.convert2string(), UVM_MEDIUM)
+      `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
       finish_item(tx_wr);
     end
 
@@ -67,7 +67,7 @@ class fifo_read_sequence extends uvm_sequence #(fifo_transaction);
       tx_rd.wr_en = 0;
       tx_rd.rd_en = 1;
       
-      `uvm_info("GENERATE", tx_rd.convert2string(), UVM_MEDIUM)
+      `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)
       finish_item(tx_rd);
     end
 

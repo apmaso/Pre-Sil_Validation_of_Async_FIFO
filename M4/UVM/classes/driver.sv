@@ -16,13 +16,13 @@ class fifo_write_driver extends uvm_driver #(fifo_transaction);
   // Constructor
   function new(string name = "fifo_write_driver", uvm_component parent);
     super.new(name, parent);
-    `uvm_info(get_type_name(), $sformatf("Constructing %s", get_full_name()), UVM_HIGH);
+    `uvm_info(get_type_name(), $sformatf("Constructing %s", get_full_name()), UVM_DEBUG);
   endfunction : new
 
   // Build Phase
   function void build_phase(uvm_phase phase);
     super.build_phase(phase); 
-    `uvm_info(get_type_name(), $sformatf("Building %s", get_full_name()), UVM_HIGH);
+    `uvm_info(get_type_name(), $sformatf("Building %s", get_full_name()), UVM_DEBUG);
     
     if(!uvm_config_db #(virtual fifo_bfm)::get(this, "", "bfm", bfm))
       `uvm_fatal("NOBFM", {"bfm not defined for ", get_full_name(), "."});
@@ -32,7 +32,7 @@ class fifo_write_driver extends uvm_driver #(fifo_transaction);
   // Connect Phase
   function void connect_phase(uvm_phase phase);
     super.connect_phase(phase);  
-    `uvm_info(get_type_name(), $sformatf("Connecting %s", get_full_name()), UVM_HIGH);
+    `uvm_info(get_type_name(), $sformatf("Connecting %s", get_full_name()), UVM_DEBUG);
   endfunction : connect_phase
   
   // Run Phase
@@ -47,7 +47,7 @@ class fifo_write_driver extends uvm_driver #(fifo_transaction);
         bfm.data_in <= tx_wr.data_in;
         bfm.wr_en <= tx_wr.wr_en;
          
-      `uvm_info(get_type_name(), $sformatf("Driver tx_wr \t\t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  ", tx_wr.wr_en, tx_wr.rd_en, tx_wr.data_in), UVM_MEDIUM);
+      `uvm_info(get_type_name(), $sformatf("Driver tx_wr \t\t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  ", tx_wr.wr_en, tx_wr.rd_en, tx_wr.data_in), UVM_HIGH);
       seq_item_port.item_done(); 
     end
   endtask : run_phase

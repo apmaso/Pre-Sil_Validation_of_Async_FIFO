@@ -13,14 +13,14 @@ class fifo_agent extends uvm_agent;
     // Constructor
     function new(string name = "fifo_agent", uvm_component parent);
         super.new(name, parent);
-        `uvm_info(get_type_name(), $sformatf("Constructing %s", get_full_name()), UVM_HIGH);
+        `uvm_info(get_type_name(), $sformatf("Constructing %s", get_full_name()), UVM_DEBUG);
     endfunction : new
 
     // Build phase   TODO: Check if this can be virtual
     // virtual function void build_phase(uvm_phase phase);
     function void build_phase(uvm_phase phase);
         super.build_phase(phase);
-        `uvm_info(get_type_name(), $sformatf("Building %s", get_full_name()), UVM_HIGH);
+        `uvm_info(get_type_name(), $sformatf("Building %s", get_full_name()), UVM_DEBUG);
 
         // Create and configure the components
         sequencer_wr_h = fifo_sequencer::type_id::create("sequencer_wr_h", this);
@@ -36,7 +36,7 @@ class fifo_agent extends uvm_agent;
     //virtual function void connect_phase(uvm_phase phase);
     function void connect_phase(uvm_phase phase);
         super.connect_phase(phase);
-        `uvm_info(get_type_name(), $sformatf("Connecting %s", get_full_name()), UVM_HIGH);
+        `uvm_info(get_type_name(), $sformatf("Connecting %s", get_full_name()), UVM_DEBUG);
         
         // Connect the driver to the sequencer
         driver_wr_h.seq_item_port.connect(sequencer_wr_h.seq_item_export);

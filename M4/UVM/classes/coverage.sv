@@ -17,9 +17,9 @@ class fifo_coverage extends uvm_subscriber #(fifo_transaction);
     // Define covergroups
     covergroup cg;
         option.per_instance = 2;
-        EMPTY   : coverpoint tx.empty
-        FULL    : coverpoint tx.full
-        HALF    : coverpoint tx.half
+        EMPTY   : coverpoint tx.empty;
+        FULL    : coverpoint tx.full;
+        HALF    : coverpoint tx.half;
     endgroup : cg
 
     // Constructor

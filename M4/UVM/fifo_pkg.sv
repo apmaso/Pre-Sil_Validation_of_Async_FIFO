@@ -13,7 +13,6 @@ package fifo_pkg;
 	parameter READ_DELAY = 0;
 
 
-	`include "coverage.sv"
 	`include "transaction.sv"
 	`include "sequence.sv"
 	`include "sequencer.sv"
@@ -21,6 +20,7 @@ package fifo_pkg;
 	`include "monitor.sv"
     `include "agent.sv"
 	`include "scoreboard.sv"
+	`include "coverage.sv"
     `include "environment.sv"
 	`include "test.sv"
 

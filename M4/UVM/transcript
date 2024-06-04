@@ -14,426 +14,68 @@
 # //
 do run.do
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 12:44:17 on Jun 03,2024
+# Start time: 18:49:45 on Jun 03,2024
 # vlog -reportprogress 300 -lint dut/fifo_top.sv 
 # -- Compiling module fifo_top
 # 
 # Top level modules:
 # 	fifo_top
-# End time: 12:44:17 on Jun 03,2024, Elapsed time: 0:00:00
+# End time: 18:49:45 on Jun 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 12:44:17 on Jun 03,2024
+# Start time: 18:49:45 on Jun 03,2024
 # vlog -reportprogress 300 -lint dut/fifo_memory.sv 
 # -- Compiling module fifo_memory
 # 
 # Top level modules:
 # 	fifo_memory
-# End time: 12:44:17 on Jun 03,2024, Elapsed time: 0:00:00
+# End time: 18:49:45 on Jun 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 12:44:17 on Jun 03,2024
+# Start time: 18:49:45 on Jun 03,2024
 # vlog -reportprogress 300 -lint dut/read_pointer.sv 
 # -- Compiling module read_pointer
 # 
 # Top level modules:
 # 	read_pointer
-# End time: 12:44:17 on Jun 03,2024, Elapsed time: 0:00:00
+# End time: 18:49:45 on Jun 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 12:44:17 on Jun 03,2024
+# Start time: 18:49:45 on Jun 03,2024
 # vlog -reportprogress 300 -lint dut/write_pointer.sv 
 # -- Compiling module write_pointer
 # 
 # Top level modules:
 # 	write_pointer
-# End time: 12:44:18 on Jun 03,2024, Elapsed time: 0:00:01
+# End time: 18:49:46 on Jun 03,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 12:44:18 on Jun 03,2024
+# Start time: 18:49:46 on Jun 03,2024
 # vlog -reportprogress 300 -lint dut/sync.sv 
 # -- Compiling module sync
 # 
 # Top level modules:
 # 	sync
-# End time: 12:44:18 on Jun 03,2024, Elapsed time: 0:00:00
+# End time: 18:49:46 on Jun 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 12:44:18 on Jun 03,2024
+# Start time: 18:49:46 on Jun 03,2024
 # vlog -reportprogress 300 -f tb.f 
 # -- Compiling package fifo_pkg
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
 # ** Note: (vlog-2286) fifo_pkg.sv(3): Using implicit +incdir+/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-# -- Compiling interface fifo_bfm
-# -- Importing package fifo_pkg
+# ** Error: (vlog-13069) ** while parsing file included at fifo_pkg.sv(23)
+# ** at classes/coverage.sv(21): near "FULL": syntax error, unexpected IDENTIFIER, expecting ';' or '{'.
+# ** Error: (vlog-13069) ** while parsing file included at fifo_pkg.sv(23)
+# ** at classes/coverage.sv(21): near ":": syntax error, unexpected ':'.
 # -- Compiling module top
-# 
-# Top level modules:
-# 	top
-# End time: 12:44:19 on Jun 03,2024, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vopt 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 12:44:19 on Jun 03,2024
-# vopt -reportprogress 300 top -o top_optimized "+acc" "+cover=sbfec+fifo_top(rtl)." 
-# 
-# Top level modules:
-# 	top
-# 
-# Analyzing design...
-# -- Loading module top
-# -- Importing package fifo_pkg
-# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-# -- Loading package mtiUvm.questa_uvm_pkg
-# -- Loading interface fifo_bfm
-# -- Loading module fifo_top
-# -- Loading module fifo_memory
-# -- Loading module write_pointer
-# -- Loading module read_pointer
-# -- Loading module sync
-# Optimizing 12 design-units (inlining 0/9 module instances):
-# -- Optimizing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)(fast)
-# -- Optimizing package mtiUvm.questa_uvm_pkg(fast)
-# -- Optimizing package fifo_pkg(fast)
-# -- Optimizing module write_pointer(fast)
-# -- Optimizing module fifo_top(fast)
-# -- Optimizing module read_pointer(fast)
-# -- Optimizing module fifo_memory(fast)
-# -- Optimizing interface fifo_bfm(fast__2)
-# -- Optimizing interface fifo_bfm(fast__3)
-# -- Optimizing module top(fast)
-# -- Optimizing module sync(fast)
-# -- Optimizing interface fifo_bfm(fast)
-# Optimized design name is top_optimized
-# End time: 12:44:25 on Jun 03,2024, Elapsed time: 0:00:06
-# Errors: 0, Warnings: 0
-# vsim top_optimized -coverage 
-# Start time: 12:44:25 on Jun 03,2024
-# Loading sv_std.std
-# Loading work.fifo_bfm(fast)
-# Loading mtiUvm.uvm_pkg(fast)
-# Loading work.fifo_pkg(fast)
-# Loading mtiUvm.questa_uvm_pkg(fast)
-# Loading work.top(fast)
-# Loading work.fifo_bfm(fast__2)
-# Loading work.fifo_top(fast)
-# Loading work.fifo_bfm(fast__3)
-# Loading work.fifo_memory(fast)
-# Loading work.write_pointer(fast)
-# Loading work.read_pointer(fast)
-# Loading work.sync(fast)
-# Loading /pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
-# 1
-# ----------------------------------------------------------------
-# UVM-1.1d
-# (C) 2007-2013 Mentor Graphics Corporation
-# (C) 2007-2013 Cadence Design Systems, Inc.
-# (C) 2006-2013 Synopsys, Inc.
-# (C) 2011-2013 Cypress Semiconductor Corp.
-# ----------------------------------------------------------------
-# 
-#   ***********       IMPORTANT RELEASE NOTES         ************
-# 
-#   You are using a version of the UVM library that has been compiled
-#   with `UVM_NO_DEPRECATED undefined.
-#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
-# 
-#   You are using a version of the UVM library that has been compiled
-#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
-#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
-# 
-#       (Specify +UVM_NO_RELNOTES to turn off this notice)
-# 
-# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
-# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
-# UVM_INFO @ 0: reporter [RNTST] Running test my_first_test...
-# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
-# ---------------------------------------------------------------
-# Name                       Type                     Size  Value
-# ---------------------------------------------------------------
-# uvm_test_top               my_first_test            -     @471 
-#   environment_h            fifo_environment         -     @478 
-#     agent_h                fifo_agent               -     @485 
-#       driver_rd_h          fifo_read_driver         -     @755 
-#         rsp_port           uvm_analysis_port        -     @770 
-#         seq_item_port      uvm_seq_item_pull_port   -     @762 
-#       driver_wr_h          fifo_write_driver        -     @732 
-#         rsp_port           uvm_analysis_port        -     @747 
-#         seq_item_port      uvm_seq_item_pull_port   -     @739 
-#       monitor_rd_h         fifo_read_monitor        -     @725 
-#         monitor_port_rd    uvm_analysis_port        -     @781 
-#       monitor_wr_h         fifo_write_monitor       -     @718 
-#         monitor_port_wr    uvm_analysis_port        -     @790 
-#       sequencer_rd_h       fifo_sequencer           -     @609 
-#         rsp_export         uvm_analysis_export      -     @616 
-#         seq_item_export    uvm_seq_item_pull_imp    -     @710 
-#         arbitration_queue  array                    0     -    
-#         lock_queue         array                    0     -    
-#         num_last_reqs      integral                 32    'd1  
-#         num_last_rsps      integral                 32    'd1  
-#       sequencer_wr_h       fifo_sequencer           -     @500 
-#         rsp_export         uvm_analysis_export      -     @507 
-#         seq_item_export    uvm_seq_item_pull_imp    -     @601 
-#         arbitration_queue  array                    0     -    
-#         lock_queue         array                    0     -    
-#         num_last_reqs      integral                 32    'd1  
-#         num_last_rsps      integral                 32    'd1  
-#     scoreboard_h           fifo_scoreboard          -     @492 
-#       scoreboard_port_rd   uvm_analysis_imp_port_b  -     @816 
-#       scoreboard_port_wr   uvm_analysis_imp_port_a  -     @808 
-# ---------------------------------------------------------------
-# 
-# UVM_INFO classes/sequence.sv(18) @ 0: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [FIFO_WRITE_SEQ] Starting write sequence
-# UVM_INFO classes/sequence.sv(59) @ 0: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [FIFO_READ_SEQ] Starting read sequence
-# UVM_INFO classes/sequence.sv(32) @ 80: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
-# Data in: 14, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 102: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 14  
-# UVM_INFO classes/sequence.sv(32) @ 102: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
-# Data in: af, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 134: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: af  
-# UVM_INFO classes/monitor.sv(125) @ 134: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 14  |  full: 0  |  empty: 1  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 134: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 14  |
-# UVM_INFO classes/sequence.sv(32) @ 134: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
-# Data in: ce, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 166: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: ce  
-# UVM_INFO classes/monitor.sv(125) @ 166: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: af  |  full: 0  |  empty: 1  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 166: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: af  |
-# UVM_INFO classes/sequence.sv(32) @ 166: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
-# Data in: df, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 198: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: df  
-# UVM_INFO classes/monitor.sv(125) @ 198: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: ce  |  full: 0  |  empty: 1  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 198: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: ce  |
-# UVM_INFO classes/sequence.sv(32) @ 198: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
-# Data in: 40, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 230: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 40  
-# UVM_INFO classes/monitor.sv(125) @ 230: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: df  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 230: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: df  |
-# UVM_INFO classes/sequence.sv(32) @ 230: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
-# Data in: b3, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 262: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: b3  
-# UVM_INFO classes/monitor.sv(125) @ 262: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 40  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 262: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 40  |
-# UVM_INFO classes/sequence.sv(32) @ 262: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
-# Data in: 32, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/sequence.sv(70) @ 280: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
-# Data in: 88, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 294: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 32  
-# UVM_INFO classes/monitor.sv(125) @ 294: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: b3  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 294: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: b3  |
-# UVM_INFO classes/sequence.sv(32) @ 294: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
-# Data in: e3, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(96) @ 304: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 88  
-# UVM_INFO classes/sequence.sv(70) @ 304: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
-# Data in: c8, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(50) @ 326: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: e3  
-# UVM_INFO classes/monitor.sv(125) @ 326: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 32  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 326: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 32  |
-# UVM_INFO classes/sequence.sv(32) @ 326: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
-# Data in: 25, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(96) @ 336: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: c8  
-# UVM_INFO classes/sequence.sv(70) @ 336: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
-# Data in: 6c, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/monitor.sv(67) @ 356: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 14  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(112) @ 356: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 14  |
-# UVM_INFO classes/scoreboard.sv(79) @ 356: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 14, got 14
-# UVM_INFO classes/driver.sv(50) @ 358: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 25  
-# UVM_INFO classes/monitor.sv(125) @ 358: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: e3  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 358: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: e3  |
-# UVM_INFO classes/sequence.sv(32) @ 358: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [GENERATE] Writing: 1 or Reading: 0
-# Data in: 5d, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/driver.sv(96) @ 368: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 6c  
-# UVM_INFO classes/sequence.sv(70) @ 368: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
-# Data in: a5, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/monitor.sv(67) @ 388: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: af  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(112) @ 388: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: af  |
-# UVM_INFO classes/scoreboard.sv(79) @ 388: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected af, got af
-# UVM_INFO classes/driver.sv(50) @ 390: uvm_test_top.environment_h.agent_h.driver_wr_h [fifo_write_driver] Driver tx_wr 		|  wr_en: 1  |  rd_en: 0  |  data_in: 5d  
-# UVM_INFO classes/monitor.sv(125) @ 390: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 25  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 390: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 25  |
-# UVM_INFO classes/driver.sv(96) @ 400: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: a5  
-# UVM_INFO classes/sequence.sv(70) @ 400: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
-# Data in: 7e, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/monitor.sv(67) @ 420: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: ce  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(112) @ 420: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: ce  |
-# UVM_INFO classes/scoreboard.sv(79) @ 420: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ce, got ce
-# UVM_INFO classes/monitor.sv(125) @ 422: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 5d  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 422: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 5d  |
-# UVM_INFO classes/driver.sv(96) @ 432: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 7e  
-# UVM_INFO classes/sequence.sv(70) @ 432: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
-# Data in: d9, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/monitor.sv(67) @ 452: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: df  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(112) @ 452: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: df  |
-# UVM_INFO classes/scoreboard.sv(79) @ 452: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected df, got df
-# UVM_INFO classes/monitor.sv(125) @ 454: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 5d  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 454: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 5d  |
-# UVM_INFO classes/driver.sv(96) @ 464: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: d9  
-# UVM_INFO classes/sequence.sv(70) @ 464: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
-# Data in: b6, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/monitor.sv(67) @ 484: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 40  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(112) @ 484: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 40  |
-# UVM_INFO classes/scoreboard.sv(79) @ 484: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 40, got 40
-# UVM_INFO classes/monitor.sv(125) @ 486: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 5d  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 486: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 5d  |
-# UVM_INFO classes/driver.sv(96) @ 496: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: b6  
-# UVM_INFO classes/sequence.sv(70) @ 496: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
-# Data in: 90, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/monitor.sv(67) @ 516: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: b3  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(112) @ 516: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: b3  |
-# UVM_INFO classes/scoreboard.sv(79) @ 516: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected b3, got b3
-# UVM_INFO classes/monitor.sv(125) @ 518: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 5d  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 518: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 5d  |
-# UVM_INFO classes/driver.sv(96) @ 528: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 90  
-# UVM_INFO classes/sequence.sv(70) @ 528: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
-# Data in: 4d, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/monitor.sv(67) @ 548: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: 32  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(112) @ 548: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: 32  |
-# UVM_INFO classes/scoreboard.sv(79) @ 548: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 32, got 32
-# UVM_INFO classes/monitor.sv(125) @ 550: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 5d  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 550: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 5d  |
-# UVM_INFO classes/driver.sv(96) @ 560: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 4d  
-# UVM_INFO classes/sequence.sv(70) @ 560: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [GENERATE] Writing: 0 or Reading: 1
-# Data in: 0f, Data out: xx
-# Full: x, Half: x, Empty: x
-# UVM_INFO classes/monitor.sv(67) @ 580: uvm_test_top.environment_h.agent_h.monitor_rd_h [fifo_read_monitor] Monitor mon_tx_rd 	|  rd_en: 1  |  data_out: e3  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(112) @ 580: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  rd_en: 1  |  data_out: e3  |
-# UVM_INFO classes/scoreboard.sv(79) @ 580: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected e3, got e3
-# UVM_INFO classes/monitor.sv(125) @ 582: uvm_test_top.environment_h.agent_h.monitor_wr_h [fifo_write_monitor] Monitor mon_tx_wr 	|  wr_en: 1  |  data_in: 5d  |  full: 0  |  empty: 0  |  half: 0
-# UVM_INFO classes/scoreboard.sv(107) @ 582: uvm_test_top.environment_h.scoreboard_h [fifo_scoreboard] Scoreboard tx 	|  wr_en: 1  |  data_in: 5d  |
-# UVM_INFO classes/driver.sv(96) @ 592: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 0f  
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 592: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# 
-# --- UVM Report Summary ---
-# 
-# ** Report counts by severity
-# UVM_INFO :  101
-# UVM_WARNING :    0
-# UVM_ERROR :    0
-# UVM_FATAL :    0
-# ** Report counts by id
-# [FIFO_READ_SEQ]     1
-# [FIFO_WRITE_SEQ]     1
-# [GENERATE]    20
-# [Questa UVM]     2
-# [RNTST]     1
-# [SCOREBOARD]     8
-# [TEST_DONE]     1
-# [UVMTOP]     1
-# [fifo_read_driver]    10
-# [fifo_read_monitor]     8
-# [fifo_scoreboard]    23
-# [fifo_write_driver]    10
-# [fifo_write_monitor]    15
-# ** Note: $finish    : /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 592 ns  Iteration: 61  Instance: /top
-# 1
-# Break in Task uvm_pkg/uvm_root::run_test at /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
-# QuestaSim-64 vcover 2021.3_1 Coverage Utility 2021.08 Aug 15 2021
-# Start time: 12:44:36 on Jun 03,2024
-# vcover report async_fifo.ucdb 
-# Coverage Report Summary Data by instance
-# 
-# =================================================================================
-# === Instance: /top/dut/bfm
-# === Design Unit: work.fifo_bfm
-# =================================================================================
-#     Enabled Coverage              Bins      Hits    Misses  Coverage
-#     ----------------              ----      ----    ------  --------
-#     Statements                      14         7         7    50.00%
-# 
-# =================================================================================
-# === Instance: /top/dut/mem_inst
-# === Design Unit: work.fifo_memory
-# =================================================================================
-#     Enabled Coverage              Bins      Hits    Misses  Coverage
-#     ----------------              ----      ----    ------  --------
-#     Branches                         4         4         0   100.00%
-#     Expressions                      2         0         2     0.00%
-#     Statements                       5         5         0   100.00%
-# 
-# =================================================================================
-# === Instance: /top/dut/write_ptr
-# === Design Unit: work.write_pointer
-# =================================================================================
-#     Enabled Coverage              Bins      Hits    Misses  Coverage
-#     ----------------              ----      ----    ------  --------
-#     Branches                         2         2         0   100.00%
-#     Expressions                      3         0         3     0.00%
-#     Statements                      11        11         0   100.00%
-# 
-# =================================================================================
-# === Instance: /top/dut/read_ptr
-# === Design Unit: work.read_pointer
-# =================================================================================
-#     Enabled Coverage              Bins      Hits    Misses  Coverage
-#     ----------------              ----      ----    ------  --------
-#     Branches                         2         2         0   100.00%
-#     Expressions                      1         1         0   100.00%
-#     Statements                      11        11         0   100.00%
-# 
-# =================================================================================
-# === Instance: /top/dut/sync_w2r
-# === Design Unit: work.sync
-# =================================================================================
-#     Enabled Coverage              Bins      Hits    Misses  Coverage
-#     ----------------              ----      ----    ------  --------
-#     Branches                         2         2         0   100.00%
-#     Statements                       5         5         0   100.00%
-# 
-# =================================================================================
-# === Instance: /top/dut/sync_r2w
-# === Design Unit: work.sync
-# =================================================================================
-#     Enabled Coverage              Bins      Hits    Misses  Coverage
-#     ----------------              ----      ----    ------  --------
-#     Branches                         2         2         0   100.00%
-#     Statements                       5         5         0   100.00%
-# 
-# =================================================================================
-# === Instance: /top/dut
-# === Design Unit: work.fifo_top
-# =================================================================================
-#     Enabled Coverage              Bins      Hits    Misses  Coverage
-#     ----------------              ----      ----    ------  --------
-#     Expressions                      4         2         2    50.00%
-# 
-# =================================================================================
-# === Instance: /fifo_pkg
-# === Design Unit: work.fifo_pkg
-# =================================================================================
-#     Enabled Coverage              Bins      Hits    Misses  Coverage
-#     ----------------              ----      ----    ------  --------
-#     Assertions                       2         2         0   100.00%
-# 
-# 
-# TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 2
-# 
-# Total Coverage By Instance (filtered view): 79.06%
-# 
-# End time: 12:44:36 on Jun 03,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vcover 2021.3_1 Coverage Utility 2021.08 Aug 15 2021
-# Start time: 12:44:36 on Jun 03,2024
-# vcover report async_fifo.ucdb -cvg -details 
-# ** Note: (vcover-17388) No matching coverage data found in file 'async_fifo.ucdb'.
-# End time: 12:44:36 on Jun 03,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 12:44:51 on Jun 03,2024, Elapsed time: 0:00:26
-# Errors: 0, Warnings: 0
+# ** Error: ** while parsing file included at fifo_pkg.sv(23)
+# ** at top.sv(16): (vlog-13006) Could not find the package (fifo_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: (vlog-13069) fifo_pkg.sv(27): near "endpackage": syntax error, unexpected "SystemVerilog keyword 'endpackage'".
+# End time: 18:49:47 on Jun 03,2024, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 0
+# ** Error: /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/vlog failed.
+# Error in macro ./run.do line 12
+# /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/vlog failed.
+#     while executing
+# "vlog -f tb.f"

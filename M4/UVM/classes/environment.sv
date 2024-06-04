@@ -6,6 +6,7 @@ class fifo_environment extends uvm_env;
     // Declare handles to the components
     fifo_agent  agent_h;
     fifo_scoreboard scoreboard_h;
+    fifo_coverage coverage_h;
 
     // Constructor 
     function new(string name = "fifo_environment", uvm_component parent);
@@ -20,6 +21,7 @@ class fifo_environment extends uvm_env;
        
         agent_h         = fifo_agent::type_id::create("agent_h", this);
         scoreboard_h    = fifo_scoreboard::type_id::create("scoreboard_h", this);
+        coverage_h      = fifo_coverage::type_id::create("coverage_h", this);
     endfunction : build_phase
 
     // Connect the driver to the sequencer
@@ -30,6 +32,11 @@ class fifo_environment extends uvm_env;
         // Connect the analysis port to the scoreboard
         agent_h.monitor_wr_h.monitor_port_wr.connect(scoreboard_h.scoreboard_port_wr);
         agent_h.monitor_rd_h.monitor_port_rd.connect(scoreboard_h.scoreboard_port_rd);
+
+        // Connect the analysis port to the coverage
+        // TODO: Not sure if I can connect the same port to two different components
+        // agent_h.monitor_wr_h.monitor_port_wr.connect(coverage_h.analysis_export);
+        agent_h.monitor_wr_h.monitor_port_rd.connect(coverage_h.analysis_export);
 
     endfunction : connect_phase
 

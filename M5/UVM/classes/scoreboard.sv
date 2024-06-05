@@ -20,7 +20,7 @@ class fifo_scoreboard extends uvm_scoreboard;
     uvm_analysis_imp_port_rd #(fifo_transaction, fifo_scoreboard) scoreboard_port_rd;
     fifo_transaction tx_stack_wr[$];
     fifo_transaction tx_stack_rd[$];
-
+    int count = 0;
     
 
     // Constructor
@@ -74,12 +74,26 @@ class fifo_scoreboard extends uvm_scoreboard;
     endtask: run_phase
 
     function void write_port_wr(fifo_transaction mon_tx_wr);
-        tx_stack_wr.push_back(mon_tx_wr);
+        if (mon_tx_wr.wr_en == 1) begin
+            if (count < 2**ADDR_WIDTH) begin
+                count++;
+                tx_stack_wr.push_back(mon_tx_wr);
+            end
+            else begin
+                uvm_error("SCOREBOARD", "Attempted to write to a full FIFO!");
+            end
+        end
         `uvm_info(get_type_name(), $sformatf("Scoreboard tx \t|  wr_en: %b  |  data_in: %h  |", mon_tx_wr.wr_en, mon_tx_wr.data_in), UVM_HIGH);
     endfunction : write_port_wr
 
     function void write_port_rd(fifo_transaction mon_tx_rd);
-        tx_stack_rd.push_back(mon_tx_rd);
+        if (count > 0) begin
+            count--;
+            tx_stack_rd.push_back(mon_tx_rd);
+        end
+        else begin
+            uvm_error("SCOREBOARD", "Attempted to read from an empty FIFO!");
+        end
         `uvm_info(get_type_name(), $sformatf("Scoreboard tx \t|  rd_en: %b  |  data_out: %h  |", mon_tx_rd.rd_en, mon_tx_rd.data_out), UVM_HIGH);
     endfunction : write_port_rd
     

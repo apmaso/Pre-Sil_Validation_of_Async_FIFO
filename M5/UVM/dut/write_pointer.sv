@@ -26,9 +26,7 @@ module write_pointer #(
     end
 
     assign waddr = binary_wptr[ADDR_WIDTH-1:0];
-    //assign binary_wptr_next = binary_wptr + (inc & ~full);
-    // Attempting to inject a bug by not checking for full
-    assign binary_wptr_next = binary_wptr + (inc);
+    assign binary_wptr_next = binary_wptr + (inc & ~full);
     assign gray_wptr_next = (binary_wptr_next>>1) ^ binary_wptr_next;
 
     assign full_next =  ((gray_wptr_next[ADDR_WIDTH-2:0] == wq2_rptr[ADDR_WIDTH-2:0]) &&

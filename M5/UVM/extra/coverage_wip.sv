@@ -32,12 +32,12 @@ class fifo_coverage extends uvm_subscriber #(fifo_transaction);
     covergroup cg_fifo;
 	option.per_instance = 1;
         coverpoint tx.wr_en {
-            bins wr_en = {1};
-            bins wr_den = {0};
+            bins wr_en_high = {1};
+	    bins wr_en_low = {0};
         }
         coverpoint tx.rd_en {
-            bins rd_en = {1};
-            bins rd_den = {0};
+            bins rd_en_high = {1};
+	    bins rd_en_low = {0};
         }
         coverpoint tx.full {
             bins full_true = {1};
@@ -85,10 +85,13 @@ class fifo_coverage extends uvm_subscriber #(fifo_transaction);
     covergroup cg_data_integrity;
 	option.per_instance = 1;
         coverpoint tx.data_out {
-            bins data_low = {[0:63]};
+	    bins data_val_range[4] = {[0:255]}; //4 bins, bin 1 0:63 bin 2 64:127, bin 3 128:191, bin 4 192:255
+	    /*
+            bins data_low = {[0:63]}; //64 bins each with a single value
             bins data_mid = {[64:127]};
             bins data_high = {[128:191]};
             bins data_max = {[192:255]};
+	    */
         }
     endgroup
 
@@ -108,6 +111,7 @@ class fifo_coverage extends uvm_subscriber #(fifo_transaction);
     endgroup
 
     // Covergroup for burst w/r ops
+    /* wr_en and rd_en are covered above
     covergroup cg_burst_ops;
 	option.per_instance = 1;
         coverpoint tx.wr_en {
@@ -117,6 +121,7 @@ class fifo_coverage extends uvm_subscriber #(fifo_transaction);
             bins burst_read = {1};
         }
     endgroup
+    */
 
 /*
     // Covergroup for RST 
@@ -138,6 +143,7 @@ class fifo_coverage extends uvm_subscriber #(fifo_transaction);
             bins rd_en_idle = {0};
         }
     endgroup
+    
 /*
     // Covergroup for high-freq ops
     covergroup cg_high_freq;
@@ -153,16 +159,17 @@ class fifo_coverage extends uvm_subscriber #(fifo_transaction);
     covergroup cg_abrupt_change;
 	option.per_instance = 1;
         coverpoint tx.wr_en {
-            bins wr_en_change = {1};
-            bins wr_en_stable = {0};
+            bins wr_en_high_to_low = (1 => 0);
+            bins wr_en_low_to_high = (0 => 1);
         }
         coverpoint tx.rd_en {
-            bins rd_en_change = {1};
-            bins rd_en_stable = {0};
+            bins rd_en_high_to_low = (1 => 0);
+            bins rd_en_low_to_high = (0 => 1);
         }
     endgroup
 
     // Covergroup for capturing throughput under varied conditions
+/*	//covered above
     covergroup cg_throughput;
 	option.per_instance = 1;
         coverpoint tx.wr_en {
@@ -174,6 +181,7 @@ class fifo_coverage extends uvm_subscriber #(fifo_transaction);
             bins rd_en_inactive = {0};
         }
     endgroup
+*/
 
     // Constructor
     function new(string name = "fifo_coverage", uvm_component parent = null);
@@ -186,12 +194,12 @@ class fifo_coverage extends uvm_subscriber #(fifo_transaction);
 	cg_half_full_empty = new();
 	cg_data_integrity = new();
 	cg_data_patterns = new();
-	cg_burst_ops = new();
+	//cg_burst_ops = new();
 	//cg_reset = new();
 	cg_idle_cycles = new();
 	//cg_high_freq = new();
 	cg_abrupt_change = new();
-	cg_throughput = new();
+	//cg_throughput = new();
     endfunction : new
 
     virtual function void write(fifo_transaction t);
@@ -204,12 +212,12 @@ class fifo_coverage extends uvm_subscriber #(fifo_transaction);
 	cg_half_full_empty.sample();
 	cg_data_integrity.sample();
 	cg_data_patterns.sample();
-	cg_burst_ops.sample();
+	//cg_burst_ops.sample();
 	//cg_reset.sample();
 	cg_idle_cycles.sample();
 	//cg_high_freq.sample();
 	cg_abrupt_change.sample();
-	cg_throughput.sample();
+	//cg_throughput.sample();
 
 
 	cov_cg_fifo = cg_fifo.get_coverage();
@@ -217,25 +225,24 @@ class fifo_coverage extends uvm_subscriber #(fifo_transaction);
     	cov_cg_half_full_empty = cg_half_full_empty.get_coverage();
     	cov_cg_data_integrity = cg_data_integrity.get_coverage();
     	cov_cg_data_patterns = cg_data_patterns.get_coverage();
-    	cov_cg_burst_ops = cg_burst_ops.get_coverage();
+    	//cov_cg_burst_ops = cg_burst_ops.get_coverage();
     	//cov_cg_reset = cg_reset.get_coverage();
     	cov_cg_idle_cycles = cg_idle_cycles.get_coverage();
     	//cov_cg_high_freq = cg_high_freq.get_coverage();
     	cov_cg_abrupt_change = cg_abrupt_change.get_coverage();
-    	cov_cg_throughput = cg_throughput.get_coverage();
+    	//cov_cg_throughput = cg_throughput.get_coverage();
 
-        `uvm_info(get_type_name(), $sformatf("Coverage cg_fifo: %f", cov_cg_fifo), UVM_NONE);
+    `uvm_info(get_type_name(), $sformatf("Coverage cg_fifo: %f", cov_cg_fifo), UVM_NONE);
 	//`uvm_info(get_type_name(), $sformatf("Coverage cg_fifo_depth: %f", cov_cg_fifo_depth), UVM_NONE);
 	`uvm_info(get_type_name(), $sformatf("Coverage cg_half_full_empty: %f", cov_cg_half_full_empty), UVM_NONE);
 	`uvm_info(get_type_name(), $sformatf("Coverage cg_data_integrity: %f", cov_cg_data_integrity), UVM_NONE);
 	`uvm_info(get_type_name(), $sformatf("Coverage cg_data_patterns: %f", cov_cg_data_patterns), UVM_NONE);
-	`uvm_info(get_type_name(), $sformatf("Coverage cg_burst_ops: %f", cov_cg_burst_ops), UVM_NONE);
+	//`uvm_info(get_type_name(), $sformatf("Coverage cg_burst_ops: %f", cov_cg_burst_ops), UVM_NONE);
 	//`uvm_info(get_type_name(), $sformatf("Coverage cg_reset: %f", cov_cg_reset), UVM_NONE);
 	`uvm_info(get_type_name(), $sformatf("Coverage cg_idle_cycles: %f", cov_cg_idle_cycles), UVM_NONE);
 	//`uvm_info(get_type_name(), $sformatf("Coverage cg_high_freq: %f", cov_cg_high_freq), UVM_NONE);
 	`uvm_info(get_type_name(), $sformatf("Coverage cg_abrupt_change: %f", cov_cg_abrupt_change), UVM_NONE);
-	`uvm_info(get_type_name(), $sformatf("Coverage cg_throughput: %f", cov_cg_throughput), UVM_NONE);
+	//`uvm_info(get_type_name(), $sformatf("Coverage cg_throughput: %f", cov_cg_throughput), UVM_NONE);
     endfunction : write
 
 endclass
-

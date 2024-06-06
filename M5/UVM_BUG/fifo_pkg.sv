@@ -8,9 +8,9 @@ package fifo_pkg;
 	parameter CYCLE_TIME_RD = 20;    // 50 MHz
 	
 	// Parameters for the testbench	
-	parameter TX_COUNT_WR = 10;
-	parameter TX_COUNT_RD = 10;
-	parameter READ_DELAY = 10;
+	parameter TX_COUNT_WR = 30;
+	parameter TX_COUNT_RD = 30;
+	parameter READ_DELAY = 5;
 
 
 	`include "transaction.sv"

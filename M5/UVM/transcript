@@ -14,52 +14,52 @@
 # //
 do run.do
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 18:03:14 on Jun 04,2024
+# Start time: 16:31:26 on Jun 07,2024
 # vlog -reportprogress 300 -lint dut/fifo_top.sv 
 # -- Compiling module fifo_top
 # 
 # Top level modules:
 # 	fifo_top
-# End time: 18:03:14 on Jun 04,2024, Elapsed time: 0:00:00
+# End time: 16:31:26 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 18:03:14 on Jun 04,2024
+# Start time: 16:31:26 on Jun 07,2024
 # vlog -reportprogress 300 -lint dut/fifo_memory.sv 
 # -- Compiling module fifo_memory
 # 
 # Top level modules:
 # 	fifo_memory
-# End time: 18:03:15 on Jun 04,2024, Elapsed time: 0:00:01
+# End time: 16:31:26 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 18:03:15 on Jun 04,2024
+# Start time: 16:31:26 on Jun 07,2024
 # vlog -reportprogress 300 -lint dut/read_pointer.sv 
 # -- Compiling module read_pointer
 # 
 # Top level modules:
 # 	read_pointer
-# End time: 18:03:15 on Jun 04,2024, Elapsed time: 0:00:00
+# End time: 16:31:26 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 18:03:15 on Jun 04,2024
+# Start time: 16:31:27 on Jun 07,2024
 # vlog -reportprogress 300 -lint dut/write_pointer.sv 
 # -- Compiling module write_pointer
 # 
 # Top level modules:
 # 	write_pointer
-# End time: 18:03:15 on Jun 04,2024, Elapsed time: 0:00:00
+# End time: 16:31:27 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 18:03:15 on Jun 04,2024
+# Start time: 16:31:27 on Jun 07,2024
 # vlog -reportprogress 300 -lint dut/sync.sv 
 # -- Compiling module sync
 # 
 # Top level modules:
 # 	sync
-# End time: 18:03:15 on Jun 04,2024, Elapsed time: 0:00:00
+# End time: 16:31:27 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 18:03:15 on Jun 04,2024
+# Start time: 16:31:27 on Jun 07,2024
 # vlog -reportprogress 300 -f tb.f 
 # -- Compiling package fifo_pkg
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
@@ -70,10 +70,10 @@ do run.do
 # 
 # Top level modules:
 # 	top
-# End time: 18:03:16 on Jun 04,2024, Elapsed time: 0:00:01
+# End time: 16:31:28 on Jun 07,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vopt 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 18:03:16 on Jun 04,2024
+# Start time: 16:31:29 on Jun 07,2024
 # vopt -reportprogress 300 top -o top_optimized "+acc" "+cover=sbfec+fifo_top(rtl)." 
 # 
 # Top level modules:
@@ -104,10 +104,10 @@ do run.do
 # -- Optimizing module sync(fast)
 # -- Optimizing interface fifo_bfm(fast)
 # Optimized design name is top_optimized
-# End time: 18:03:22 on Jun 04,2024, Elapsed time: 0:00:06
+# End time: 16:31:36 on Jun 07,2024, Elapsed time: 0:00:07
 # Errors: 0, Warnings: 0
 # vsim top_optimized -coverage 
-# Start time: 18:03:22 on Jun 04,2024
+# Start time: 16:31:37 on Jun 07,2024
 # Loading sv_std.std
 # Loading work.fifo_bfm(fast)
 # Loading mtiUvm.uvm_pkg(fast)
@@ -123,6 +123,16 @@ do run.do
 # Loading work.sync(fast)
 # Loading /pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
 # 1
+# Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: amaso  Hostname: mo.ece.pdx.edu  ProcessID: 32746
+#           Attempting to use alternate WLF file "./wlftDI0s5o".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftDI0s5o
 # ----------------------------------------------------------------
 # UVM-1.1d
 # (C) 2007-2013 Mentor Graphics Corporation
@@ -147,168 +157,168 @@ do run.do
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test my_first_test...
 # UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
-# ----------------------------------------------------------------
-# Name                       Type                      Size  Value
-# ----------------------------------------------------------------
-# uvm_test_top               my_first_test             -     @471 
-#   environment_h            fifo_environment          -     @478 
-#     agent_h                fifo_agent                -     @485 
-#       driver_rd_h          fifo_read_driver          -     @774 
-#         rsp_port           uvm_analysis_port         -     @789 
-#         seq_item_port      uvm_seq_item_pull_port    -     @781 
-#       driver_wr_h          fifo_write_driver         -     @751 
-#         rsp_port           uvm_analysis_port         -     @766 
-#         seq_item_port      uvm_seq_item_pull_port    -     @758 
-#       monitor_rd_h         fifo_read_monitor         -     @744 
-#         monitor_port_rd    uvm_analysis_port         -     @800 
-#       monitor_wr_h         fifo_write_monitor        -     @737 
-#         monitor_port_wr    uvm_analysis_port         -     @809 
-#       sequencer_rd_h       fifo_sequencer            -     @628 
-#         rsp_export         uvm_analysis_export       -     @635 
-#         seq_item_export    uvm_seq_item_pull_imp     -     @729 
-#         arbitration_queue  array                     0     -    
-#         lock_queue         array                     0     -    
-#         num_last_reqs      integral                  32    'd1  
-#         num_last_rsps      integral                  32    'd1  
-#       sequencer_wr_h       fifo_sequencer            -     @519 
-#         rsp_export         uvm_analysis_export       -     @526 
-#         seq_item_export    uvm_seq_item_pull_imp     -     @620 
-#         arbitration_queue  array                     0     -    
-#         lock_queue         array                     0     -    
-#         num_last_reqs      integral                  32    'd1  
-#         num_last_rsps      integral                  32    'd1  
-#     coverage_h             fifo_coverage             -     @499 
-#       analysis_imp         uvm_analysis_imp          -     @506 
-#     scoreboard_h           fifo_scoreboard           -     @492 
-#       scoreboard_port_rd   uvm_analysis_imp_port_rd  -     @835 
-#       scoreboard_port_wr   uvm_analysis_imp_port_wr  -     @827 
-# ----------------------------------------------------------------
+# ---------------------------------------------------------------
+# Name                       Type                     Size  Value
+# ---------------------------------------------------------------
+# uvm_test_top               my_first_test            -     @471 
+#   environment_h            fifo_environment         -     @478 
+#     agent_h                fifo_agent               -     @485 
+#       driver_rd_h          fifo_read_driver         -     @774 
+#         rsp_port           uvm_analysis_port        -     @789 
+#         seq_item_port      uvm_seq_item_pull_port   -     @781 
+#       driver_wr_h          fifo_write_driver        -     @751 
+#         rsp_port           uvm_analysis_port        -     @766 
+#         seq_item_port      uvm_seq_item_pull_port   -     @758 
+#       monitor_rd_h         fifo_read_monitor        -     @744 
+#         monitor_port_rd    uvm_analysis_port        -     @800 
+#       monitor_wr_h         fifo_write_monitor       -     @737 
+#         monitor_port_wr    uvm_analysis_port        -     @809 
+#       sequencer_rd_h       fifo_sequencer           -     @628 
+#         rsp_export         uvm_analysis_export      -     @635 
+#         seq_item_export    uvm_seq_item_pull_imp    -     @729 
+#         arbitration_queue  array                    0     -    
+#         lock_queue         array                    0     -    
+#         num_last_reqs      integral                 32    'd1  
+#         num_last_rsps      integral                 32    'd1  
+#       sequencer_wr_h       fifo_sequencer           -     @519 
+#         rsp_export         uvm_analysis_export      -     @526 
+#         seq_item_export    uvm_seq_item_pull_imp    -     @620 
+#         arbitration_queue  array                    0     -    
+#         lock_queue         array                    0     -    
+#         num_last_reqs      integral                 32    'd1  
+#         num_last_rsps      integral                 32    'd1  
+#     coverage_h             fifo_coverage            -     @499 
+#       analysis_imp         uvm_analysis_imp         -     @506 
+#     scoreboard_h           fifo_scoreboard          -     @492 
+#       scoreboard_port_rd   uvm_analysis_imp_port_b  -     @835 
+#       scoreboard_port_wr   uvm_analysis_imp_port_a  -     @827 
+# ---------------------------------------------------------------
 # 
 # UVM_INFO classes/sequence.sv(18) @ 0: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [FIFO_WRITE_SEQ] Starting write sequence
 # UVM_INFO classes/sequence.sv(59) @ 0: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [FIFO_READ_SEQ] Starting read sequence
-# UVM_INFO classes/driver.sv(96) @ 304: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 88  
-# UVM_INFO classes/driver.sv(96) @ 336: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: c8  
+# UVM_INFO classes/driver.sv(96) @ 208: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 88  
+# UVM_INFO classes/driver.sv(96) @ 240: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: c8  
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
-# mon_tx_rd  fifo_transaction  -     @998 
+# mon_tx_rd  fifo_transaction  -     @974 
 # ----------------------------------------
-# UVM_INFO classes/coverage.sv(218) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
-# UVM_INFO classes/coverage.sv(220) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
-# UVM_INFO classes/coverage.sv(221) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 25.000000
-# UVM_INFO classes/coverage.sv(222) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
-# UVM_INFO classes/coverage.sv(223) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
-# UVM_INFO classes/coverage.sv(225) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
-# UVM_INFO classes/coverage.sv(227) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
-# UVM_INFO classes/coverage.sv(228) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
-# UVM_INFO classes/scoreboard.sv(71) @ 356: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 14, got 14
-# UVM_INFO classes/driver.sv(96) @ 368: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 6c  
+# UVM_INFO classes/coverage.sv(227) @ 260: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
+# UVM_INFO classes/coverage.sv(229) @ 260: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
+# UVM_INFO classes/coverage.sv(230) @ 260: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 25.000000
+# UVM_INFO classes/coverage.sv(231) @ 260: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
+# UVM_INFO classes/coverage.sv(232) @ 260: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
+# UVM_INFO classes/coverage.sv(234) @ 260: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
+# UVM_INFO classes/coverage.sv(236) @ 260: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
+# UVM_INFO classes/coverage.sv(237) @ 260: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
+# UVM_INFO classes/scoreboard.sv(71) @ 260: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 14, got 14
+# UVM_INFO classes/driver.sv(96) @ 272: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 6c  
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @983 
+# ----------------------------------------
+# UVM_INFO classes/coverage.sv(227) @ 292: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
+# UVM_INFO classes/coverage.sv(229) @ 292: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
+# UVM_INFO classes/coverage.sv(230) @ 292: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 50.000000
+# UVM_INFO classes/coverage.sv(231) @ 292: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
+# UVM_INFO classes/coverage.sv(232) @ 292: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
+# UVM_INFO classes/coverage.sv(234) @ 292: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
+# UVM_INFO classes/coverage.sv(236) @ 292: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
+# UVM_INFO classes/coverage.sv(237) @ 292: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
+# UVM_INFO classes/scoreboard.sv(71) @ 292: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected af, got af
+# UVM_INFO classes/driver.sv(96) @ 304: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: a5  
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @991 
+# ----------------------------------------
+# UVM_INFO classes/coverage.sv(227) @ 324: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
+# UVM_INFO classes/coverage.sv(229) @ 324: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
+# UVM_INFO classes/coverage.sv(230) @ 324: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 75.000000
+# UVM_INFO classes/coverage.sv(231) @ 324: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
+# UVM_INFO classes/coverage.sv(232) @ 324: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
+# UVM_INFO classes/coverage.sv(234) @ 324: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
+# UVM_INFO classes/coverage.sv(236) @ 324: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
+# UVM_INFO classes/coverage.sv(237) @ 324: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
+# UVM_INFO classes/scoreboard.sv(71) @ 324: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ce, got ce
+# UVM_INFO classes/driver.sv(96) @ 336: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 7e  
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @999 
+# ----------------------------------------
+# UVM_INFO classes/coverage.sv(227) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
+# UVM_INFO classes/coverage.sv(229) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
+# UVM_INFO classes/coverage.sv(230) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 75.000000
+# UVM_INFO classes/coverage.sv(231) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
+# UVM_INFO classes/coverage.sv(232) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
+# UVM_INFO classes/coverage.sv(234) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
+# UVM_INFO classes/coverage.sv(236) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
+# UVM_INFO classes/coverage.sv(237) @ 356: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
+# UVM_INFO classes/scoreboard.sv(71) @ 356: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected df, got df
+# UVM_INFO classes/driver.sv(96) @ 368: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: d9  
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1007
 # ----------------------------------------
-# UVM_INFO classes/coverage.sv(218) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
-# UVM_INFO classes/coverage.sv(220) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
-# UVM_INFO classes/coverage.sv(221) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 50.000000
-# UVM_INFO classes/coverage.sv(222) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
-# UVM_INFO classes/coverage.sv(223) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
-# UVM_INFO classes/coverage.sv(225) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
-# UVM_INFO classes/coverage.sv(227) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
-# UVM_INFO classes/coverage.sv(228) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
-# UVM_INFO classes/scoreboard.sv(71) @ 388: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected af, got af
-# UVM_INFO classes/driver.sv(96) @ 400: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: a5  
+# UVM_INFO classes/coverage.sv(227) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
+# UVM_INFO classes/coverage.sv(229) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
+# UVM_INFO classes/coverage.sv(230) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
+# UVM_INFO classes/coverage.sv(231) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
+# UVM_INFO classes/coverage.sv(232) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
+# UVM_INFO classes/coverage.sv(234) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
+# UVM_INFO classes/coverage.sv(236) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
+# UVM_INFO classes/coverage.sv(237) @ 388: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
+# UVM_INFO classes/scoreboard.sv(71) @ 388: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 40, got 40
+# UVM_INFO classes/driver.sv(96) @ 400: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: b6  
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1015
 # ----------------------------------------
-# UVM_INFO classes/coverage.sv(218) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
-# UVM_INFO classes/coverage.sv(220) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
-# UVM_INFO classes/coverage.sv(221) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 75.000000
-# UVM_INFO classes/coverage.sv(222) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
-# UVM_INFO classes/coverage.sv(223) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
-# UVM_INFO classes/coverage.sv(225) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
-# UVM_INFO classes/coverage.sv(227) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
-# UVM_INFO classes/coverage.sv(228) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
-# UVM_INFO classes/scoreboard.sv(71) @ 420: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ce, got ce
-# UVM_INFO classes/driver.sv(96) @ 432: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 7e  
+# UVM_INFO classes/coverage.sv(227) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
+# UVM_INFO classes/coverage.sv(229) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
+# UVM_INFO classes/coverage.sv(230) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
+# UVM_INFO classes/coverage.sv(231) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
+# UVM_INFO classes/coverage.sv(232) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
+# UVM_INFO classes/coverage.sv(234) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
+# UVM_INFO classes/coverage.sv(236) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
+# UVM_INFO classes/coverage.sv(237) @ 420: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
+# UVM_INFO classes/scoreboard.sv(71) @ 420: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected b3, got b3
+# UVM_INFO classes/driver.sv(96) @ 432: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 90  
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1023
 # ----------------------------------------
-# UVM_INFO classes/coverage.sv(218) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
-# UVM_INFO classes/coverage.sv(220) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
-# UVM_INFO classes/coverage.sv(221) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 75.000000
-# UVM_INFO classes/coverage.sv(222) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
-# UVM_INFO classes/coverage.sv(223) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
-# UVM_INFO classes/coverage.sv(225) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
-# UVM_INFO classes/coverage.sv(227) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
-# UVM_INFO classes/coverage.sv(228) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
-# UVM_INFO classes/scoreboard.sv(71) @ 452: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected df, got df
-# UVM_INFO classes/driver.sv(96) @ 464: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: d9  
+# UVM_INFO classes/coverage.sv(227) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
+# UVM_INFO classes/coverage.sv(229) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
+# UVM_INFO classes/coverage.sv(230) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
+# UVM_INFO classes/coverage.sv(231) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
+# UVM_INFO classes/coverage.sv(232) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
+# UVM_INFO classes/coverage.sv(234) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
+# UVM_INFO classes/coverage.sv(236) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
+# UVM_INFO classes/coverage.sv(237) @ 452: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
+# UVM_INFO classes/scoreboard.sv(71) @ 452: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 32, got 32
+# UVM_INFO classes/driver.sv(96) @ 464: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 4d  
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1031
 # ----------------------------------------
-# UVM_INFO classes/coverage.sv(218) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
-# UVM_INFO classes/coverage.sv(220) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
-# UVM_INFO classes/coverage.sv(221) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
-# UVM_INFO classes/coverage.sv(222) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
-# UVM_INFO classes/coverage.sv(223) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
-# UVM_INFO classes/coverage.sv(225) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
-# UVM_INFO classes/coverage.sv(227) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
-# UVM_INFO classes/coverage.sv(228) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
-# UVM_INFO classes/scoreboard.sv(71) @ 484: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 40, got 40
-# UVM_INFO classes/driver.sv(96) @ 496: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: b6  
-# ----------------------------------------
-# Name       Type              Size  Value
-# ----------------------------------------
-# mon_tx_rd  fifo_transaction  -     @1039
-# ----------------------------------------
-# UVM_INFO classes/coverage.sv(218) @ 516: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
-# UVM_INFO classes/coverage.sv(220) @ 516: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
-# UVM_INFO classes/coverage.sv(221) @ 516: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
-# UVM_INFO classes/coverage.sv(222) @ 516: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
-# UVM_INFO classes/coverage.sv(223) @ 516: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
-# UVM_INFO classes/coverage.sv(225) @ 516: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
-# UVM_INFO classes/coverage.sv(227) @ 516: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
-# UVM_INFO classes/coverage.sv(228) @ 516: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
-# UVM_INFO classes/scoreboard.sv(71) @ 516: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected b3, got b3
-# UVM_INFO classes/driver.sv(96) @ 528: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 90  
-# ----------------------------------------
-# Name       Type              Size  Value
-# ----------------------------------------
-# mon_tx_rd  fifo_transaction  -     @1047
-# ----------------------------------------
-# UVM_INFO classes/coverage.sv(218) @ 548: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
-# UVM_INFO classes/coverage.sv(220) @ 548: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
-# UVM_INFO classes/coverage.sv(221) @ 548: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
-# UVM_INFO classes/coverage.sv(222) @ 548: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
-# UVM_INFO classes/coverage.sv(223) @ 548: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
-# UVM_INFO classes/coverage.sv(225) @ 548: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
-# UVM_INFO classes/coverage.sv(227) @ 548: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
-# UVM_INFO classes/coverage.sv(228) @ 548: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
-# UVM_INFO classes/scoreboard.sv(71) @ 548: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 32, got 32
-# UVM_INFO classes/driver.sv(96) @ 560: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 4d  
-# ----------------------------------------
-# Name       Type              Size  Value
-# ----------------------------------------
-# mon_tx_rd  fifo_transaction  -     @1055
-# ----------------------------------------
-# UVM_INFO classes/coverage.sv(218) @ 580: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
-# UVM_INFO classes/coverage.sv(220) @ 580: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
-# UVM_INFO classes/coverage.sv(221) @ 580: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
-# UVM_INFO classes/coverage.sv(222) @ 580: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
-# UVM_INFO classes/coverage.sv(223) @ 580: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
-# UVM_INFO classes/coverage.sv(225) @ 580: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
-# UVM_INFO classes/coverage.sv(227) @ 580: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
-# UVM_INFO classes/coverage.sv(228) @ 580: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
-# UVM_INFO classes/scoreboard.sv(71) @ 580: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected e3, got e3
-# UVM_INFO classes/driver.sv(96) @ 592: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 0f  
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 592: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO classes/coverage.sv(227) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 40.000000
+# UVM_INFO classes/coverage.sv(229) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
+# UVM_INFO classes/coverage.sv(230) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
+# UVM_INFO classes/coverage.sv(231) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
+# UVM_INFO classes/coverage.sv(232) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
+# UVM_INFO classes/coverage.sv(234) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 0.000000
+# UVM_INFO classes/coverage.sv(236) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 25.000000
+# UVM_INFO classes/coverage.sv(237) @ 484: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 25.000000
+# UVM_INFO classes/scoreboard.sv(71) @ 484: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected e3, got e3
+# UVM_INFO classes/driver.sv(96) @ 496: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 0f  
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 496: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
 # 
@@ -328,11 +338,11 @@ do run.do
 # [fifo_coverage]    64
 # [fifo_read_driver]    10
 # ** Note: $finish    : /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 592 ns  Iteration: 61  Instance: /top
+#    Time: 496 ns  Iteration: 61  Instance: /top
 # 1
 # Break in Task uvm_pkg/uvm_root::run_test at /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
 # QuestaSim-64 vcover 2021.3_1 Coverage Utility 2021.08 Aug 15 2021
-# Start time: 18:03:36 on Jun 04,2024
+# Start time: 16:31:56 on Jun 07,2024
 # vcover report async_fifo.ucdb 
 # Coverage Report Summary Data by instance
 # 
@@ -398,7 +408,7 @@ do run.do
 # =================================================================================
 #     Enabled Coverage              Bins      Hits    Misses  Coverage
 #     ----------------              ----      ----    ------  --------
-#     Expressions                      4         2         2    50.00%
+#     Expressions                      4         1         3    25.00%
 # 
 # =================================================================================
 # === Instance: /fifo_pkg
@@ -416,12 +426,12 @@ do run.do
 # 
 # TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 2
 # 
-# Total Coverage By Instance (filtered view): 70.50%
+# Total Coverage By Instance (filtered view): 68.50%
 # 
-# End time: 18:03:36 on Jun 04,2024, Elapsed time: 0:00:00
+# End time: 16:31:56 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcover 2021.3_1 Coverage Utility 2021.08 Aug 15 2021
-# Start time: 18:03:36 on Jun 04,2024
+# Start time: 16:31:56 on Jun 07,2024
 # vcover report async_fifo.ucdb -cvg -details 
 # Coverage Report by instance with details
 # 
@@ -472,6 +482,41 @@ do run.do
 #         % Hit:                                         50.00%        100          -                      
 #         bin half_full_true                                  0          1          -    ZERO                 
 #         bin half_full_false                                 8          1          -    Covered              
+#  Covergroup instance \/fifo_pkg::fifo_coverage::cg_fifo  
+#                                                        40.00%        100          -    Uncovered            
+#     covered/total bins:                                     4         10          -                      
+#     missing/total bins:                                     6         10          -                      
+#     % Hit:                                             40.00%        100          -                      
+#     Coverpoint #coverpoint__0#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          2          -                      
+#         missing/total bins:                                 2          2          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin wr_en                                           0          1          -    ZERO                 
+#         bin wr_den                                          0          1          -    ZERO                 
+#     Coverpoint #coverpoint__1#                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin rd_en                                           8          1          -    Covered              
+#         bin rd_den                                          0          1          -    ZERO                 
+#     Coverpoint #coverpoint__2#                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin full_true                                       0          1          -    ZERO                 
+#         bin full_false                                      8          1          -    Covered              
+#     Coverpoint #coverpoint__3#                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin empty_true                                      0          1          -    ZERO                 
+#         bin empty_false                                     8          1          -    Covered              
+#     Coverpoint #coverpoint__4#                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin half_full_true                                  0          1          -    ZERO                 
+#         bin half_full_false                                 8          1          -    Covered              
 #  TYPE /fifo_pkg/fifo_coverage/cg_half_full_empty       50.00%        100          -    Uncovered            
 #     covered/total bins:                                     1          2          -                      
 #     missing/total bins:                                     1          2          -                      
@@ -482,7 +527,31 @@ do run.do
 #         % Hit:                                         50.00%        100          -                      
 #         bin half_full_true                                  0          1          -    ZERO                 
 #         bin half_full_false                                 8          1          -    Covered              
+#  Covergroup instance \/fifo_pkg::fifo_coverage::cg_half_full_empty  
+#                                                        50.00%        100          -    Uncovered            
+#     covered/total bins:                                     1          2          -                      
+#     missing/total bins:                                     1          2          -                      
+#     % Hit:                                             50.00%        100          -                      
+#     Coverpoint #coverpoint__0#                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin half_full_true                                  0          1          -    ZERO                 
+#         bin half_full_false                                 8          1          -    Covered              
 #  TYPE /fifo_pkg/fifo_coverage/cg_data_integrity       100.00%        100          -    Covered              
+#     covered/total bins:                                     4          4          -                      
+#     missing/total bins:                                     0          4          -                      
+#     % Hit:                                            100.00%        100          -                      
+#     Coverpoint #coverpoint__0#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 4          4          -                      
+#         missing/total bins:                                 0          4          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin data_low                                        2          1          -    Covered              
+#         bin data_mid                                        1          1          -    Covered              
+#         bin data_high                                       2          1          -    Covered              
+#         bin data_max                                        3          1          -    Covered              
+#  Covergroup instance \/fifo_pkg::fifo_coverage::cg_data_integrity  
+#                                                       100.00%        100          -    Covered              
 #     covered/total bins:                                     4          4          -                      
 #     missing/total bins:                                     0          4          -                      
 #     % Hit:                                            100.00%        100          -                      
@@ -512,7 +581,41 @@ do run.do
 #         bin pattern_zero                                    0          1          -    ZERO                 
 #         bin pattern_all_ones                                0          1          -    ZERO                 
 #         bin pattern_alt_ones                                0          1          -    ZERO                 
+#  Covergroup instance \/fifo_pkg::fifo_coverage::cg_data_patterns  
+#                                                         0.00%        100          -    ZERO                 
+#     covered/total bins:                                     0          6          -                      
+#     missing/total bins:                                     6          6          -                      
+#     % Hit:                                              0.00%        100          -                      
+#     Coverpoint #coverpoint__0#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          3          -                      
+#         missing/total bins:                                 3          3          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin pattern_zero                                    0          1          -    ZERO                 
+#         bin pattern_all_ones                                0          1          -    ZERO                 
+#         bin pattern_alt_ones                                0          1          -    ZERO                 
+#     Coverpoint #coverpoint__1#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          3          -                      
+#         missing/total bins:                                 3          3          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin pattern_zero                                    0          1          -    ZERO                 
+#         bin pattern_all_ones                                0          1          -    ZERO                 
+#         bin pattern_alt_ones                                0          1          -    ZERO                 
 #  TYPE /fifo_pkg/fifo_coverage/cg_burst_ops             50.00%        100          -    Uncovered            
+#     covered/total bins:                                     1          2          -                      
+#     missing/total bins:                                     1          2          -                      
+#     % Hit:                                             50.00%        100          -                      
+#     Coverpoint #coverpoint__0#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          1          -                      
+#         missing/total bins:                                 1          1          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin burst_write                                     0          1          -    ZERO                 
+#     Coverpoint #coverpoint__1#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin burst_read                                      8          1          -    Covered              
+#  Covergroup instance \/fifo_pkg::fifo_coverage::cg_burst_ops  
+#                                                        50.00%        100          -    Uncovered            
 #     covered/total bins:                                     1          2          -                      
 #     missing/total bins:                                     1          2          -                      
 #     % Hit:                                             50.00%        100          -                      
@@ -556,7 +659,41 @@ do run.do
 #         % Hit:                                         50.00%        100          -                      
 #         bin rd_en_change                                    8          1          -    Covered              
 #         bin rd_en_stable                                    0          1          -    ZERO                 
+#  Covergroup instance \/fifo_pkg::fifo_coverage::cg_abrupt_change  
+#                                                        25.00%        100          -    Uncovered            
+#     covered/total bins:                                     1          4          -                      
+#     missing/total bins:                                     3          4          -                      
+#     % Hit:                                             25.00%        100          -                      
+#     Coverpoint #coverpoint__0#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          2          -                      
+#         missing/total bins:                                 2          2          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin wr_en_change                                    0          1          -    ZERO                 
+#         bin wr_en_stable                                    0          1          -    ZERO                 
+#     Coverpoint #coverpoint__1#                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin rd_en_change                                    8          1          -    Covered              
+#         bin rd_en_stable                                    0          1          -    ZERO                 
 #  TYPE /fifo_pkg/fifo_coverage/cg_throughput            25.00%        100          -    Uncovered            
+#     covered/total bins:                                     1          4          -                      
+#     missing/total bins:                                     3          4          -                      
+#     % Hit:                                             25.00%        100          -                      
+#     Coverpoint #coverpoint__0#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          2          -                      
+#         missing/total bins:                                 2          2          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin wr_en_active                                    0          1          -    ZERO                 
+#         bin wr_en_inactive                                  0          1          -    ZERO                 
+#     Coverpoint #coverpoint__1#                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin rd_en_active                                    8          1          -    Covered              
+#         bin rd_en_inactive                                  0          1          -    ZERO                 
+#  Covergroup instance \/fifo_pkg::fifo_coverage::cg_throughput  
+#                                                        25.00%        100          -    Uncovered            
 #     covered/total bins:                                     1          4          -                      
 #     missing/total bins:                                     3          4          -                      
 #     % Hit:                                             25.00%        100          -                      
@@ -612,6 +749,41 @@ do run.do
 #         % Hit:                                         50.00%        100          -                      
 #         bin half_full_true                                  0          1          -    ZERO                 
 #         bin half_full_false                                 8          1          -    Covered              
+#  Covergroup instance \/fifo_pkg::fifo_coverage::cg_fifo  
+#                                                        40.00%        100          -    Uncovered            
+#     covered/total bins:                                     4         10          -                      
+#     missing/total bins:                                     6         10          -                      
+#     % Hit:                                             40.00%        100          -                      
+#     Coverpoint #coverpoint__0#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          2          -                      
+#         missing/total bins:                                 2          2          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin wr_en                                           0          1          -    ZERO                 
+#         bin wr_den                                          0          1          -    ZERO                 
+#     Coverpoint #coverpoint__1#                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin rd_en                                           8          1          -    Covered              
+#         bin rd_den                                          0          1          -    ZERO                 
+#     Coverpoint #coverpoint__2#                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin full_true                                       0          1          -    ZERO                 
+#         bin full_false                                      8          1          -    Covered              
+#     Coverpoint #coverpoint__3#                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin empty_true                                      0          1          -    ZERO                 
+#         bin empty_false                                     8          1          -    Covered              
+#     Coverpoint #coverpoint__4#                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin half_full_true                                  0          1          -    ZERO                 
+#         bin half_full_false                                 8          1          -    Covered              
 #  TYPE /fifo_pkg/fifo_coverage/cg_half_full_empty       50.00%        100          -    Uncovered            
 #     covered/total bins:                                     1          2          -                      
 #     missing/total bins:                                     1          2          -                      
@@ -622,7 +794,31 @@ do run.do
 #         % Hit:                                         50.00%        100          -                      
 #         bin half_full_true                                  0          1          -    ZERO                 
 #         bin half_full_false                                 8          1          -    Covered              
+#  Covergroup instance \/fifo_pkg::fifo_coverage::cg_half_full_empty  
+#                                                        50.00%        100          -    Uncovered            
+#     covered/total bins:                                     1          2          -                      
+#     missing/total bins:                                     1          2          -                      
+#     % Hit:                                             50.00%        100          -                      
+#     Coverpoint #coverpoint__0#                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin half_full_true                                  0          1          -    ZERO                 
+#         bin half_full_false                                 8          1          -    Covered              
 #  TYPE /fifo_pkg/fifo_coverage/cg_data_integrity       100.00%        100          -    Covered              
+#     covered/total bins:                                     4          4          -                      
+#     missing/total bins:                                     0          4          -                      
+#     % Hit:                                            100.00%        100          -                      
+#     Coverpoint #coverpoint__0#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 4          4          -                      
+#         missing/total bins:                                 0          4          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin data_low                                        2          1          -    Covered              
+#         bin data_mid                                        1          1          -    Covered              
+#         bin data_high                                       2          1          -    Covered              
+#         bin data_max                                        3          1          -    Covered              
+#  Covergroup instance \/fifo_pkg::fifo_coverage::cg_data_integrity  
+#                                                       100.00%        100          -    Covered              
 #     covered/total bins:                                     4          4          -                      
 #     missing/total bins:                                     0          4          -                      
 #     % Hit:                                            100.00%        100          -                      
@@ -652,7 +848,41 @@ do run.do
 #         bin pattern_zero                                    0          1          -    ZERO                 
 #         bin pattern_all_ones                                0          1          -    ZERO                 
 #         bin pattern_alt_ones                                0          1          -    ZERO                 
+#  Covergroup instance \/fifo_pkg::fifo_coverage::cg_data_patterns  
+#                                                         0.00%        100          -    ZERO                 
+#     covered/total bins:                                     0          6          -                      
+#     missing/total bins:                                     6          6          -                      
+#     % Hit:                                              0.00%        100          -                      
+#     Coverpoint #coverpoint__0#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          3          -                      
+#         missing/total bins:                                 3          3          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin pattern_zero                                    0          1          -    ZERO                 
+#         bin pattern_all_ones                                0          1          -    ZERO                 
+#         bin pattern_alt_ones                                0          1          -    ZERO                 
+#     Coverpoint #coverpoint__1#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          3          -                      
+#         missing/total bins:                                 3          3          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin pattern_zero                                    0          1          -    ZERO                 
+#         bin pattern_all_ones                                0          1          -    ZERO                 
+#         bin pattern_alt_ones                                0          1          -    ZERO                 
 #  TYPE /fifo_pkg/fifo_coverage/cg_burst_ops             50.00%        100          -    Uncovered            
+#     covered/total bins:                                     1          2          -                      
+#     missing/total bins:                                     1          2          -                      
+#     % Hit:                                             50.00%        100          -                      
+#     Coverpoint #coverpoint__0#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          1          -                      
+#         missing/total bins:                                 1          1          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin burst_write                                     0          1          -    ZERO                 
+#     Coverpoint #coverpoint__1#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 1          1          -                      
+#         missing/total bins:                                 0          1          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin burst_read                                      8          1          -    Covered              
+#  Covergroup instance \/fifo_pkg::fifo_coverage::cg_burst_ops  
+#                                                        50.00%        100          -    Uncovered            
 #     covered/total bins:                                     1          2          -                      
 #     missing/total bins:                                     1          2          -                      
 #     % Hit:                                             50.00%        100          -                      
@@ -696,7 +926,41 @@ do run.do
 #         % Hit:                                         50.00%        100          -                      
 #         bin rd_en_change                                    8          1          -    Covered              
 #         bin rd_en_stable                                    0          1          -    ZERO                 
+#  Covergroup instance \/fifo_pkg::fifo_coverage::cg_abrupt_change  
+#                                                        25.00%        100          -    Uncovered            
+#     covered/total bins:                                     1          4          -                      
+#     missing/total bins:                                     3          4          -                      
+#     % Hit:                                             25.00%        100          -                      
+#     Coverpoint #coverpoint__0#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          2          -                      
+#         missing/total bins:                                 2          2          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin wr_en_change                                    0          1          -    ZERO                 
+#         bin wr_en_stable                                    0          1          -    ZERO                 
+#     Coverpoint #coverpoint__1#                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin rd_en_change                                    8          1          -    Covered              
+#         bin rd_en_stable                                    0          1          -    ZERO                 
 #  TYPE /fifo_pkg/fifo_coverage/cg_throughput            25.00%        100          -    Uncovered            
+#     covered/total bins:                                     1          4          -                      
+#     missing/total bins:                                     3          4          -                      
+#     % Hit:                                             25.00%        100          -                      
+#     Coverpoint #coverpoint__0#                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                 0          2          -                      
+#         missing/total bins:                                 2          2          -                      
+#         % Hit:                                          0.00%        100          -                      
+#         bin wr_en_active                                    0          1          -    ZERO                 
+#         bin wr_en_inactive                                  0          1          -    ZERO                 
+#     Coverpoint #coverpoint__1#                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin rd_en_active                                    8          1          -    Covered              
+#         bin rd_en_inactive                                  0          1          -    ZERO                 
+#  Covergroup instance \/fifo_pkg::fifo_coverage::cg_throughput  
+#                                                        25.00%        100          -    Uncovered            
 #     covered/total bins:                                     1          4          -                      
 #     missing/total bins:                                     3          4          -                      
 #     % Hit:                                             25.00%        100          -                      
@@ -717,7 +981,7 @@ do run.do
 # 
 # Total Coverage By Instance (filtered view): 36.25%
 # 
-# End time: 18:03:36 on Jun 04,2024, Elapsed time: 0:00:00
+# End time: 16:31:56 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 18:03:53 on Jun 04,2024, Elapsed time: 0:00:31
-# Errors: 0, Warnings: 0
+# End time: 16:32:43 on Jun 07,2024, Elapsed time: 0:01:06
+# Errors: 0, Warnings: 2

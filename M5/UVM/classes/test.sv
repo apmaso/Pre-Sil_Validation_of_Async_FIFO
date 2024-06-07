@@ -85,8 +85,8 @@ class half_test extends my_first_test;
     task run_phase(uvm_phase phase);
         super.run_phase(phase);
         `uvm_info(get_type_name(), $sformatf("Running %s", get_full_name()), UVM_HIGH);
-        write_sequence_h = fifo_write_sequence::type_id::create("write_sequence_h");
-        read_sequence_h = fifo_read_sequence::type_id::create("read_sequence_h");
+        write_sequence_h = fifo_half_wr_seq::type_id::create("write_sequence_h");
+        read_sequence_h = fifo_half_rd_seq::type_id::create("read_sequence_h");
 
         phase.raise_objection(this);
         // Run the sequences in parallel

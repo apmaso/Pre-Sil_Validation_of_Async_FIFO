@@ -39,17 +39,11 @@ class my_first_test extends uvm_test;
         read_sequence_h = fifo_read_sequence::type_id::create("read_sequence_h");
 
         phase.raise_objection(this);
-
-/*        if (!write_sequence_h.randomize())
-            `uvm_error("RANDOMIZE", "Failed to randomize write sequence")
-        if (!read_sequence_h.randomize())
-            `uvm_error("RANDOMIZE", "Failed to randomize read sequence")
-*/
+        // Run the sequences in parallel
         fork
             write_sequence_h.start(environment_h.agent_h.sequencer_wr_h);
             read_sequence_h.start(environment_h.agent_h.sequencer_rd_h);
         join
-
         phase.drop_objection(this); 
     endtask
   

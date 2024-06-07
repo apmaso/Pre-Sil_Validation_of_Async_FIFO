@@ -21,6 +21,7 @@ module fifo_memory #(
     end
 
     // Half-full/Half-empty logic
-    assign half = (raddr-waddr==32)||(waddr-raddr==32) ? 1'b1 : 1'b0;
+    // 1 left shifted by ADDR_WIDTH-1 is always half of the FIFO's depth 
+    assign half = (raddr-waddr==(1<<(ADDR_WIDTH-1)))||(waddr-raddr==(1<<(ADDR_WIDTH-1))) ? 1'b1 : 1'b0;
 
 endmodule

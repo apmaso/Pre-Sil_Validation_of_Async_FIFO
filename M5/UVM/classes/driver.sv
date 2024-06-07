@@ -86,7 +86,7 @@ class fifo_read_driver extends uvm_driver #(fifo_transaction);
     super.run_phase(phase);  
     bfm.reset_fifo();
 
-    #(READ_DELAY*CYCLE_TIME_RD);
+    //#(READ_DELAY*CYCLE_TIME_RD);
     forever begin
       seq_item_port.get_next_item(tx_rd); 
       // Drive data to FIFO

@@ -55,8 +55,8 @@ class half_test extends my_first_test;
 
     // Declare handles to the components
     fifo_environment environment_h;
-    fifo_half_wr_seq write_sequence_h;
-    fifo_half_rd_seq read_sequence_h;
+    fifo_half_wr_seq half_wr_seq_h;
+    fifo_half_rd_seq half_rd_seq_h;
 
     // Define the constructor
     function new(string name = "half_test", uvm_component parent);
@@ -85,14 +85,14 @@ class half_test extends my_first_test;
     task run_phase(uvm_phase phase);
         super.run_phase(phase);
         `uvm_info(get_type_name(), $sformatf("Running %s", get_full_name()), UVM_HIGH);
-        write_sequence_h = fifo_half_wr_seq::type_id::create("write_sequence_h");
-        read_sequence_h = fifo_half_rd_seq::type_id::create("read_sequence_h");
+        half_wr_seq_h = fifo_half_wr_seq::type_id::create("half_wr_seq_h");
+        half_rd_seq_h = fifo_half_rd_seq::type_id::create("half_rd_seq_h");
 
         phase.raise_objection(this);
         // Run the sequences in parallel
         fork
-            write_sequence_h.start(environment_h.agent_h.sequencer_wr_h);
-            read_sequence_h.start(environment_h.agent_h.sequencer_rd_h);
+            half_wr_seq_h.start(environment_h.agent_h.sequencer_wr_h);
+            half_rd_seq_h.start(environment_h.agent_h.sequencer_rd_h);
         join
         phase.drop_objection(this); 
     endtask

@@ -224,17 +224,20 @@ class fifo_coverage extends uvm_subscriber #(fifo_transaction);
     	cov_cg_abrupt_change = cg_abrupt_change.get_coverage();
     	cov_cg_throughput = cg_throughput.get_coverage();
 
+/*
         `uvm_info(get_type_name(), $sformatf("Coverage cg_fifo: %f", cov_cg_fifo), UVM_NONE);
-	//`uvm_info(get_type_name(), $sformatf("Coverage cg_fifo_depth: %f", cov_cg_fifo_depth), UVM_NONE);
-	`uvm_info(get_type_name(), $sformatf("Coverage cg_half_full_empty: %f", cov_cg_half_full_empty), UVM_NONE);
-	`uvm_info(get_type_name(), $sformatf("Coverage cg_data_integrity: %f", cov_cg_data_integrity), UVM_NONE);
-	`uvm_info(get_type_name(), $sformatf("Coverage cg_data_patterns: %f", cov_cg_data_patterns), UVM_NONE);
-	`uvm_info(get_type_name(), $sformatf("Coverage cg_burst_ops: %f", cov_cg_burst_ops), UVM_NONE);
-	//`uvm_info(get_type_name(), $sformatf("Coverage cg_reset: %f", cov_cg_reset), UVM_NONE);
-	`uvm_info(get_type_name(), $sformatf("Coverage cg_idle_cycles: %f", cov_cg_idle_cycles), UVM_NONE);
-	//`uvm_info(get_type_name(), $sformatf("Coverage cg_high_freq: %f", cov_cg_high_freq), UVM_NONE);
-	`uvm_info(get_type_name(), $sformatf("Coverage cg_abrupt_change: %f", cov_cg_abrupt_change), UVM_NONE);
-	`uvm_info(get_type_name(), $sformatf("Coverage cg_throughput: %f", cov_cg_throughput), UVM_NONE);
+	    //`uvm_info(get_type_name(), $sformatf("Coverage cg_fifo_depth: %f", cov_cg_fifo_depth), UVM_NONE);
+	    `uvm_info(get_type_name(), $sformatf("Coverage cg_half_full_empty: %f", cov_cg_half_full_empty), UVM_NONE);
+	    `uvm_info(get_type_name(), $sformatf("Coverage cg_data_integrity: %f", cov_cg_data_integrity), UVM_NONE);
+	    `uvm_info(get_type_name(), $sformatf("Coverage cg_data_patterns: %f", cov_cg_data_patterns), UVM_NONE);
+	    `uvm_info(get_type_name(), $sformatf("Coverage cg_burst_ops: %f", cov_cg_burst_ops), UVM_NONE);
+	    //`uvm_info(get_type_name(), $sformatf("Coverage cg_reset: %f", cov_cg_reset), UVM_NONE);
+	    `uvm_info(get_type_name(), $sformatf("Coverage cg_idle_cycles: %f", cov_cg_idle_cycles), UVM_NONE);
+	    //`uvm_info(get_type_name(), $sformatf("Coverage cg_high_freq: %f", cov_cg_high_freq), UVM_NONE);
+	    `uvm_info(get_type_name(), $sformatf("Coverage cg_abrupt_change: %f", cov_cg_abrupt_change), UVM_NONE);
+	    `uvm_info(get_type_name(), $sformatf("Coverage cg_throughput: %f", cov_cg_throughput), UVM_NONE);
+*/
+
     endfunction : write
 
 endclass

@@ -97,7 +97,7 @@ class fifo_half_wr_seq extends fifo_write_sequence;
     
     // generate some transactions
     tx_wr = fifo_transaction::type_id::create("tx_wr");
-    repeat(31) begin // 32 writes to half-fill the FIFO
+    repeat(30) begin // 30 writes to half-fill the FIFO
       start_item(tx_wr);
       
       assert(tx_wr.randomize() with {op == WRITE;});
@@ -151,7 +151,7 @@ class fifo_half_rd_seq extends fifo_read_sequence;
     
     // generate some transactions
     tx_rd = fifo_transaction::type_id::create("tx_rd");
-    repeat(31) begin // 32 transactions w/o rd_en to half-fill the FIFO
+    repeat(30) begin // 30 transactions w/o rd_en to half-fill the FIFO
       start_item(tx_rd);
       
       tx_rd.op = READ;

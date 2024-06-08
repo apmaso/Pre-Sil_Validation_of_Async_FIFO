@@ -99,7 +99,7 @@ class fifo_read_driver extends uvm_driver #(fifo_transaction);
       @(posedge bfm.clk_rd);
         bfm.rd_en <= tx_rd.rd_en;
          
-      `uvm_info(get_type_name(), $sformatf("Driver tx_rd \t\t|  wr_en: %b  |  rd_en: %b  |  data_in: %h  ", tx_rd.wr_en, tx_rd.rd_en, tx_rd.data_in), UVM_MEDIUM);
+      `uvm_info(get_type_name(), $sformatf("Driver tx_rd \t\t|  wr_en: %b  |  rd_en: %b  ", tx_rd.wr_en, tx_rd.rd_en), UVM_HIGH);
       seq_item_port.item_done(); 
     end
   endtask : run_phase

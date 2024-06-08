@@ -21,6 +21,10 @@ class fifo_scoreboard extends uvm_scoreboard;
     fifo_transaction tx_stack_wr[$];
     fifo_transaction tx_stack_rd[$];
 
+    // Declare counters
+    int half_count = 0;
+    int full_count = 0;
+    int empty_count = 0;
 
     // Constructor
 	function new(string name = "fifo_scoreboard", uvm_component parent);
@@ -50,10 +54,6 @@ class fifo_scoreboard extends uvm_scoreboard;
         super.run_phase(phase);  
         `uvm_info(get_type_name(), $sformatf("Running %s", get_full_name()), UVM_HIGH);
  
-        // Declare counters
-        int half_count = 0;
-        int full_count = 0;
-        int empty_count = 0;
         
         forever begin
             logic [DATA_WIDTH-1:0] expected;
@@ -79,8 +79,6 @@ class fifo_scoreboard extends uvm_scoreboard;
                 half_count++;
                 `uvm_info("SCOREBOARD", $sformatf("Half count: %0d", half_count), UVM_MEDIUM);
             end
-
-
 
             if (received !== expected) begin
                 `uvm_error("SCOREBOARD", $sformatf("Data mismatch!: expected %h, got %h", expected, received));  

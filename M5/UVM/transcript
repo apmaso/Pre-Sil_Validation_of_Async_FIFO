@@ -1,51 +1,66 @@
+# //  Questa Sim-64
+# //  Version 2021.3_1 linux_x86_64 Aug 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+do run.do
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 21:47:25 on Jun 07,2024
-# vlog -lint dut/fifo_top.sv 
+# Start time: 22:27:26 on Jun 07,2024
+# vlog -reportprogress 300 -lint dut/fifo_top.sv 
 # -- Compiling module fifo_top
 # 
 # Top level modules:
 # 	fifo_top
-# End time: 21:47:25 on Jun 07,2024, Elapsed time: 0:00:00
+# End time: 22:27:26 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 21:47:25 on Jun 07,2024
-# vlog -lint dut/fifo_memory.sv 
+# Start time: 22:27:26 on Jun 07,2024
+# vlog -reportprogress 300 -lint dut/fifo_memory.sv 
 # -- Compiling module fifo_memory
 # 
 # Top level modules:
 # 	fifo_memory
-# End time: 21:47:25 on Jun 07,2024, Elapsed time: 0:00:00
+# End time: 22:27:27 on Jun 07,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 21:47:25 on Jun 07,2024
-# vlog -lint dut/read_pointer.sv 
+# Start time: 22:27:27 on Jun 07,2024
+# vlog -reportprogress 300 -lint dut/read_pointer.sv 
 # -- Compiling module read_pointer
 # 
 # Top level modules:
 # 	read_pointer
-# End time: 21:47:26 on Jun 07,2024, Elapsed time: 0:00:01
+# End time: 22:27:27 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 21:47:26 on Jun 07,2024
-# vlog -lint dut/write_pointer.sv 
+# Start time: 22:27:27 on Jun 07,2024
+# vlog -reportprogress 300 -lint dut/write_pointer.sv 
 # -- Compiling module write_pointer
 # 
 # Top level modules:
 # 	write_pointer
-# End time: 21:47:26 on Jun 07,2024, Elapsed time: 0:00:00
+# End time: 22:27:27 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 21:47:26 on Jun 07,2024
-# vlog -lint dut/sync.sv 
+# Start time: 22:27:27 on Jun 07,2024
+# vlog -reportprogress 300 -lint dut/sync.sv 
 # -- Compiling module sync
 # 
 # Top level modules:
 # 	sync
-# End time: 21:47:26 on Jun 07,2024, Elapsed time: 0:00:00
+# End time: 22:27:28 on Jun 07,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 21:47:26 on Jun 07,2024
-# vlog -f tb.f 
+# Start time: 22:27:28 on Jun 07,2024
+# vlog -reportprogress 300 -f tb.f 
 # -- Compiling package fifo_pkg
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
 # ** Note: (vlog-2286) fifo_pkg.sv(3): Using implicit +incdir+/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
@@ -55,11 +70,11 @@
 # 
 # Top level modules:
 # 	top
-# End time: 21:47:27 on Jun 07,2024, Elapsed time: 0:00:01
+# End time: 22:27:29 on Jun 07,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vopt 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 21:47:27 on Jun 07,2024
-# vopt top -o top_optimized "+acc" "+cover=sbfec+fifo_top(rtl)." 
+# Start time: 22:27:29 on Jun 07,2024
+# vopt -reportprogress 300 top -o top_optimized "+acc" "+cover=sbfec+fifo_top(rtl)." 
 # 
 # Top level modules:
 # 	top
@@ -89,24 +104,10 @@
 # -- Optimizing module sync(fast)
 # -- Optimizing interface fifo_bfm(fast)
 # Optimized design name is top_optimized
-# End time: 21:47:33 on Jun 07,2024, Elapsed time: 0:00:06
+# End time: 22:27:35 on Jun 07,2024, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 0
 # vsim top_optimized -coverage "+UVM_TESTNAME=my_first_test" 
-# Start time: 21:47:33 on Jun 07,2024
-# //  Questa Sim-64
-# //  Version 2021.3_1 linux_x86_64 Aug 15 2021
-# //
-# //  Copyright 1991-2021 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  QuestaSim and its associated documentation contain trade
-# //  secrets and commercial or financial information that are the property of
-# //  Mentor Graphics Corporation and are privileged, confidential,
-# //  and exempt from disclosure under the Freedom of Information Act,
-# //  5 U.S.C. Section 552. Furthermore, this information
-# //  is prohibited from disclosure under the Trade Secrets Act,
-# //  18 U.S.C. Section 1905.
-# //
+# Start time: 22:27:35 on Jun 07,2024
 # Loading sv_std.std
 # Loading work.fifo_bfm(fast)
 # Loading mtiUvm.uvm_pkg(fast)
@@ -121,10 +122,10 @@
 # Loading work.read_pointer(fast)
 # Loading work.sync(fast)
 # Loading /pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
-# End time: 21:47:35 on Jun 07,2024, Elapsed time: 0:00:02
+# End time: 22:27:46 on Jun 07,2024, Elapsed time: 0:00:11
 # Errors: 0, Warnings: 0
 # vsim top_optimized -coverage "+UVM_TESTNAME=half_test" 
-# Start time: 21:47:35 on Jun 07,2024
+# Start time: 22:27:46 on Jun 07,2024
 # Loading sv_std.std
 # Loading work.fifo_bfm(fast)
 # Loading mtiUvm.uvm_pkg(fast)
@@ -364,7 +365,7 @@
 # UVM_INFO classes/scoreboard.sv(71) @ 484: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected e3, got e3
 # UVM_INFO classes/driver.sv(96) @ 496: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: 0f  
 # UVM_INFO classes/sequence.sv(96) @ 496: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@half_wr_seq_h [HALF_WRITE_SEQ] Starting write sequence for half_test
-# UVM_INFO classes/sequence.sv(150) @ 496: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@half_rd_seq_h [HALF_WRITE_SEQ] Starting write sequence for half_test
+# UVM_INFO classes/sequence.sv(150) @ 496: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@half_rd_seq_h [HALF_READ_SEQ] Starting read sequence for half_test
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
@@ -424,100 +425,99 @@
 # UVM_INFO classes/driver.sv(96) @ 1424: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 0  |  data_in: xx  
 # UVM_INFO classes/driver.sv(96) @ 1456: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 0  |  data_in: xx  
 # UVM_INFO classes/driver.sv(96) @ 1488: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 0  |  data_in: xx  
-# UVM_INFO classes/driver.sv(96) @ 1520: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 0  |  data_in: xx  
-# UVM_INFO classes/driver.sv(96) @ 1552: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: xx  
-# UVM_INFO classes/driver.sv(96) @ 1584: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 0  |  data_in: xx  
+# UVM_INFO classes/driver.sv(96) @ 1520: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: xx  
+# UVM_INFO classes/driver.sv(96) @ 1552: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 0  |  data_in: xx  
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
-# mon_tx_rd  fifo_transaction  -     @1327
+# mon_tx_rd  fifo_transaction  -     @1319
 # ----------------------------------------
-# UVM_INFO classes/coverage.sv(227) @ 1604: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 50.000000
-# UVM_INFO classes/coverage.sv(229) @ 1604: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
-# UVM_INFO classes/coverage.sv(230) @ 1604: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
-# UVM_INFO classes/coverage.sv(231) @ 1604: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
-# UVM_INFO classes/coverage.sv(232) @ 1604: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
-# UVM_INFO classes/coverage.sv(234) @ 1604: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 50.000000
-# UVM_INFO classes/coverage.sv(236) @ 1604: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 50.000000
-# UVM_INFO classes/coverage.sv(237) @ 1604: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 50.000000
-# UVM_INFO classes/scoreboard.sv(71) @ 1604: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 5d, got 5d
-# UVM_INFO classes/driver.sv(96) @ 1616: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: xx  
-# UVM_INFO classes/driver.sv(96) @ 1648: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 0  |  data_in: xx  
-# ----------------------------------------
-# Name       Type              Size  Value
-# ----------------------------------------
-# mon_tx_rd  fifo_transaction  -     @1343
-# ----------------------------------------
-# UVM_INFO classes/coverage.sv(227) @ 1668: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 50.000000
-# UVM_INFO classes/coverage.sv(229) @ 1668: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
-# UVM_INFO classes/coverage.sv(230) @ 1668: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
-# UVM_INFO classes/coverage.sv(231) @ 1668: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
-# UVM_INFO classes/coverage.sv(232) @ 1668: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
-# UVM_INFO classes/coverage.sv(234) @ 1668: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 50.000000
-# UVM_INFO classes/coverage.sv(236) @ 1668: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 50.000000
-# UVM_INFO classes/coverage.sv(237) @ 1668: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 50.000000
-# UVM_INFO classes/scoreboard.sv(71) @ 1668: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 5d, got 5d
-# UVM_INFO classes/driver.sv(96) @ 1680: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: xx  
-# UVM_INFO classes/driver.sv(96) @ 1712: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 0  |  data_in: xx  
+# UVM_INFO classes/coverage.sv(227) @ 1572: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 50.000000
+# UVM_INFO classes/coverage.sv(229) @ 1572: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
+# UVM_INFO classes/coverage.sv(230) @ 1572: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
+# UVM_INFO classes/coverage.sv(231) @ 1572: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
+# UVM_INFO classes/coverage.sv(232) @ 1572: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
+# UVM_INFO classes/coverage.sv(234) @ 1572: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 50.000000
+# UVM_INFO classes/coverage.sv(236) @ 1572: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 50.000000
+# UVM_INFO classes/coverage.sv(237) @ 1572: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 50.000000
+# UVM_INFO classes/scoreboard.sv(71) @ 1572: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 5d, got 5d
+# UVM_INFO classes/driver.sv(96) @ 1584: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: xx  
+# UVM_INFO classes/driver.sv(96) @ 1616: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 0  |  data_in: xx  
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
-# mon_tx_rd  fifo_transaction  -     @1359
+# mon_tx_rd  fifo_transaction  -     @1335
 # ----------------------------------------
-# UVM_INFO classes/coverage.sv(227) @ 1732: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 50.000000
-# UVM_INFO classes/coverage.sv(229) @ 1732: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
-# UVM_INFO classes/coverage.sv(230) @ 1732: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
-# UVM_INFO classes/coverage.sv(231) @ 1732: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
-# UVM_INFO classes/coverage.sv(232) @ 1732: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
-# UVM_INFO classes/coverage.sv(234) @ 1732: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 50.000000
-# UVM_INFO classes/coverage.sv(236) @ 1732: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 50.000000
-# UVM_INFO classes/coverage.sv(237) @ 1732: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 50.000000
-# UVM_INFO classes/scoreboard.sv(71) @ 1732: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 5d, got 5d
-# UVM_INFO classes/driver.sv(96) @ 1744: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: xx  
-# UVM_INFO classes/driver.sv(96) @ 1776: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 0  |  data_in: xx  
+# UVM_INFO classes/coverage.sv(227) @ 1636: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 50.000000
+# UVM_INFO classes/coverage.sv(229) @ 1636: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
+# UVM_INFO classes/coverage.sv(230) @ 1636: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
+# UVM_INFO classes/coverage.sv(231) @ 1636: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
+# UVM_INFO classes/coverage.sv(232) @ 1636: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
+# UVM_INFO classes/coverage.sv(234) @ 1636: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 50.000000
+# UVM_INFO classes/coverage.sv(236) @ 1636: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 50.000000
+# UVM_INFO classes/coverage.sv(237) @ 1636: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 50.000000
+# UVM_INFO classes/scoreboard.sv(71) @ 1636: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 5d, got 5d
+# UVM_INFO classes/driver.sv(96) @ 1648: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: xx  
+# UVM_INFO classes/driver.sv(96) @ 1680: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 0  |  data_in: xx  
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
-# mon_tx_rd  fifo_transaction  -     @1375
+# mon_tx_rd  fifo_transaction  -     @1351
 # ----------------------------------------
-# UVM_INFO classes/coverage.sv(227) @ 1796: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 50.000000
-# UVM_INFO classes/coverage.sv(229) @ 1796: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
-# UVM_INFO classes/coverage.sv(230) @ 1796: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
-# UVM_INFO classes/coverage.sv(231) @ 1796: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
-# UVM_INFO classes/coverage.sv(232) @ 1796: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
-# UVM_INFO classes/coverage.sv(234) @ 1796: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 50.000000
-# UVM_INFO classes/coverage.sv(236) @ 1796: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 50.000000
-# UVM_INFO classes/coverage.sv(237) @ 1796: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 50.000000
-# UVM_INFO classes/scoreboard.sv(71) @ 1796: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected dd, got dd
-# UVM_INFO classes/driver.sv(96) @ 1808: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: xx  
-# UVM_INFO classes/driver.sv(96) @ 1840: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 0  |  data_in: xx  
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 1840: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO classes/coverage.sv(227) @ 1700: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 50.000000
+# UVM_INFO classes/coverage.sv(229) @ 1700: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
+# UVM_INFO classes/coverage.sv(230) @ 1700: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
+# UVM_INFO classes/coverage.sv(231) @ 1700: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
+# UVM_INFO classes/coverage.sv(232) @ 1700: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
+# UVM_INFO classes/coverage.sv(234) @ 1700: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 50.000000
+# UVM_INFO classes/coverage.sv(236) @ 1700: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 50.000000
+# UVM_INFO classes/coverage.sv(237) @ 1700: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 50.000000
+# UVM_INFO classes/scoreboard.sv(71) @ 1700: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 5d, got 5d
+# UVM_INFO classes/driver.sv(96) @ 1712: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: xx  
+# UVM_INFO classes/driver.sv(96) @ 1744: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 0  |  data_in: xx  
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @1367
+# ----------------------------------------
+# UVM_INFO classes/coverage.sv(227) @ 1764: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_fifo: 50.000000
+# UVM_INFO classes/coverage.sv(229) @ 1764: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_half_full_empty: 50.000000
+# UVM_INFO classes/coverage.sv(230) @ 1764: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_integrity: 100.000000
+# UVM_INFO classes/coverage.sv(231) @ 1764: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_data_patterns: 0.000000
+# UVM_INFO classes/coverage.sv(232) @ 1764: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_burst_ops: 50.000000
+# UVM_INFO classes/coverage.sv(234) @ 1764: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_idle_cycles: 50.000000
+# UVM_INFO classes/coverage.sv(236) @ 1764: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_abrupt_change: 50.000000
+# UVM_INFO classes/coverage.sv(237) @ 1764: uvm_test_top.environment_h.coverage_h [fifo_coverage] Coverage cg_throughput: 50.000000
+# UVM_INFO classes/scoreboard.sv(71) @ 1764: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected dd, got dd
+# UVM_INFO classes/driver.sv(96) @ 1776: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 1  |  data_in: xx  
+# UVM_INFO classes/driver.sv(96) @ 1808: uvm_test_top.environment_h.agent_h.driver_rd_h [fifo_read_driver] Driver tx_rd 		|  wr_en: 0  |  rd_en: 0  |  data_in: xx  
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 1808: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :  188
+# UVM_INFO :  187
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
 # [FIFO_READ_SEQ]     1
 # [FIFO_WRITE_SEQ]     1
-# [HALF_WRITE_SEQ]     2
+# [HALF_READ_SEQ]     1
+# [HALF_WRITE_SEQ]     1
 # [Questa UVM]     2
 # [RNTST]     1
 # [SCOREBOARD]    14
 # [TEST_DONE]     1
 # [UVMTOP]     2
 # [fifo_coverage]   112
-# [fifo_read_driver]    52
+# [fifo_read_driver]    51
 # ** Note: $finish    : /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 1840 ns  Iteration: 61  Instance: /top
+#    Time: 1808 ns  Iteration: 61  Instance: /top
 # 1
 # Break in Task uvm_pkg/uvm_root::run_test at /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
-# Stopped at /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
 # QuestaSim-64 vcover 2021.3_1 Coverage Utility 2021.08 Aug 15 2021
-# Start time: 21:47:37 on Jun 07,2024
+# Start time: 22:27:55 on Jun 07,2024
 # vcover report async_fifo.ucdb 
 # Coverage Report Summary Data by instance
 # 
@@ -603,10 +603,10 @@
 # 
 # Total Coverage By Instance (filtered view): 75.25%
 # 
-# End time: 21:47:37 on Jun 07,2024, Elapsed time: 0:00:00
+# End time: 22:27:55 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcover 2021.3_1 Coverage Utility 2021.08 Aug 15 2021
-# Start time: 21:47:38 on Jun 07,2024
+# Start time: 22:27:55 on Jun 07,2024
 # vcover report async_fifo.ucdb -cvg -details 
 # Coverage Report by instance with details
 # 
@@ -1156,10 +1156,7 @@
 # 
 # Total Coverage By Instance (filtered view): 50.00%
 # 
-# End time: 21:47:38 on Jun 07,2024, Elapsed time: 0:00:00
+# End time: 22:27:55 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# invalid command name ":q"
-# ambiguous command name "c": calcDefaultSignalModeValue capstats case cat catch cd cdbg cdbg_mode cdbg_wait_for_starting cdump chan change check checkVCDMap check_svver_available check_viewer checkpoint checkpointDone checkpointError ciid class cleanupGui clock close clp cmdSplit code column2tok compare compareOptionsRule compareSetDefaults compile concat config configExcludeCovUpdate configbody configure connect_to_kernel console cont context contextOf continue convertVlogExtId coroutine cover_save_create_ucdb coverage createSourceInfo create_rpc_server
-# wrong # args: should be "llength list"
-# End time: 21:48:09 on Jun 07,2024, Elapsed time: 0:00:34
+# End time: 22:32:48 on Jun 07,2024, Elapsed time: 0:05:02
 # Errors: 0, Warnings: 0

@@ -24,7 +24,6 @@ module top;
                  .data_out(bfm.data_out), .full(bfm.full), .empty(bfm.empty), 
                  .half(bfm.half));
 
-
    initial begin
       // Type, Caller, Path, Name, Value
       uvm_config_db #(virtual fifo_bfm)::set(null, "*", "bfm", bfm);
@@ -32,6 +31,5 @@ module top;
       run_test("my_first_test");
       run_test("half_test");
    end
-
 
 endmodule : top

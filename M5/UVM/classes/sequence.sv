@@ -97,7 +97,7 @@ class fifo_half_wr_seq extends fifo_write_sequence;
     
     // generate some transactions
     tx_wr = fifo_transaction::type_id::create("tx_wr");
-    repeat(32) begin // 32 writes to half-fill the FIFO
+    repeat(31) begin // 32 writes to half-fill the FIFO
       start_item(tx_wr);
       
       assert(tx_wr.randomize() with {op == WRITE;});
@@ -147,11 +147,11 @@ class fifo_half_rd_seq extends fifo_read_sequence;
     if (starting_phase != null)
       starting_phase.raise_objection(this);
 
-    `uvm_info("HALF_WRITE_SEQ", "Starting write sequence for half_test", UVM_MEDIUM)
+    `uvm_info("HALF_READ_SEQ", "Starting read sequence for half_test", UVM_MEDIUM)
     
     // generate some transactions
     tx_rd = fifo_transaction::type_id::create("tx_rd");
-    repeat(32) begin // 32 transactions w/o rd_en to half-fill the FIFO
+    repeat(31) begin // 32 transactions w/o rd_en to half-fill the FIFO
       start_item(tx_rd);
       
       tx_rd.op = READ;

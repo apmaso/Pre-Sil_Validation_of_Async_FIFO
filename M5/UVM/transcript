@@ -1,66 +1,51 @@
-# //  Questa Sim-64
-# //  Version 2021.3_1 linux_x86_64 Aug 15 2021
-# //
-# //  Copyright 1991-2021 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  QuestaSim and its associated documentation contain trade
-# //  secrets and commercial or financial information that are the property of
-# //  Mentor Graphics Corporation and are privileged, confidential,
-# //  and exempt from disclosure under the Freedom of Information Act,
-# //  5 U.S.C. Section 552. Furthermore, this information
-# //  is prohibited from disclosure under the Trade Secrets Act,
-# //  18 U.S.C. Section 1905.
-# //
-do run.do
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 20:18:28 on Jun 07,2024
-# vlog -reportprogress 300 -lint dut/fifo_top.sv 
+# Start time: 21:47:25 on Jun 07,2024
+# vlog -lint dut/fifo_top.sv 
 # -- Compiling module fifo_top
 # 
 # Top level modules:
 # 	fifo_top
-# End time: 20:18:28 on Jun 07,2024, Elapsed time: 0:00:00
+# End time: 21:47:25 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 20:18:28 on Jun 07,2024
-# vlog -reportprogress 300 -lint dut/fifo_memory.sv 
+# Start time: 21:47:25 on Jun 07,2024
+# vlog -lint dut/fifo_memory.sv 
 # -- Compiling module fifo_memory
 # 
 # Top level modules:
 # 	fifo_memory
-# End time: 20:18:29 on Jun 07,2024, Elapsed time: 0:00:01
+# End time: 21:47:25 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 20:18:29 on Jun 07,2024
-# vlog -reportprogress 300 -lint dut/read_pointer.sv 
+# Start time: 21:47:25 on Jun 07,2024
+# vlog -lint dut/read_pointer.sv 
 # -- Compiling module read_pointer
 # 
 # Top level modules:
 # 	read_pointer
-# End time: 20:18:29 on Jun 07,2024, Elapsed time: 0:00:00
+# End time: 21:47:26 on Jun 07,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 20:18:29 on Jun 07,2024
-# vlog -reportprogress 300 -lint dut/write_pointer.sv 
+# Start time: 21:47:26 on Jun 07,2024
+# vlog -lint dut/write_pointer.sv 
 # -- Compiling module write_pointer
 # 
 # Top level modules:
 # 	write_pointer
-# End time: 20:18:29 on Jun 07,2024, Elapsed time: 0:00:00
+# End time: 21:47:26 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 20:18:29 on Jun 07,2024
-# vlog -reportprogress 300 -lint dut/sync.sv 
+# Start time: 21:47:26 on Jun 07,2024
+# vlog -lint dut/sync.sv 
 # -- Compiling module sync
 # 
 # Top level modules:
 # 	sync
-# End time: 20:18:30 on Jun 07,2024, Elapsed time: 0:00:01
+# End time: 21:47:26 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 20:18:30 on Jun 07,2024
-# vlog -reportprogress 300 -f tb.f 
+# Start time: 21:47:26 on Jun 07,2024
+# vlog -f tb.f 
 # -- Compiling package fifo_pkg
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
 # ** Note: (vlog-2286) fifo_pkg.sv(3): Using implicit +incdir+/pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
@@ -70,11 +55,11 @@ do run.do
 # 
 # Top level modules:
 # 	top
-# End time: 20:18:31 on Jun 07,2024, Elapsed time: 0:00:01
+# End time: 21:47:27 on Jun 07,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vopt 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 20:18:31 on Jun 07,2024
-# vopt -reportprogress 300 top -o top_optimized "+acc" "+cover=sbfec+fifo_top(rtl)." 
+# Start time: 21:47:27 on Jun 07,2024
+# vopt top -o top_optimized "+acc" "+cover=sbfec+fifo_top(rtl)." 
 # 
 # Top level modules:
 # 	top
@@ -98,16 +83,48 @@ do run.do
 # -- Optimizing module fifo_top(fast)
 # -- Optimizing module read_pointer(fast)
 # -- Optimizing module fifo_memory(fast)
+# -- Optimizing module top(fast)
 # -- Optimizing interface fifo_bfm(fast__2)
 # -- Optimizing interface fifo_bfm(fast__3)
-# -- Optimizing module top(fast)
 # -- Optimizing module sync(fast)
 # -- Optimizing interface fifo_bfm(fast)
 # Optimized design name is top_optimized
-# End time: 20:18:37 on Jun 07,2024, Elapsed time: 0:00:06
+# End time: 21:47:33 on Jun 07,2024, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 0
-# vsim top_optimized -coverage 
-# Start time: 20:18:37 on Jun 07,2024
+# vsim top_optimized -coverage "+UVM_TESTNAME=my_first_test" 
+# Start time: 21:47:33 on Jun 07,2024
+# //  Questa Sim-64
+# //  Version 2021.3_1 linux_x86_64 Aug 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.fifo_bfm(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.fifo_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.fifo_bfm(fast__2)
+# Loading work.fifo_top(fast)
+# Loading work.fifo_bfm(fast__3)
+# Loading work.fifo_memory(fast)
+# Loading work.write_pointer(fast)
+# Loading work.read_pointer(fast)
+# Loading work.sync(fast)
+# Loading /pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# End time: 21:47:35 on Jun 07,2024, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vsim top_optimized -coverage "+UVM_TESTNAME=half_test" 
+# Start time: 21:47:35 on Jun 07,2024
 # Loading sv_std.std
 # Loading work.fifo_bfm(fast)
 # Loading mtiUvm.uvm_pkg(fast)
@@ -498,8 +515,9 @@ do run.do
 #    Time: 1840 ns  Iteration: 61  Instance: /top
 # 1
 # Break in Task uvm_pkg/uvm_root::run_test at /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# Stopped at /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
 # QuestaSim-64 vcover 2021.3_1 Coverage Utility 2021.08 Aug 15 2021
-# Start time: 20:18:52 on Jun 07,2024
+# Start time: 21:47:37 on Jun 07,2024
 # vcover report async_fifo.ucdb 
 # Coverage Report Summary Data by instance
 # 
@@ -585,10 +603,10 @@ do run.do
 # 
 # Total Coverage By Instance (filtered view): 75.25%
 # 
-# End time: 20:18:52 on Jun 07,2024, Elapsed time: 0:00:00
+# End time: 21:47:37 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcover 2021.3_1 Coverage Utility 2021.08 Aug 15 2021
-# Start time: 20:18:52 on Jun 07,2024
+# Start time: 21:47:38 on Jun 07,2024
 # vcover report async_fifo.ucdb -cvg -details 
 # Coverage Report by instance with details
 # 
@@ -1138,8 +1156,10 @@ do run.do
 # 
 # Total Coverage By Instance (filtered view): 50.00%
 # 
-# End time: 20:18:52 on Jun 07,2024, Elapsed time: 0:00:00
+# End time: 21:47:38 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-add wave -position insertpoint sim:/top/dut/*
-# End time: 20:32:30 on Jun 07,2024, Elapsed time: 0:13:53
+# invalid command name ":q"
+# ambiguous command name "c": calcDefaultSignalModeValue capstats case cat catch cd cdbg cdbg_mode cdbg_wait_for_starting cdump chan change check checkVCDMap check_svver_available check_viewer checkpoint checkpointDone checkpointError ciid class cleanupGui clock close clp cmdSplit code column2tok compare compareOptionsRule compareSetDefaults compile concat config configExcludeCovUpdate configbody configure connect_to_kernel console cont context contextOf continue convertVlogExtId coroutine cover_save_create_ucdb coverage createSourceInfo create_rpc_server
+# wrong # args: should be "llength list"
+# End time: 21:48:09 on Jun 07,2024, Elapsed time: 0:00:34
 # Errors: 0, Warnings: 0

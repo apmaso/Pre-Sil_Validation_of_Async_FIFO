@@ -29,7 +29,7 @@ module top;
       // Type, Caller, Path, Name, Value
       uvm_config_db #(virtual fifo_bfm)::set(null, "*", "bfm", bfm);
       uvm_top.finish_on_completion = 1; // Calls $finish(1) when all tests are done
-      //run_test("my_first_test");
+      run_test("my_first_test");
       run_test("half_test");
    end
 

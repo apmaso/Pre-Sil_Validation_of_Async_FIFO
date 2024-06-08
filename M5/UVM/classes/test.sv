@@ -54,7 +54,7 @@ class half_test extends my_first_test;
     `uvm_component_utils(half_test);
 
     // Declare handles to the components
-    fifo_environment environment_h;
+    //fifo_environment environment_h;
     fifo_half_wr_seq half_wr_seq_h;
     fifo_half_rd_seq half_rd_seq_h;
 
@@ -69,7 +69,7 @@ class half_test extends my_first_test;
         super.build_phase(phase);
         `uvm_info(get_type_name(), $sformatf("Building %s", get_full_name()), UVM_HIGH);
 
-        environment_h = fifo_environment::type_id::create("environment_h", this);
+        //environment_h = fifo_environment::type_id::create("environment_h", this);
     endfunction : build_phase
   
     // End of elab phase for topology setup

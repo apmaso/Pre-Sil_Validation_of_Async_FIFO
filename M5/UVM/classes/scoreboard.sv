@@ -21,7 +21,6 @@ class fifo_scoreboard extends uvm_scoreboard;
     fifo_transaction tx_stack_wr[$];
     fifo_transaction tx_stack_rd[$];
 
-    
 
     // Constructor
 	function new(string name = "fifo_scoreboard", uvm_component parent);
@@ -51,19 +50,38 @@ class fifo_scoreboard extends uvm_scoreboard;
         super.run_phase(phase);  
         `uvm_info(get_type_name(), $sformatf("Running %s", get_full_name()), UVM_HIGH);
  
+        // Declare counters
+        int half_count = 0;
+        int full_count = 0;
+        int empty_count = 0;
         
         forever begin
             logic [DATA_WIDTH-1:0] expected;
             logic [DATA_WIDTH-1:0] received;
             fifo_transaction current_tx_rd;
             fifo_transaction current_tx_wr;
-                
+
             wait(tx_stack_rd.size() > 0);
             current_tx_wr = tx_stack_wr.pop_front();
             current_tx_rd = tx_stack_rd.pop_front();
             expected = current_tx_wr.data_in;
             received = current_tx_rd.data_out;
-                
+
+            if (current_tx_wr.full || current_tx_rd.full) begin
+                full_count++;
+                `uvm_info("SCOREBOARD", $sformatf("Full count: %0d", full_count), UVM_MEDIUM);
+            end
+            if (current_tx_wr.empty || current_tx_rd.empty) begin
+                empty_count++;
+                `uvm_info("SCOREBOARD", $sformatf("Empty count: %0d", empty_count), UVM_MEDIUM);
+            end
+            if (current_tx_wr.half || current_tx_rd.half) begin
+                half_count++;
+                `uvm_info("SCOREBOARD", $sformatf("Half count: %0d", half_count), UVM_MEDIUM);
+            end
+
+
+
             if (received !== expected) begin
                 `uvm_error("SCOREBOARD", $sformatf("Data mismatch!: expected %h, got %h", expected, received));  
             end

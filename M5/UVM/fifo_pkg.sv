@@ -10,7 +10,7 @@ package fifo_pkg;
 	// Parameters for the testbench	
 	parameter TX_COUNT_WR = 10;
 	parameter TX_COUNT_RD = 10;
-	//parameter READ_DELAY = 10;
+	parameter READ_DELAY = 1;
 
 
 	`include "transaction.sv"

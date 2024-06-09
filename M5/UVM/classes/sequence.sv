@@ -40,7 +40,7 @@ class fifo_burst_wr_seq extends uvm_sequence #(fifo_transaction);
         `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
         finish_item(tx_wr);
       end
-      burst_count++;:waddr
+      burst_count++;
     end
 
     if (starting_phase != null)

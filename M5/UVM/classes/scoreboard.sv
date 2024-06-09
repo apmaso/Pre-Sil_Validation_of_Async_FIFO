@@ -22,9 +22,12 @@ class fifo_scoreboard extends uvm_scoreboard;
     fifo_transaction tx_stack_rd[$];
 
     // Declare counters
-    int half_count  = 0;
-    int full_count  = 0;
-    int empty_count = 0;
+    int half_count_wr  = 0;
+    int half_count_rd  = 0;
+    int full_count_wr  = 0;
+    int full_count_rd  = 0;
+    int empty_count_wr = 0;
+    int empty_count_rd = 0;
     int read_count  = 0;
     int write_count = 0;
 
@@ -68,17 +71,29 @@ class fifo_scoreboard extends uvm_scoreboard;
             expected = current_tx_wr.data_in;
             received = current_tx_rd.data_out;
 
-            if (current_tx_wr.full || current_tx_rd.full) begin
-                full_count++;
-                `uvm_info("SCOREBOARD", $sformatf("Full count: %0d", full_count), UVM_MEDIUM);
+            if (current_tx_wr.full) begin
+                full_count_wr++;
+                `uvm_info("SCOREBOARD", $sformatf("Full write count: %0d", full_count_wr), UVM_MEDIUM);
             end
-            if (current_tx_wr.empty || current_tx_rd.empty) begin
-                empty_count++;
-                `uvm_info("SCOREBOARD", $sformatf("Empty count: %0d", empty_count), UVM_MEDIUM);
+            if (current_tx_rd.full) begin
+                full_count_rd++;
+                `uvm_info("SCOREBOARD", $sformatf("Full read count: %0d", full_count_rd), UVM_MEDIUM);
             end
-            if (current_tx_wr.half || current_tx_rd.half) begin
-                half_count++;
-                `uvm_info("SCOREBOARD", $sformatf("Half count: %0d", half_count), UVM_MEDIUM);
+            if (current_tx_wr.empty) begin
+                empty_count_wr++;
+                `uvm_info("SCOREBOARD", $sformatf("Empty write count: %0d", empty_count_wr), UVM_MEDIUM);
+            end
+            if (current_tx_rd.empty) begin
+                empty_count_rd++;
+                `uvm_info("SCOREBOARD", $sformatf("Empty read count: %0d", empty_count_rd), UVM_MEDIUM);
+            end
+            if (current_tx_wr.half) begin
+                half_count_wr++;
+                `uvm_info("SCOREBOARD", $sformatf("Half write count: %0d", half_count_wr), UVM_MEDIUM);
+            end
+            if (current_tx_rd.half) begin
+                half_count_rd++;
+                `uvm_info("SCOREBOARD", $sformatf("Half read count: %0d", half_count_rd), UVM_MEDIUM);
             end
             if (received !== expected) begin
                 `uvm_error("SCOREBOARD", $sformatf("Data mismatch!: expected %h, got %h", expected, received));  

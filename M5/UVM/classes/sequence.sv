@@ -4,6 +4,9 @@ class fifo_burst_wr_seq extends uvm_sequence #(fifo_transaction);
   // Declare handle to the transaction packet
   fifo_transaction tx_wr;
   
+  // Counter for the current burst number
+  int burst_count = 1;    
+  
   // Constructor 
   function new(string name="fifo_burst_wr_seq");
     super.new(name);
@@ -16,7 +19,6 @@ class fifo_burst_wr_seq extends uvm_sequence #(fifo_transaction);
 
     // TODO: Can this created once per burst? 
     tx_wr = fifo_transaction::type_id::create("tx_wr");
-    int burst_count = 1;    
     repeat(BURST_TX_CNT) begin
       `uvm_info("BURST_WRITE_SEQ", $sformatf("Starting burst write sequence number %d", burst_count), UVM_MEDIUM)
       repeat (BURST_SIZE) begin
@@ -53,6 +55,9 @@ class fifo_burst_rd_seq extends uvm_sequence #(fifo_transaction);
   // Declare handles to the transaction packet
   fifo_transaction tx_rd;
   
+  // Counter for the current burst number
+  int burst_count = 1;    
+  
   // Constructor 
   function new(string name="fifo_burst_rd_seq");
     super.new(name);
@@ -66,7 +71,6 @@ class fifo_burst_rd_seq extends uvm_sequence #(fifo_transaction);
 
     // TODO: Can this created once per burst? 
     tx_rd = fifo_transaction::type_id::create("tx_rd");
-    int burst_count = 1;    
     repeat(BURST_TX_CNT) begin
       `uvm_info("BURST_READ_SEQ", $sformatf("Starting burst read sequence number %d", burst_count), UVM_MEDIUM)
       repeat (BURST_SIZE) begin

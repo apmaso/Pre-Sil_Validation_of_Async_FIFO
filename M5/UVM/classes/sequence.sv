@@ -29,13 +29,13 @@ class fifo_write_sequence extends uvm_sequence #(fifo_transaction);
       `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
       finish_item(tx_wr);
     end
+
+    // 5 dummy transactions to buffer between tests
     repeat(5) begin
       start_item(tx_wr);
-      
       assert(tx_wr.randomize() with {op == WRITE;});
       tx_wr.wr_en = 0;
       tx_wr.rd_en = 0;
-      
       `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
       finish_item(tx_wr);
     end
@@ -76,14 +76,13 @@ class fifo_read_sequence extends uvm_sequence #(fifo_transaction);
       `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)
       finish_item(tx_rd);
     end
+
+    // 5 dummy transactions to buffer between tests 
     repeat(5) begin
       start_item(tx_rd);
-      
-      
       assert(tx_rd.randomize() with {op == READ;});
       tx_rd.wr_en = 0;
       tx_rd.rd_en = 0;
-      
       `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)
       finish_item(tx_rd);
     end
@@ -113,7 +112,7 @@ class fifo_half_wr_seq extends fifo_write_sequence;
     
     // generate some transactions
     tx_wr = fifo_transaction::type_id::create("tx_wr");
-    repeat(30) begin // 30 writes to half-fill the FIFO
+    repeat(32) begin // 32 writes to half-fill the FIFO
       start_item(tx_wr);
       
       assert(tx_wr.randomize() with {op == WRITE;});
@@ -140,7 +139,28 @@ class fifo_half_wr_seq extends fifo_write_sequence;
       `uvm_info("GENERATED", tx_wr.convert2string(), UVM_HIGH)
       finish_item(tx_wr);
     end
+    
+    // 32 dummy writes to empty the FIFO
+    repeat(32) begin 
+      start_item(tx_wr);
+      
+      assert(tx_wr.randomize() with {op == WRITE;});
+      tx_wr.wr_en = 0;
+      tx_wr.rd_en = 0;
+      
+      `uvm_info("GENERATED", tx_wr.convert2string(), UVM_HIGH)
+      finish_item(tx_wr);
+    end
 
+    // 5 dummy transactions to buffer between tests
+    repeat(5) begin
+      start_item(tx_wr);
+      assert(tx_wr.randomize() with {op == WRITE;});
+      tx_wr.wr_en = 0;
+      tx_wr.rd_en = 0;
+      `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
+      finish_item(tx_wr);
+    end
     if (starting_phase != null)
       starting_phase.drop_objection(this);
   endtask : body
@@ -167,7 +187,7 @@ class fifo_half_rd_seq extends fifo_read_sequence;
     
     // generate some transactions
     tx_rd = fifo_transaction::type_id::create("tx_rd");
-    repeat(30) begin // 30 transactions w/o rd_en to half-fill the FIFO
+    repeat(32) begin // 32 transactions w/o rd_en to half-fill the FIFO
       start_item(tx_rd);
       
       tx_rd.op = READ;
@@ -195,6 +215,28 @@ class fifo_half_rd_seq extends fifo_read_sequence;
       finish_item(tx_rd);
     end
 
+    // 32 Reads to empty the FIFO
+    repeat(32) begin 
+      start_item(tx_rd);
+      
+      tx_rd.op = READ;
+      tx_rd.wr_en = 0;
+      tx_rd.rd_en = 1;
+      
+      `uvm_info("GENERATED", tx_rd.convert2string(), UVM_HIGH)
+      finish_item(tx_rd);
+    end
+    
+    // 5 dummy transactions to buffer between tests 
+    repeat(5) begin
+      start_item(tx_rd);
+      assert(tx_rd.randomize() with {op == READ;});
+      tx_rd.wr_en = 0;
+      tx_rd.rd_en = 0;
+      `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)
+      finish_item(tx_rd);
+    end
+    
     if (starting_phase != null)
       starting_phase.drop_objection(this);
   endtask : body

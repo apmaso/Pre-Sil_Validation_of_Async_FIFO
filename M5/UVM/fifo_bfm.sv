@@ -32,10 +32,14 @@ interface fifo_bfm;
 	// Clock Generation for Write and Read domains
 	initial begin
 		clk_wr = 1'b0;
-		clk_rd = 1'b0;
 		forever begin
 			#(CYCLE_TIME_WR/2) clk_wr = ~clk_wr;
-	 		#(CYCLE_TIME_RD/2) clk_rd = ~clk_rd;
+		end
+	end
+	initial begin
+		clk_rd = 1'b0;
+		forever begin
+			#(CYCLE_TIME_RD/2) clk_rd = ~clk_rd;
 		end
 	end
 

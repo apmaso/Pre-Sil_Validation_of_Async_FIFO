@@ -31,17 +31,16 @@ class fifo_burst_wr_seq extends uvm_sequence #(fifo_transaction);
         `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
         finish_item(tx_wr);
       end
-      // No-write transactions to allow FIFO to be emptied 
+      // 72 No-write tx to allow FIFO to be emptied -> 72*12.5 = 900 ticks (Delta btw read and write bursts)
       // Plus 8 dummy txs to compensate for the initial read delay (in read driver)
-      // Plus 8 dummy txs buffer between tests
-      // NOTE: 8 Write Clks = 5 Read Clks
-      repeat(BUFFER_TX_CNT+8+8) begin
+      // Plus 8 dummy txs per buffer count (8 Write Clks = 5 Read Clks)
+      repeat (72+8+(8*BUFFER_CNT)) begin
         start_item(tx_wr);
         tx_wr.wr_en = 0;
         `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
         finish_item(tx_wr);
       end
-      burst_count++;
+      burst_count++;:waddr
     end
 
     if (starting_phase != null)
@@ -84,9 +83,8 @@ class fifo_burst_rd_seq extends uvm_sequence #(fifo_transaction);
         `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)
         finish_item(tx_rd);
       end
-      // 5 dummy read transactions to buffer between tests
-      // NOTE: 5 Read Clks = 8 Write Clks
-      repeat(5) begin
+      // 5 dummy txs per buffer count (5 Read Clks = 8 Write Clks)
+      repeat(5*BUFFER_CNT) begin
         start_item(tx_rd);
         tx_rd.rd_en = 0;
         `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)

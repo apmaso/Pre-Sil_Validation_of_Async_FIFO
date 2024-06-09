@@ -27,7 +27,6 @@ class fifo_burst_wr_seq extends uvm_sequence #(fifo_transaction);
         // Burst of writes with random data
         assert(tx_wr.randomize() with {op == WRITE;});
         tx_wr.wr_en = 1;
-        tx_wr.rd_en = 0;
         
         `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
         finish_item(tx_wr);
@@ -36,7 +35,6 @@ class fifo_burst_wr_seq extends uvm_sequence #(fifo_transaction);
       repeat(5) begin
         start_item(tx_wr);
         tx_wr.wr_en = 0;
-        tx_wr.rd_en = 0;
         `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
         finish_item(tx_wr);
       end
@@ -78,8 +76,7 @@ class fifo_burst_rd_seq extends uvm_sequence #(fifo_transaction);
         
         // Burst of writes with random data
         tx_rd.op = READ; 
-        tx_rd.wr_en = 1;
-        tx_rd.rd_en = 0;
+        tx_rd.rd_en = 1;
         
         `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)
         finish_item(tx_rd);
@@ -87,7 +84,6 @@ class fifo_burst_rd_seq extends uvm_sequence #(fifo_transaction);
       // Dummy write transactions to buffer between tests
       repeat(5) begin
         start_item(tx_rd);
-        tx_rd.wr_en = 0;
         tx_rd.rd_en = 0;
         `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)
         finish_item(tx_rd);

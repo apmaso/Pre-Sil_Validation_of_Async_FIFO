@@ -10,7 +10,9 @@ package fifo_pkg;
 	// Parameters for the testbench	
 	parameter TX_COUNT_WR = 120;
 	parameter TX_COUNT_RD = 120;
-	parameter READ_DELAY = 5;
+
+	parameter BURST_TX_CNT = 120;
+	parameter RANDOM_TX_CNT = 2000;
 
 
 	`include "transaction.sv"

@@ -45,7 +45,6 @@ class my_first_test extends uvm_test;
         join
         phase.drop_objection(this); 
     endtask
-  
 endclass
 class half_test extends my_first_test;
     // Register the class with the factory 
@@ -76,5 +75,34 @@ class half_test extends my_first_test;
         join
         phase.drop_objection(this); 
     endtask
-  
+endclass
+class random_test extends half_test;
+    // Register the class with the factory 
+    `uvm_component_utils(random_test);
+
+    // Declare handles to the new components
+    fifo_random_wr_seq random_wr_seq_h;
+    fifo_random_rd_seq random_rd_seq_h;
+
+    // Define the constructor
+    function new(string name = "random_test", uvm_component parent);
+        super.new(name, parent);
+        `uvm_info(get_type_name(), $sformatf("Constructing %s", get_full_name()), UVM_HIGH);
+    endfunction : new
+ 
+    // Overwrite the run phase with new sequences
+    task run_phase(uvm_phase phase);
+        super.run_phase(phase);
+        `uvm_info(get_type_name(), $sformatf("Running %s", get_full_name()), UVM_HIGH);
+        random_wr_seq_h = fifo_random_wr_seq::type_id::create("random_wr_seq_h");
+        random_rd_seq_h = fifo_random_rd_seq::type_id::create("random_rd_seq_h");
+
+        phase.raise_objection(this);
+        // Run the sequences in parallel
+        fork
+            random_wr_seq_h.start(environment_h.agent_h.sequencer_wr_h);
+            random_rd_seq_h.start(environment_h.agent_h.sequencer_rd_h);
+        join
+        phase.drop_objection(this); 
+    endtask
 endclass

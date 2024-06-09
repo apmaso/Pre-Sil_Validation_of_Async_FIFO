@@ -22,9 +22,6 @@ class fifo_write_sequence extends uvm_sequence #(fifo_transaction);
     repeat(TX_COUNT_WR) begin
       start_item(tx_wr);
       
-      //if (!tx_wr.randomize())
-      //  `uvm_error("RANDOMIZE", "Failed to randomize transaction")
-      
       assert(tx_wr.randomize() with {op == WRITE;});
       tx_wr.wr_en = 1;
       tx_wr.rd_en = 0;
@@ -32,7 +29,16 @@ class fifo_write_sequence extends uvm_sequence #(fifo_transaction);
       `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
       finish_item(tx_wr);
     end
-
+    repeat(5) begin
+      start_item(tx_wr);
+      
+      assert(tx_wr.randomize() with {op == WRITE;});
+      tx_wr.wr_en = 0;
+      tx_wr.rd_en = 0;
+      
+      `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
+      finish_item(tx_wr);
+    end
     if (starting_phase != null)
       starting_phase.drop_objection(this);
   endtask : body
@@ -70,7 +76,17 @@ class fifo_read_sequence extends uvm_sequence #(fifo_transaction);
       `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)
       finish_item(tx_rd);
     end
-
+    repeat(5) begin
+      start_item(tx_rd);
+      
+      
+      assert(tx_rd.randomize() with {op == READ;});
+      tx_rd.wr_en = 0;
+      tx_rd.rd_en = 0;
+      
+      `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)
+      finish_item(tx_rd);
+    end
     if (starting_phase != null)
       starting_phase.drop_objection(this);
   endtask : body

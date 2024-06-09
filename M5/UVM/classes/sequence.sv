@@ -32,7 +32,7 @@ class fifo_burst_wr_seq extends uvm_sequence #(fifo_transaction);
         finish_item(tx_wr);
       end
       // Dummy write transactions to buffer between tests
-      repeat(5) begin
+      repeat(BUFFER_TX_CNT) begin
         start_item(tx_wr);
         tx_wr.wr_en = 0;
         `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
@@ -82,7 +82,7 @@ class fifo_burst_rd_seq extends uvm_sequence #(fifo_transaction);
         finish_item(tx_rd);
       end
       // Dummy write transactions to buffer between tests
-      repeat(5) begin
+      repeat(BUFFER_TX_CNT) begin
         start_item(tx_rd);
         tx_rd.rd_en = 0;
         `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)

@@ -100,7 +100,7 @@ class fifo_burst_rd_seq extends uvm_sequence #(fifo_transaction);
   endtask : body
 endclass
 
-class fifo_half_wr_seq extends fifo_write_sequence;
+class fifo_half_wr_seq extends fifo_burst_wr_seq;
   `uvm_object_utils(fifo_half_wr_seq) // Register the class with the factory
 
   // Declare handles to the transaction packet
@@ -175,7 +175,7 @@ class fifo_half_wr_seq extends fifo_write_sequence;
   endtask : body
   
 endclass
-class fifo_half_rd_seq extends fifo_read_sequence;
+class fifo_half_rd_seq extends fifo_burst_rd_seq;
   `uvm_object_utils(fifo_half_rd_seq) // Register the class with the factory
 
   // Declare handles to the transaction packet

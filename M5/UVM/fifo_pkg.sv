@@ -10,7 +10,7 @@ package fifo_pkg;
 	// Parameters for the Burst testbench	
 	parameter BURST_TX_CNT	= 2;
 	parameter BURST_SIZE   	= 120;
-	parameter BUFFER_TX_CNT	= 25;
+	parameter BUFFER_TX_CNT	= 72;
 
 
 	parameter RANDOM_TX_CNT = 2000;

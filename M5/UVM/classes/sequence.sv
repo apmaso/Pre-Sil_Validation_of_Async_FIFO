@@ -31,9 +31,11 @@ class fifo_burst_wr_seq extends uvm_sequence #(fifo_transaction);
         `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
         finish_item(tx_wr);
       end
-      // No-write transactions to allow FIFO to be emptied PLUS 8 dummy txs to buffer between tests
+      // No-write transactions to allow FIFO to be emptied 
+      // Plus 8 dummy txs to compensate for the initial read delay (in read driver)
+      // Plus 8 dummy txs buffer between tests
       // NOTE: 8 Write Clks = 5 Read Clks
-      repeat(BUFFER_TX_CNT+8) begin
+      repeat(BUFFER_TX_CNT+8+8) begin
         start_item(tx_wr);
         tx_wr.wr_en = 0;
         `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)

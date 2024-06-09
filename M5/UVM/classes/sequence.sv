@@ -20,7 +20,7 @@ class fifo_burst_wr_seq extends uvm_sequence #(fifo_transaction);
     // TODO: Can this created once per burst? 
     tx_wr = fifo_transaction::type_id::create("tx_wr");
     repeat(BURST_TX_CNT) begin
-      `uvm_info("BURST_WRITE_SEQ", $sformatf("Starting burst write sequence number %d", burst_count), UVM_MEDIUM)
+      `uvm_info("BURST_WRITE_SEQ", $sformatf("Starting burst write sequence number: %0d", burst_count), UVM_MEDIUM)
       repeat (BURST_SIZE) begin
         start_item(tx_wr);
         
@@ -70,7 +70,7 @@ class fifo_burst_rd_seq extends uvm_sequence #(fifo_transaction);
     // TODO: Can this created once per burst? 
     tx_rd = fifo_transaction::type_id::create("tx_rd");
     repeat(BURST_TX_CNT) begin
-      `uvm_info("BURST_READ_SEQ", $sformatf("Starting burst read sequence number %d", burst_count), UVM_MEDIUM)
+      `uvm_info("BURST_READ_SEQ", $sformatf("Starting burst read sequence number: %0d", burst_count), UVM_MEDIUM)
       repeat (BURST_SIZE) begin
         start_item(tx_rd);
         

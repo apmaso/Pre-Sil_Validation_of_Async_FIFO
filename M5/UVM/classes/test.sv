@@ -1,14 +1,14 @@
-class my_first_test extends uvm_test;
+class burst_test extends uvm_test;
     // Register the class with the factory 
-    `uvm_component_utils(my_first_test);
+    `uvm_component_utils(burst_test);
 
     // Declare handles to the components
     fifo_environment environment_h;
-    fifo_write_sequence write_sequence_h;
-    fifo_read_sequence read_sequence_h;
+    fifo_burst_wr_seq write_sequence_h;
+    fifo_burst_rd_seq read_sequence_h;
 
     // Define the constructor
-    function new(string name = "my_first_test", uvm_component parent);
+    function new(string name = "burst_test", uvm_component parent);
         super.new(name, parent);
         `uvm_info(get_type_name(), $sformatf("Constructing %s", get_full_name()), UVM_HIGH);
     endfunction : new
@@ -34,8 +34,8 @@ class my_first_test extends uvm_test;
     task run_phase(uvm_phase phase);
         super.run_phase(phase);
         `uvm_info(get_type_name(), $sformatf("Running %s", get_full_name()), UVM_HIGH);
-        write_sequence_h = fifo_write_sequence::type_id::create("write_sequence_h");
-        read_sequence_h = fifo_read_sequence::type_id::create("read_sequence_h");
+        write_sequence_h = fifo_burst_wr_seq::type_id::create("write_sequence_h");
+        read_sequence_h = fifo_burst_rd_seq::type_id::create("read_sequence_h");
 
         phase.raise_objection(this);
         // Run the sequences in parallel
@@ -46,7 +46,7 @@ class my_first_test extends uvm_test;
         phase.drop_objection(this); 
     endtask
 endclass
-class half_test extends my_first_test;
+class half_test extends burst_test;
     // Register the class with the factory 
     `uvm_component_utils(half_test);
 

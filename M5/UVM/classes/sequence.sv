@@ -1,58 +1,60 @@
-class fifo_write_sequence extends uvm_sequence #(fifo_transaction);
-  `uvm_object_utils(fifo_write_sequence) // Register the class with the factory
+class fifo_burst_wr_seq extends uvm_sequence #(fifo_transaction);
+  `uvm_object_utils(fifo_burst_wr_seq) // Register the class with the factory
 
-  // Declare handles to the transaction packet
+  // Declare handle to the transaction packet
   fifo_transaction tx_wr;
   
   // Constructor 
-  function new(string name="fifo_write_sequence");
+  function new(string name="fifo_burst_wr_seq");
     super.new(name);
   endfunction
   
-  // virtual task body();
   // Not virtual in Doulos Video
   task body();
     if (starting_phase != null)
       starting_phase.raise_objection(this);
 
-    `uvm_info("FIFO_WRITE_SEQ", "Starting write sequence", UVM_MEDIUM)
-    
-    // generate some transactions
+    // TODO: Can this created once per burst? 
     tx_wr = fifo_transaction::type_id::create("tx_wr");
-    repeat(TX_COUNT_WR) begin
-      start_item(tx_wr);
-      
-      assert(tx_wr.randomize() with {op == WRITE;});
-      tx_wr.wr_en = 1;
-      tx_wr.rd_en = 0;
-      
-      `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
-      finish_item(tx_wr);
+    int burst_count = 1;    
+    repeat(BURST_TX_CNT) begin
+      `uvm_info("BURST_WRITE_SEQ", $sformatf("Starting burst write sequence number %d", burst_count), UVM_MEDIUM)
+      repeat (BURST_SIZE) begin
+        start_item(tx_wr);
+        
+        // Burst of writes with random data
+        assert(tx_wr.randomize() with {op == WRITE;});
+        tx_wr.wr_en = 1;
+        tx_wr.rd_en = 0;
+        
+        `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
+        finish_item(tx_wr);
+      end
+      // Dummy write transactions to buffer between tests
+      repeat(5) begin
+        start_item(tx_wr);
+        tx_wr.wr_en = 0;
+        tx_wr.rd_en = 0;
+        `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
+        finish_item(tx_wr);
+      end
+      burst_count++;
     end
 
-    // 5 dummy transactions to buffer between tests
-    repeat(5) begin
-      start_item(tx_wr);
-      assert(tx_wr.randomize() with {op == WRITE;});
-      tx_wr.wr_en = 0;
-      tx_wr.rd_en = 0;
-      `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)
-      finish_item(tx_wr);
-    end
     if (starting_phase != null)
       starting_phase.drop_objection(this);
   endtask : body
   
 endclass
 
-class fifo_read_sequence extends uvm_sequence #(fifo_transaction);
-  `uvm_object_utils(fifo_read_sequence) // Register the class with the factory
+class fifo_burst_rd_seq extends uvm_sequence #(fifo_transaction);
+  `uvm_object_utils(fifo_burst_rd_seq) // Register the class with the factory
 
   // Declare handles to the transaction packet
   fifo_transaction tx_rd;
   
   // Constructor 
-  function new(string name="fifo_read_sequence");
+  function new(string name="fifo_burst_rd_seq");
     super.new(name);
   endfunction
   
@@ -62,30 +64,33 @@ class fifo_read_sequence extends uvm_sequence #(fifo_transaction);
     if (starting_phase != null)
       starting_phase.raise_objection(this);
 
-    `uvm_info("FIFO_READ_SEQ", "Starting read sequence", UVM_MEDIUM)
-    // generate some transactions
+    // TODO: Can this created once per burst? 
     tx_rd = fifo_transaction::type_id::create("tx_rd");
-    repeat(TX_COUNT_RD) begin
-      start_item(tx_rd);
-      
-      
-      assert(tx_rd.randomize() with {op == READ;});
-      tx_rd.wr_en = 0;
-      tx_rd.rd_en = 1;
-      
-      `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)
-      finish_item(tx_rd);
+    int burst_count = 1;    
+    repeat(BURST_TX_CNT) begin
+      `uvm_info("BURST_READ_SEQ", $sformatf("Starting burst read sequence number %d", burst_count), UVM_MEDIUM)
+      repeat (BURST_SIZE) begin
+        start_item(tx_rd);
+        
+        // Burst of writes with random data
+        tx_rd.op = READ; 
+        tx_rd.wr_en = 1;
+        tx_rd.rd_en = 0;
+        
+        `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)
+        finish_item(tx_rd);
+      end
+      // Dummy write transactions to buffer between tests
+      repeat(5) begin
+        start_item(tx_rd);
+        tx_rd.wr_en = 0;
+        tx_rd.rd_en = 0;
+        `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)
+        finish_item(tx_rd);
+      end
+      burst_count++;
     end
-
-    // 5 dummy transactions to buffer between tests 
-    repeat(5) begin
-      start_item(tx_rd);
-      assert(tx_rd.randomize() with {op == READ;});
-      tx_rd.wr_en = 0;
-      tx_rd.rd_en = 0;
-      `uvm_info("GENERATE", tx_rd.convert2string(), UVM_HIGH)
-      finish_item(tx_rd);
-    end
+   
     if (starting_phase != null)
       starting_phase.drop_objection(this);
   endtask : body

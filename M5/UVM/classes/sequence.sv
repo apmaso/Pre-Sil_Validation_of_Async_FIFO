@@ -310,7 +310,7 @@ class fifo_random_rd_seq extends fifo_read_sequence;
     repeat(RANDOM_TX_CNT) begin 
       start_item(tx_rd);
       
-      assert(tx_wr.randomize() with {op == READ;});
+      assert(tx_rd.randomize() with {op == READ;});
       
       `uvm_info("GENERATED", tx_rd.convert2string(), UVM_HIGH)
       finish_item(tx_rd);

@@ -127,14 +127,14 @@ class fifo_half_wr_seq extends fifo_write_sequence;
     repeat (5) begin
       start_item(tx_wr);
       assert(tx_wr.randomize() with {op == WRITE;});
-      tx_wr.wr_en = 0;
+      tx_wr.wr_en = 1;
       tx_wr.rd_en = 0;
       `uvm_info("GENERATED", tx_wr.convert2string(), UVM_HIGH)
       finish_item(tx_wr);
     
       start_item(tx_wr);
       assert(tx_wr.randomize() with {op == WRITE;});
-      tx_wr.wr_en = 1;
+      tx_wr.wr_en = 0;
       tx_wr.rd_en = 0;
       `uvm_info("GENERATED", tx_wr.convert2string(), UVM_HIGH)
       finish_item(tx_wr);
@@ -203,14 +203,14 @@ class fifo_half_rd_seq extends fifo_read_sequence;
       start_item(tx_rd);
       tx_rd.op = READ;
       tx_rd.wr_en = 0;
-      tx_rd.rd_en = 1;
+      tx_rd.rd_en = 0;
       `uvm_info("GENERATED", tx_rd.convert2string(), UVM_HIGH)
       finish_item(tx_rd);
     
       start_item(tx_rd);
       tx_rd.op = READ;
       tx_rd.wr_en = 0;
-      tx_rd.rd_en = 0;
+      tx_rd.rd_en = 1;
       `uvm_info("GENERATED", tx_rd.convert2string(), UVM_HIGH)
       finish_item(tx_rd);
     end

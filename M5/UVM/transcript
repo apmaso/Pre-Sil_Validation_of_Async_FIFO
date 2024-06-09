@@ -1,50 +1,50 @@
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 01:05:43 on Jun 08,2024
+# Start time: 22:34:55 on Jun 08,2024
 # vlog -lint dut/fifo_top.sv 
 # -- Compiling module fifo_top
 # 
 # Top level modules:
 # 	fifo_top
-# End time: 01:05:43 on Jun 08,2024, Elapsed time: 0:00:00
+# End time: 22:34:56 on Jun 08,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 01:05:43 on Jun 08,2024
+# Start time: 22:34:56 on Jun 08,2024
 # vlog -lint dut/fifo_memory.sv 
 # -- Compiling module fifo_memory
 # 
 # Top level modules:
 # 	fifo_memory
-# End time: 01:05:43 on Jun 08,2024, Elapsed time: 0:00:00
+# End time: 22:34:56 on Jun 08,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 01:05:43 on Jun 08,2024
+# Start time: 22:34:56 on Jun 08,2024
 # vlog -lint dut/read_pointer.sv 
 # -- Compiling module read_pointer
 # 
 # Top level modules:
 # 	read_pointer
-# End time: 01:05:44 on Jun 08,2024, Elapsed time: 0:00:01
+# End time: 22:34:56 on Jun 08,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 01:05:44 on Jun 08,2024
+# Start time: 22:34:56 on Jun 08,2024
 # vlog -lint dut/write_pointer.sv 
 # -- Compiling module write_pointer
 # 
 # Top level modules:
 # 	write_pointer
-# End time: 01:05:44 on Jun 08,2024, Elapsed time: 0:00:00
+# End time: 22:34:57 on Jun 08,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 01:05:44 on Jun 08,2024
+# Start time: 22:34:57 on Jun 08,2024
 # vlog -lint dut/sync.sv 
 # -- Compiling module sync
 # 
 # Top level modules:
 # 	sync
-# End time: 01:05:44 on Jun 08,2024, Elapsed time: 0:00:00
+# End time: 22:34:57 on Jun 08,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 01:05:44 on Jun 08,2024
+# Start time: 22:34:57 on Jun 08,2024
 # vlog -f tb.f 
 # -- Compiling package fifo_pkg
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
@@ -55,10 +55,10 @@
 # 
 # Top level modules:
 # 	top
-# End time: 01:05:45 on Jun 08,2024, Elapsed time: 0:00:01
+# End time: 22:34:58 on Jun 08,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vopt 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 01:05:45 on Jun 08,2024
+# Start time: 22:34:58 on Jun 08,2024
 # vopt top -o top_optimized "+acc" "+cover=sbfec+fifo_top(rtl)." 
 # 
 # Top level modules:
@@ -89,10 +89,10 @@
 # -- Optimizing module sync(fast)
 # -- Optimizing interface fifo_bfm(fast)
 # Optimized design name is top_optimized
-# End time: 01:05:53 on Jun 08,2024, Elapsed time: 0:00:08
+# End time: 22:35:06 on Jun 08,2024, Elapsed time: 0:00:08
 # Errors: 0, Warnings: 0
 # vsim top_optimized -coverage "+UVM_TESTNAME=my_first_test" 
-# Start time: 01:05:53 on Jun 08,2024
+# Start time: 22:35:06 on Jun 08,2024
 # //  Questa Sim-64
 # //  Version 2021.3_1 linux_x86_64 Aug 15 2021
 # //
@@ -121,10 +121,10 @@
 # Loading work.read_pointer(fast)
 # Loading work.sync(fast)
 # Loading /pkgs/mentor/questa/2021.3_1/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
-# End time: 01:05:56 on Jun 08,2024, Elapsed time: 0:00:03
+# End time: 22:35:08 on Jun 08,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # vsim top_optimized -coverage "+UVM_TESTNAME=half_test" 
-# Start time: 01:05:56 on Jun 08,2024
+# Start time: 22:35:08 on Jun 08,2024
 # Loading sv_std.std
 # Loading work.fifo_bfm(fast)
 # Loading mtiUvm.uvm_pkg(fast)
@@ -202,766 +202,1289 @@
 # ---------------------------------------------------------------
 # 
 # UVM_INFO classes/sequence.sv(18) @ 0: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@write_sequence_h [FIFO_WRITE_SEQ] Starting write sequence
-# UVM_INFO classes/sequence.sv(59) @ 0: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [FIFO_READ_SEQ] Starting read sequence
+# UVM_INFO classes/sequence.sv(65) @ 0: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@read_sequence_h [FIFO_READ_SEQ] Starting read sequence
+# UVM_INFO classes/scoreboard.sv(95) @ 230: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 1
+# UVM_INFO classes/scoreboard.sv(95) @ 262: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 2
+# UVM_INFO classes/scoreboard.sv(95) @ 294: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 3
+# UVM_INFO classes/scoreboard.sv(95) @ 326: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 4
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @998 
 # ----------------------------------------
-# UVM_INFO classes/scoreboard.sv(76) @ 356: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Empty count: 1
+# UVM_INFO classes/scoreboard.sv(105) @ 356: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 1
+# UVM_INFO classes/scoreboard.sv(77) @ 356: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Empty count: 1
 # UVM_INFO classes/scoreboard.sv(87) @ 356: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 14, got 14
+# UVM_INFO classes/scoreboard.sv(95) @ 358: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 5
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1007
 # ----------------------------------------
-# UVM_INFO classes/scoreboard.sv(76) @ 388: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Empty count: 2
+# UVM_INFO classes/scoreboard.sv(105) @ 388: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 2
+# UVM_INFO classes/scoreboard.sv(77) @ 388: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Empty count: 2
 # UVM_INFO classes/scoreboard.sv(87) @ 388: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected af, got af
+# UVM_INFO classes/scoreboard.sv(95) @ 390: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 6
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1015
 # ----------------------------------------
-# UVM_INFO classes/scoreboard.sv(76) @ 420: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Empty count: 3
+# UVM_INFO classes/scoreboard.sv(105) @ 420: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 3
+# UVM_INFO classes/scoreboard.sv(77) @ 420: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Empty count: 3
 # UVM_INFO classes/scoreboard.sv(87) @ 420: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ce, got ce
+# UVM_INFO classes/scoreboard.sv(95) @ 422: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 7
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1023
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 452: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 4
 # UVM_INFO classes/scoreboard.sv(87) @ 452: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected df, got df
+# UVM_INFO classes/scoreboard.sv(95) @ 454: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 8
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1031
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 484: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 5
 # UVM_INFO classes/scoreboard.sv(87) @ 484: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 40, got 40
+# UVM_INFO classes/scoreboard.sv(95) @ 486: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 9
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1039
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 516: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 6
 # UVM_INFO classes/scoreboard.sv(87) @ 516: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected b3, got b3
+# UVM_INFO classes/scoreboard.sv(95) @ 518: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 10
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1047
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 548: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 7
 # UVM_INFO classes/scoreboard.sv(87) @ 548: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 32, got 32
+# UVM_INFO classes/scoreboard.sv(95) @ 550: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 11
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1055
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 580: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 8
 # UVM_INFO classes/scoreboard.sv(87) @ 580: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected e3, got e3
+# UVM_INFO classes/scoreboard.sv(95) @ 582: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 12
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1063
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 612: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 9
 # UVM_INFO classes/scoreboard.sv(87) @ 612: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 25, got 25
+# UVM_INFO classes/scoreboard.sv(95) @ 614: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 13
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1071
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 644: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 10
 # UVM_INFO classes/scoreboard.sv(87) @ 644: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 5d, got 5d
+# UVM_INFO classes/scoreboard.sv(95) @ 646: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 14
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1079
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 676: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 11
 # UVM_INFO classes/scoreboard.sv(87) @ 676: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected f2, got f2
+# UVM_INFO classes/scoreboard.sv(95) @ 678: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 15
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1087
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 708: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 12
 # UVM_INFO classes/scoreboard.sv(87) @ 708: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 06, got 06
+# UVM_INFO classes/scoreboard.sv(95) @ 710: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 16
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1095
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 740: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 13
 # UVM_INFO classes/scoreboard.sv(87) @ 740: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ff, got ff
+# UVM_INFO classes/scoreboard.sv(95) @ 742: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 17
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1103
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 772: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 14
 # UVM_INFO classes/scoreboard.sv(87) @ 772: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected e0, got e0
+# UVM_INFO classes/scoreboard.sv(95) @ 774: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 18
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1111
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 804: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 15
 # UVM_INFO classes/scoreboard.sv(87) @ 804: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected fe, got fe
+# UVM_INFO classes/scoreboard.sv(95) @ 806: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 19
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1119
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 836: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 16
 # UVM_INFO classes/scoreboard.sv(87) @ 836: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 20, got 20
+# UVM_INFO classes/scoreboard.sv(95) @ 838: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 20
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1127
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 868: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 17
 # UVM_INFO classes/scoreboard.sv(87) @ 868: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected c7, got c7
+# UVM_INFO classes/scoreboard.sv(95) @ 870: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 21
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1135
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 900: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 18
 # UVM_INFO classes/scoreboard.sv(87) @ 900: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 8f, got 8f
+# UVM_INFO classes/scoreboard.sv(95) @ 902: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 22
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1143
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 932: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 19
 # UVM_INFO classes/scoreboard.sv(87) @ 932: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 69, got 69
+# UVM_INFO classes/scoreboard.sv(95) @ 934: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 23
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1151
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 964: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 20
 # UVM_INFO classes/scoreboard.sv(87) @ 964: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected f2, got f2
+# UVM_INFO classes/scoreboard.sv(95) @ 966: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 24
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1159
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 996: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 21
 # UVM_INFO classes/scoreboard.sv(87) @ 996: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 8b, got 8b
+# UVM_INFO classes/scoreboard.sv(95) @ 998: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 25
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1167
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1028: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 22
 # UVM_INFO classes/scoreboard.sv(87) @ 1028: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 0b, got 0b
+# UVM_INFO classes/scoreboard.sv(95) @ 1030: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 26
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1175
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1060: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 23
 # UVM_INFO classes/scoreboard.sv(87) @ 1060: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 84, got 84
+# UVM_INFO classes/scoreboard.sv(95) @ 1062: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 27
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1183
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1092: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 24
 # UVM_INFO classes/scoreboard.sv(87) @ 1092: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected cd, got cd
+# UVM_INFO classes/scoreboard.sv(95) @ 1094: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 28
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1191
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1124: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 25
 # UVM_INFO classes/scoreboard.sv(87) @ 1124: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 0e, got 0e
+# UVM_INFO classes/scoreboard.sv(95) @ 1126: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 29
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1199
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1156: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 26
 # UVM_INFO classes/scoreboard.sv(87) @ 1156: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 6b, got 6b
+# UVM_INFO classes/scoreboard.sv(95) @ 1158: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 30
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1207
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1188: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 27
 # UVM_INFO classes/scoreboard.sv(87) @ 1188: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected e2, got e2
+# UVM_INFO classes/scoreboard.sv(95) @ 1190: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 31
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1215
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1220: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 28
 # UVM_INFO classes/scoreboard.sv(87) @ 1220: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 34, got 34
+# UVM_INFO classes/scoreboard.sv(95) @ 1222: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 32
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1223
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1252: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 29
 # UVM_INFO classes/scoreboard.sv(87) @ 1252: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 94, got 94
+# UVM_INFO classes/scoreboard.sv(95) @ 1254: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 33
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1231
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1284: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 30
 # UVM_INFO classes/scoreboard.sv(87) @ 1284: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 0a, got 0a
+# UVM_INFO classes/scoreboard.sv(95) @ 1286: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 34
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1239
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1316: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 31
 # UVM_INFO classes/scoreboard.sv(87) @ 1316: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected c4, got c4
+# UVM_INFO classes/scoreboard.sv(95) @ 1318: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 35
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1247
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1348: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 32
 # UVM_INFO classes/scoreboard.sv(87) @ 1348: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 10, got 10
+# UVM_INFO classes/scoreboard.sv(95) @ 1350: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 36
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1255
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1380: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 33
 # UVM_INFO classes/scoreboard.sv(87) @ 1380: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 92, got 92
+# UVM_INFO classes/scoreboard.sv(95) @ 1382: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 37
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1263
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1412: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 34
 # UVM_INFO classes/scoreboard.sv(87) @ 1412: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 7f, got 7f
+# UVM_INFO classes/scoreboard.sv(95) @ 1414: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 38
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1271
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1444: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 35
 # UVM_INFO classes/scoreboard.sv(87) @ 1444: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 38, got 38
+# UVM_INFO classes/scoreboard.sv(95) @ 1446: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 39
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1279
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1476: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 36
 # UVM_INFO classes/scoreboard.sv(87) @ 1476: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ef, got ef
+# UVM_INFO classes/scoreboard.sv(95) @ 1478: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 40
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1287
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1508: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 37
 # UVM_INFO classes/scoreboard.sv(87) @ 1508: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ef, got ef
+# UVM_INFO classes/scoreboard.sv(95) @ 1510: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 41
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1295
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1540: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 38
 # UVM_INFO classes/scoreboard.sv(87) @ 1540: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected c0, got c0
+# UVM_INFO classes/scoreboard.sv(95) @ 1542: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 42
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1303
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1572: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 39
 # UVM_INFO classes/scoreboard.sv(87) @ 1572: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 21, got 21
+# UVM_INFO classes/scoreboard.sv(95) @ 1574: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 43
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1311
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1604: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 40
 # UVM_INFO classes/scoreboard.sv(87) @ 1604: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ee, got ee
+# UVM_INFO classes/scoreboard.sv(95) @ 1606: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 44
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1319
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1636: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 41
 # UVM_INFO classes/scoreboard.sv(87) @ 1636: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 06, got 06
+# UVM_INFO classes/scoreboard.sv(95) @ 1638: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 45
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1327
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1668: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 42
 # UVM_INFO classes/scoreboard.sv(87) @ 1668: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected da, got da
+# UVM_INFO classes/scoreboard.sv(95) @ 1670: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 46
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1335
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1700: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 43
 # UVM_INFO classes/scoreboard.sv(87) @ 1700: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 67, got 67
+# UVM_INFO classes/scoreboard.sv(95) @ 1702: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 47
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1343
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1732: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 44
 # UVM_INFO classes/scoreboard.sv(87) @ 1732: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 85, got 85
+# UVM_INFO classes/scoreboard.sv(95) @ 1734: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 48
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1351
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1764: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 45
 # UVM_INFO classes/scoreboard.sv(87) @ 1764: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 68, got 68
+# UVM_INFO classes/scoreboard.sv(95) @ 1766: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 49
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1359
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1796: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 46
 # UVM_INFO classes/scoreboard.sv(87) @ 1796: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 0a, got 0a
+# UVM_INFO classes/scoreboard.sv(95) @ 1798: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 50
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1367
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1828: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 47
 # UVM_INFO classes/scoreboard.sv(87) @ 1828: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 22, got 22
+# UVM_INFO classes/scoreboard.sv(95) @ 1830: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 51
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1375
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1860: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 48
 # UVM_INFO classes/scoreboard.sv(87) @ 1860: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected f6, got f6
+# UVM_INFO classes/scoreboard.sv(95) @ 1862: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 52
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1383
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1892: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 49
 # UVM_INFO classes/scoreboard.sv(87) @ 1892: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 5d, got 5d
+# UVM_INFO classes/scoreboard.sv(95) @ 1894: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 53
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1391
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1924: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 50
 # UVM_INFO classes/scoreboard.sv(87) @ 1924: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 6c, got 6c
+# UVM_INFO classes/scoreboard.sv(95) @ 1926: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 54
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1399
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1956: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 51
 # UVM_INFO classes/scoreboard.sv(87) @ 1956: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 85, got 85
+# UVM_INFO classes/scoreboard.sv(95) @ 1958: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 55
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1407
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 1988: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 52
 # UVM_INFO classes/scoreboard.sv(87) @ 1988: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ec, got ec
+# UVM_INFO classes/scoreboard.sv(95) @ 1990: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 56
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1415
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2020: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 53
 # UVM_INFO classes/scoreboard.sv(87) @ 2020: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected e1, got e1
+# UVM_INFO classes/scoreboard.sv(95) @ 2022: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 57
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1423
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2052: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 54
 # UVM_INFO classes/scoreboard.sv(87) @ 2052: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 54, got 54
+# UVM_INFO classes/scoreboard.sv(95) @ 2054: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 58
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1431
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2084: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 55
 # UVM_INFO classes/scoreboard.sv(87) @ 2084: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected f5, got f5
+# UVM_INFO classes/scoreboard.sv(95) @ 2086: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 59
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1439
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2116: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 56
 # UVM_INFO classes/scoreboard.sv(87) @ 2116: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected f2, got f2
+# UVM_INFO classes/scoreboard.sv(95) @ 2118: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 60
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1447
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2148: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 57
 # UVM_INFO classes/scoreboard.sv(87) @ 2148: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected b9, got b9
+# UVM_INFO classes/scoreboard.sv(95) @ 2150: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 61
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1455
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2180: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 58
 # UVM_INFO classes/scoreboard.sv(87) @ 2180: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected c7, got c7
+# UVM_INFO classes/scoreboard.sv(95) @ 2182: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 62
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1463
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2212: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 59
 # UVM_INFO classes/scoreboard.sv(87) @ 2212: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ca, got ca
+# UVM_INFO classes/scoreboard.sv(95) @ 2214: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 63
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1471
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2244: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 60
 # UVM_INFO classes/scoreboard.sv(87) @ 2244: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 77, got 77
+# UVM_INFO classes/scoreboard.sv(95) @ 2246: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 64
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1479
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2276: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 61
 # UVM_INFO classes/scoreboard.sv(87) @ 2276: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ab, got ab
+# UVM_INFO classes/scoreboard.sv(95) @ 2278: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 65
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1487
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2308: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 62
 # UVM_INFO classes/scoreboard.sv(87) @ 2308: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 3c, got 3c
+# UVM_INFO classes/scoreboard.sv(95) @ 2310: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 66
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1495
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2340: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 63
 # UVM_INFO classes/scoreboard.sv(87) @ 2340: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 0a, got 0a
+# UVM_INFO classes/scoreboard.sv(95) @ 2342: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 67
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1503
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2372: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 64
 # UVM_INFO classes/scoreboard.sv(87) @ 2372: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 79, got 79
+# UVM_INFO classes/scoreboard.sv(95) @ 2374: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 68
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1511
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2404: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 65
 # UVM_INFO classes/scoreboard.sv(87) @ 2404: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected c8, got c8
+# UVM_INFO classes/scoreboard.sv(95) @ 2406: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 69
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1519
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2436: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 66
 # UVM_INFO classes/scoreboard.sv(87) @ 2436: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected fa, got fa
+# UVM_INFO classes/scoreboard.sv(95) @ 2438: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 70
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1527
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2468: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 67
 # UVM_INFO classes/scoreboard.sv(87) @ 2468: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 17, got 17
+# UVM_INFO classes/scoreboard.sv(95) @ 2470: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 71
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1535
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2500: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 68
 # UVM_INFO classes/scoreboard.sv(87) @ 2500: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected d5, got d5
+# UVM_INFO classes/scoreboard.sv(95) @ 2502: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 72
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1543
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2532: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 69
 # UVM_INFO classes/scoreboard.sv(87) @ 2532: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 73, got 73
+# UVM_INFO classes/scoreboard.sv(95) @ 2534: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 73
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1551
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2564: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 70
 # UVM_INFO classes/scoreboard.sv(87) @ 2564: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 4c, got 4c
+# UVM_INFO classes/scoreboard.sv(95) @ 2566: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 74
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1559
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2596: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 71
 # UVM_INFO classes/scoreboard.sv(87) @ 2596: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 1e, got 1e
+# UVM_INFO classes/scoreboard.sv(95) @ 2598: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 75
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1567
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2628: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 72
 # UVM_INFO classes/scoreboard.sv(87) @ 2628: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected b2, got b2
+# UVM_INFO classes/scoreboard.sv(95) @ 2630: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 76
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1575
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2660: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 73
 # UVM_INFO classes/scoreboard.sv(87) @ 2660: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 55, got 55
+# UVM_INFO classes/scoreboard.sv(95) @ 2662: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 77
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1583
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2692: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 74
 # UVM_INFO classes/scoreboard.sv(87) @ 2692: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 94, got 94
+# UVM_INFO classes/scoreboard.sv(95) @ 2694: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 78
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1591
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2724: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 75
 # UVM_INFO classes/scoreboard.sv(87) @ 2724: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected cc, got cc
+# UVM_INFO classes/scoreboard.sv(95) @ 2726: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 79
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1599
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2756: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 76
 # UVM_INFO classes/scoreboard.sv(87) @ 2756: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 85, got 85
+# UVM_INFO classes/scoreboard.sv(95) @ 2758: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 80
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1607
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2788: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 77
 # UVM_INFO classes/scoreboard.sv(87) @ 2788: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 76, got 76
+# UVM_INFO classes/scoreboard.sv(95) @ 2790: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 81
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1615
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2820: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 78
 # UVM_INFO classes/scoreboard.sv(87) @ 2820: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 2c, got 2c
+# UVM_INFO classes/scoreboard.sv(95) @ 2822: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 82
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1623
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2852: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 79
 # UVM_INFO classes/scoreboard.sv(87) @ 2852: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 74, got 74
+# UVM_INFO classes/scoreboard.sv(95) @ 2854: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 83
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1631
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2884: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 80
 # UVM_INFO classes/scoreboard.sv(87) @ 2884: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected b4, got b4
+# UVM_INFO classes/scoreboard.sv(95) @ 2886: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 84
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1639
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2916: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 81
 # UVM_INFO classes/scoreboard.sv(87) @ 2916: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 46, got 46
+# UVM_INFO classes/scoreboard.sv(95) @ 2918: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 85
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1647
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2948: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 82
 # UVM_INFO classes/scoreboard.sv(87) @ 2948: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 03, got 03
+# UVM_INFO classes/scoreboard.sv(95) @ 2950: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 86
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1655
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 2980: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 83
 # UVM_INFO classes/scoreboard.sv(87) @ 2980: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 35, got 35
+# UVM_INFO classes/scoreboard.sv(95) @ 2982: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 87
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1663
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3012: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 84
 # UVM_INFO classes/scoreboard.sv(87) @ 3012: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ba, got ba
+# UVM_INFO classes/scoreboard.sv(95) @ 3014: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 88
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1671
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3044: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 85
 # UVM_INFO classes/scoreboard.sv(87) @ 3044: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 27, got 27
+# UVM_INFO classes/scoreboard.sv(95) @ 3046: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 89
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1679
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3076: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 86
 # UVM_INFO classes/scoreboard.sv(87) @ 3076: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 02, got 02
+# UVM_INFO classes/scoreboard.sv(95) @ 3078: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 90
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1687
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3108: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 87
 # UVM_INFO classes/scoreboard.sv(87) @ 3108: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 72, got 72
+# UVM_INFO classes/scoreboard.sv(95) @ 3110: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 91
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1695
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3140: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 88
 # UVM_INFO classes/scoreboard.sv(87) @ 3140: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 0e, got 0e
+# UVM_INFO classes/scoreboard.sv(95) @ 3142: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 92
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1703
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3172: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 89
 # UVM_INFO classes/scoreboard.sv(87) @ 3172: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected f3, got f3
+# UVM_INFO classes/scoreboard.sv(95) @ 3174: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 93
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1711
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3204: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 90
 # UVM_INFO classes/scoreboard.sv(87) @ 3204: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected f7, got f7
+# UVM_INFO classes/scoreboard.sv(95) @ 3206: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 94
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1719
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3236: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 91
 # UVM_INFO classes/scoreboard.sv(87) @ 3236: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 39, got 39
+# UVM_INFO classes/scoreboard.sv(95) @ 3238: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 95
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1727
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3268: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 92
 # UVM_INFO classes/scoreboard.sv(87) @ 3268: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected fb, got fb
+# UVM_INFO classes/scoreboard.sv(95) @ 3270: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 96
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1735
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3300: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 93
 # UVM_INFO classes/scoreboard.sv(87) @ 3300: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 86, got 86
+# UVM_INFO classes/scoreboard.sv(95) @ 3302: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 97
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1743
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3332: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 94
 # UVM_INFO classes/scoreboard.sv(87) @ 3332: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 4b, got 4b
+# UVM_INFO classes/scoreboard.sv(95) @ 3334: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 98
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1751
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3364: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 95
 # UVM_INFO classes/scoreboard.sv(87) @ 3364: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 11, got 11
+# UVM_INFO classes/scoreboard.sv(95) @ 3366: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 99
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1759
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3396: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 96
 # UVM_INFO classes/scoreboard.sv(87) @ 3396: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 56, got 56
+# UVM_INFO classes/scoreboard.sv(95) @ 3398: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 100
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1767
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3428: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 97
 # UVM_INFO classes/scoreboard.sv(87) @ 3428: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 19, got 19
+# UVM_INFO classes/scoreboard.sv(95) @ 3430: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 101
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1775
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3460: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 98
 # UVM_INFO classes/scoreboard.sv(87) @ 3460: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected d3, got d3
+# UVM_INFO classes/scoreboard.sv(95) @ 3462: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 102
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1783
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3492: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 99
 # UVM_INFO classes/scoreboard.sv(87) @ 3492: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ea, got ea
+# UVM_INFO classes/scoreboard.sv(95) @ 3494: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 103
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1791
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3524: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 100
 # UVM_INFO classes/scoreboard.sv(87) @ 3524: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected cb, got cb
+# UVM_INFO classes/scoreboard.sv(95) @ 3526: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 104
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1799
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3556: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 101
 # UVM_INFO classes/scoreboard.sv(87) @ 3556: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 2c, got 2c
+# UVM_INFO classes/scoreboard.sv(95) @ 3558: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 105
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1807
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3588: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 102
 # UVM_INFO classes/scoreboard.sv(87) @ 3588: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected a7, got a7
+# UVM_INFO classes/scoreboard.sv(95) @ 3590: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 106
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1815
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3620: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 103
 # UVM_INFO classes/scoreboard.sv(87) @ 3620: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected e7, got e7
+# UVM_INFO classes/scoreboard.sv(95) @ 3622: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 107
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1823
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3652: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 104
 # UVM_INFO classes/scoreboard.sv(87) @ 3652: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected f5, got f5
+# UVM_INFO classes/scoreboard.sv(95) @ 3654: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 108
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1831
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3684: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 105
 # UVM_INFO classes/scoreboard.sv(87) @ 3684: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 34, got 34
+# UVM_INFO classes/scoreboard.sv(95) @ 3686: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 109
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1839
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3716: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 106
 # UVM_INFO classes/scoreboard.sv(87) @ 3716: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected b6, got b6
+# UVM_INFO classes/scoreboard.sv(95) @ 3718: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 110
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1847
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3748: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 107
 # UVM_INFO classes/scoreboard.sv(87) @ 3748: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected b7, got b7
+# UVM_INFO classes/scoreboard.sv(95) @ 3750: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 111
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1855
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3780: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 108
 # UVM_INFO classes/scoreboard.sv(87) @ 3780: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 37, got 37
+# UVM_INFO classes/scoreboard.sv(95) @ 3782: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 112
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1863
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3812: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 109
 # UVM_INFO classes/scoreboard.sv(87) @ 3812: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 0d, got 0d
+# UVM_INFO classes/scoreboard.sv(95) @ 3814: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 113
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1871
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3844: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 110
 # UVM_INFO classes/scoreboard.sv(87) @ 3844: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected d9, got d9
+# UVM_INFO classes/scoreboard.sv(95) @ 3846: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 114
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1879
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3876: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 111
 # UVM_INFO classes/scoreboard.sv(87) @ 3876: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected b7, got b7
+# UVM_INFO classes/scoreboard.sv(95) @ 3878: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 115
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1887
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3908: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 112
 # UVM_INFO classes/scoreboard.sv(87) @ 3908: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 9a, got 9a
+# UVM_INFO classes/scoreboard.sv(95) @ 3910: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 116
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1895
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3940: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 113
 # UVM_INFO classes/scoreboard.sv(87) @ 3940: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected cb, got cb
+# UVM_INFO classes/scoreboard.sv(95) @ 3942: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 117
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1903
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 3972: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 114
 # UVM_INFO classes/scoreboard.sv(87) @ 3972: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 32, got 32
+# UVM_INFO classes/scoreboard.sv(95) @ 3974: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 118
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1911
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 4004: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 115
 # UVM_INFO classes/scoreboard.sv(87) @ 4004: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected aa, got aa
+# UVM_INFO classes/scoreboard.sv(95) @ 4006: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 119
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1919
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 4036: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 116
 # UVM_INFO classes/scoreboard.sv(87) @ 4036: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 35, got 35
+# UVM_INFO classes/scoreboard.sv(95) @ 4038: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 120
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1927
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 4068: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 117
 # UVM_INFO classes/scoreboard.sv(87) @ 4068: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 3e, got 3e
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1935
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 4100: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 118
 # UVM_INFO classes/scoreboard.sv(87) @ 4100: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ea, got ea
-# UVM_INFO classes/sequence.sv(96) @ 4112: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@half_wr_seq_h [HALF_WRITE_SEQ] Starting write sequence for half_test
-# UVM_INFO classes/sequence.sv(150) @ 4112: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@half_rd_seq_h [HALF_READ_SEQ] Starting read sequence for half_test
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
 # mon_tx_rd  fifo_transaction  -     @1943
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 4132: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 119
 # UVM_INFO classes/scoreboard.sv(87) @ 4132: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected d5, got d5
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
-# mon_tx_rd  fifo_transaction  -     @1967
+# mon_tx_rd  fifo_transaction  -     @1951
 # ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 4164: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 120
+# UVM_INFO classes/scoreboard.sv(77) @ 4164: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Empty count: 4
 # UVM_INFO classes/scoreboard.sv(87) @ 4164: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 5f, got 5f
+# UVM_INFO classes/sequence.sv(111) @ 4272: uvm_test_top.environment_h.agent_h.sequencer_wr_h@@half_wr_seq_h [HALF_WRITE_SEQ] Starting write sequence for half_test
+# UVM_INFO classes/sequence.sv(186) @ 4272: uvm_test_top.environment_h.agent_h.sequencer_rd_h@@half_rd_seq_h [HALF_READ_SEQ] Starting read sequence for half_test
+# UVM_INFO classes/scoreboard.sv(95) @ 4326: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 121
+# UVM_INFO classes/scoreboard.sv(95) @ 4358: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 122
+# UVM_INFO classes/scoreboard.sv(95) @ 4390: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 123
+# UVM_INFO classes/scoreboard.sv(95) @ 4422: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 124
+# UVM_INFO classes/scoreboard.sv(95) @ 4454: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 125
+# UVM_INFO classes/scoreboard.sv(95) @ 4486: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 126
+# UVM_INFO classes/scoreboard.sv(95) @ 4518: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 127
+# UVM_INFO classes/scoreboard.sv(95) @ 4550: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 128
+# UVM_INFO classes/scoreboard.sv(95) @ 4582: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 129
+# UVM_INFO classes/scoreboard.sv(95) @ 4614: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 130
+# UVM_INFO classes/scoreboard.sv(95) @ 4646: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 131
+# UVM_INFO classes/scoreboard.sv(95) @ 4678: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 132
+# UVM_INFO classes/scoreboard.sv(95) @ 4710: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 133
+# UVM_INFO classes/scoreboard.sv(95) @ 4742: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 134
+# UVM_INFO classes/scoreboard.sv(95) @ 4774: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 135
+# UVM_INFO classes/scoreboard.sv(95) @ 4806: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 136
+# UVM_INFO classes/scoreboard.sv(95) @ 4838: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 137
+# UVM_INFO classes/scoreboard.sv(95) @ 4870: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 138
+# UVM_INFO classes/scoreboard.sv(95) @ 4902: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 139
+# UVM_INFO classes/scoreboard.sv(95) @ 4934: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 140
+# UVM_INFO classes/scoreboard.sv(95) @ 4966: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 141
+# UVM_INFO classes/scoreboard.sv(95) @ 4998: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 142
+# UVM_INFO classes/scoreboard.sv(95) @ 5030: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 143
+# UVM_INFO classes/scoreboard.sv(95) @ 5062: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 144
+# UVM_INFO classes/scoreboard.sv(95) @ 5094: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 145
+# UVM_INFO classes/scoreboard.sv(95) @ 5126: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 146
+# UVM_INFO classes/scoreboard.sv(95) @ 5158: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 147
+# UVM_INFO classes/scoreboard.sv(95) @ 5190: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 148
+# UVM_INFO classes/scoreboard.sv(95) @ 5222: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 149
+# UVM_INFO classes/scoreboard.sv(95) @ 5254: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 150
+# UVM_INFO classes/scoreboard.sv(95) @ 5286: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 151
+# UVM_INFO classes/scoreboard.sv(95) @ 5318: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 152
+# UVM_INFO classes/scoreboard.sv(95) @ 5350: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 153
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
-# mon_tx_rd  fifo_transaction  -     @2215
+# mon_tx_rd  fifo_transaction  -     @2279
 # ----------------------------------------
-# UVM_INFO classes/scoreboard.sv(80) @ 5156: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Half count: 1
-# UVM_INFO classes/scoreboard.sv(87) @ 5156: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 5f, got 5f
-# ----------------------------------------
-# Name       Type              Size  Value
-# ----------------------------------------
-# mon_tx_rd  fifo_transaction  -     @2231
-# ----------------------------------------
-# UVM_INFO classes/scoreboard.sv(80) @ 5220: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Half count: 2
-# UVM_INFO classes/scoreboard.sv(87) @ 5220: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 5f, got 5f
+# UVM_INFO classes/scoreboard.sv(105) @ 5412: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 121
+# UVM_INFO classes/scoreboard.sv(77) @ 5412: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Empty count: 5
+# UVM_INFO classes/scoreboard.sv(81) @ 5412: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Half count: 1
+# UVM_INFO classes/scoreboard.sv(87) @ 5412: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected dd, got dd
+# UVM_INFO classes/scoreboard.sv(95) @ 5414: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 154
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
-# mon_tx_rd  fifo_transaction  -     @2247
+# mon_tx_rd  fifo_transaction  -     @2295
 # ----------------------------------------
-# UVM_INFO classes/scoreboard.sv(80) @ 5284: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Half count: 3
-# UVM_INFO classes/scoreboard.sv(87) @ 5284: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 5f, got 5f
+# UVM_INFO classes/scoreboard.sv(105) @ 5476: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 122
+# UVM_INFO classes/scoreboard.sv(77) @ 5476: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Empty count: 6
+# UVM_INFO classes/scoreboard.sv(81) @ 5476: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Half count: 2
+# UVM_INFO classes/scoreboard.sv(87) @ 5476: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 24, got 24
+# UVM_INFO classes/scoreboard.sv(95) @ 5478: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 155
 # ----------------------------------------
 # Name       Type              Size  Value
 # ----------------------------------------
-# mon_tx_rd  fifo_transaction  -     @2263
+# mon_tx_rd  fifo_transaction  -     @2311
 # ----------------------------------------
-# UVM_INFO classes/scoreboard.sv(80) @ 5348: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Half count: 4
-# UVM_INFO classes/scoreboard.sv(87) @ 5348: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected dd, got dd
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 5392: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO classes/scoreboard.sv(105) @ 5540: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 123
+# UVM_INFO classes/scoreboard.sv(77) @ 5540: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Empty count: 7
+# UVM_INFO classes/scoreboard.sv(81) @ 5540: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Half count: 3
+# UVM_INFO classes/scoreboard.sv(87) @ 5540: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 26, got 26
+# UVM_INFO classes/scoreboard.sv(95) @ 5542: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 156
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2327
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 5604: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 124
+# UVM_INFO classes/scoreboard.sv(81) @ 5604: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Half count: 4
+# UVM_INFO classes/scoreboard.sv(87) @ 5604: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 07, got 07
+# UVM_INFO classes/scoreboard.sv(95) @ 5606: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Write count: 157
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2343
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 5668: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 125
+# UVM_INFO classes/scoreboard.sv(81) @ 5668: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Half count: 5
+# UVM_INFO classes/scoreboard.sv(87) @ 5668: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 5f, got 5f
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2351
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 5700: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 126
+# UVM_INFO classes/scoreboard.sv(87) @ 5700: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 25, got 25
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2359
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 5732: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 127
+# UVM_INFO classes/scoreboard.sv(87) @ 5732: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 78, got 78
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2367
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 5764: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 128
+# UVM_INFO classes/scoreboard.sv(87) @ 5764: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected c5, got c5
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2375
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 5796: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 129
+# UVM_INFO classes/scoreboard.sv(87) @ 5796: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 30, got 30
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2383
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 5828: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 130
+# UVM_INFO classes/scoreboard.sv(87) @ 5828: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ad, got ad
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2391
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 5860: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 131
+# UVM_INFO classes/scoreboard.sv(87) @ 5860: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 84, got 84
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2399
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 5892: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 132
+# UVM_INFO classes/scoreboard.sv(87) @ 5892: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 0f, got 0f
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2407
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 5924: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 133
+# UVM_INFO classes/scoreboard.sv(87) @ 5924: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 2d, got 2d
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2415
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 5956: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 134
+# UVM_INFO classes/scoreboard.sv(87) @ 5956: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected fe, got fe
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2423
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 5988: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 135
+# UVM_INFO classes/scoreboard.sv(87) @ 5988: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 82, got 82
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2431
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6020: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 136
+# UVM_INFO classes/scoreboard.sv(87) @ 6020: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected e6, got e6
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2439
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6052: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 137
+# UVM_INFO classes/scoreboard.sv(87) @ 6052: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 40, got 40
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2447
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6084: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 138
+# UVM_INFO classes/scoreboard.sv(87) @ 6084: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected d0, got d0
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2455
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6116: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 139
+# UVM_INFO classes/scoreboard.sv(87) @ 6116: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 5d, got 5d
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2463
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6148: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 140
+# UVM_INFO classes/scoreboard.sv(87) @ 6148: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 3e, got 3e
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2471
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6180: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 141
+# UVM_INFO classes/scoreboard.sv(87) @ 6180: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected c3, got c3
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2479
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6212: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 142
+# UVM_INFO classes/scoreboard.sv(87) @ 6212: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 45, got 45
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2487
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6244: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 143
+# UVM_INFO classes/scoreboard.sv(87) @ 6244: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected d6, got d6
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2495
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6276: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 144
+# UVM_INFO classes/scoreboard.sv(87) @ 6276: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected f2, got f2
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2503
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6308: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 145
+# UVM_INFO classes/scoreboard.sv(87) @ 6308: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 1a, got 1a
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2511
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6340: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 146
+# UVM_INFO classes/scoreboard.sv(87) @ 6340: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 67, got 67
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2519
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6372: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 147
+# UVM_INFO classes/scoreboard.sv(87) @ 6372: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected dd, got dd
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2527
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6404: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 148
+# UVM_INFO classes/scoreboard.sv(87) @ 6404: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected fa, got fa
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2535
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6436: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 149
+# UVM_INFO classes/scoreboard.sv(87) @ 6436: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 37, got 37
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2543
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6468: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 150
+# UVM_INFO classes/scoreboard.sv(87) @ 6468: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected bc, got bc
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2551
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6500: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 151
+# UVM_INFO classes/scoreboard.sv(87) @ 6500: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 21, got 21
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2559
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6532: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 152
+# UVM_INFO classes/scoreboard.sv(87) @ 6532: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 21, got 21
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2567
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6564: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 153
+# UVM_INFO classes/scoreboard.sv(81) @ 6564: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Half count: 6
+# UVM_INFO classes/scoreboard.sv(87) @ 6564: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 0d, got 0d
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2575
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6596: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 154
+# UVM_INFO classes/scoreboard.sv(81) @ 6596: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Half count: 7
+# UVM_INFO classes/scoreboard.sv(87) @ 6596: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected b5, got b5
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2583
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6628: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 155
+# UVM_INFO classes/scoreboard.sv(81) @ 6628: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Half count: 8
+# UVM_INFO classes/scoreboard.sv(87) @ 6628: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected ad, got ad
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2591
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6660: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 156
+# UVM_INFO classes/scoreboard.sv(81) @ 6660: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Half count: 9
+# UVM_INFO classes/scoreboard.sv(87) @ 6660: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 9b, got 9b
+# ----------------------------------------
+# Name       Type              Size  Value
+# ----------------------------------------
+# mon_tx_rd  fifo_transaction  -     @2599
+# ----------------------------------------
+# UVM_INFO classes/scoreboard.sv(105) @ 6692: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Read count: 157
+# UVM_INFO classes/scoreboard.sv(77) @ 6692: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Empty count: 8
+# UVM_INFO classes/scoreboard.sv(81) @ 6692: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Half count: 10
+# UVM_INFO classes/scoreboard.sv(87) @ 6692: uvm_test_top.environment_h.scoreboard_h [SCOREBOARD] Data match!: expected 2c, got 2c
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 6800: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :  140
+# UVM_INFO :  498
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
@@ -972,16 +1495,16 @@
 # [HALF_WRITE_SEQ]     1
 # [Questa UVM]     2
 # [RNTST]     1
-# [SCOREBOARD]   131
+# [SCOREBOARD]   489
 # [TEST_DONE]     1
 # [UVMTOP]     1
 # ** Note: $finish    : /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 5392 ns  Iteration: 61  Instance: /top
+#    Time: 6800 ns  Iteration: 61  Instance: /top
 # 1
 # Break in Task uvm_pkg/uvm_root::run_test at /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
 # Stopped at /pkgs/mentor/questa/2021.3_1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
 # QuestaSim-64 vcover 2021.3_1 Coverage Utility 2021.08 Aug 15 2021
-# Start time: 01:05:58 on Jun 08,2024
+# Start time: 22:35:11 on Jun 08,2024
 # vcover report async_fifo.ucdb 
 # Coverage Report Summary Data by instance
 # 
@@ -1055,22 +1578,22 @@
 # =================================================================================
 #     Enabled Coverage              Bins      Hits    Misses  Coverage
 #     ----------------              ----      ----    ------  --------
-#     Assertions                       5         5         0   100.00%
-#     Covergroups                      8        na        na    61.66%
+#     Assertions                      10        10         0   100.00%
+#     Covergroups                      8        na        na    62.91%
 #         Coverpoints/Crosses         17        na        na        na
-#             Covergroup Bins         34        20        14    58.82%
+#             Covergroup Bins         34        21        13    61.76%
 # 
 # 
-# TOTAL COVERGROUP COVERAGE: 61.66%  COVERGROUP TYPES: 8
+# TOTAL COVERGROUP COVERAGE: 62.91%  COVERGROUP TYPES: 8
 # 
-# TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 5
+# TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 10
 # 
-# Total Coverage By Instance (filtered view): 77.58%
+# Total Coverage By Instance (filtered view): 77.83%
 # 
-# End time: 01:05:58 on Jun 08,2024, Elapsed time: 0:00:00
+# End time: 22:35:11 on Jun 08,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcover 2021.3_1 Coverage Utility 2021.08 Aug 15 2021
-# Start time: 01:05:59 on Jun 08,2024
+# Start time: 22:35:11 on Jun 08,2024
 # vcover report async_fifo.ucdb -cvg -details 
 # Coverage Report by instance with details
 # 
@@ -1080,17 +1603,17 @@
 # =================================================================================
 # 
 # Covergroup Coverage:
-#     Covergroups                      8        na        na    61.66%
+#     Covergroups                      8        na        na    62.91%
 #         Coverpoints/Crosses         17        na        na        na
-#             Covergroup Bins         34        20        14    58.82%
+#             Covergroup Bins         34        21        13    61.76%
 # ----------------------------------------------------------------------------------------------------------
 # Covergroup                                             Metric       Goal       Bins    Status               
 #                                                                                                          
 # ----------------------------------------------------------------------------------------------------------
-#  TYPE /fifo_pkg/fifo_coverage/cg_fifo                  60.00%        100          -    Uncovered            
-#     covered/total bins:                                     6         10          -                      
-#     missing/total bins:                                     4         10          -                      
-#     % Hit:                                             60.00%        100          -                      
+#  TYPE /fifo_pkg/fifo_coverage/cg_fifo                  70.00%        100          -    Uncovered            
+#     covered/total bins:                                     7         10          -                      
+#     missing/total bins:                                     3         10          -                      
+#     % Hit:                                             70.00%        100          -                      
 #     Coverpoint #coverpoint__0#                          0.00%        100          -    ZERO                 
 #         covered/total bins:                                 0          2          -                      
 #         missing/total bins:                                 2          2          -                      
@@ -1101,31 +1624,31 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin rd_en                                         119          1          -    Covered              
-#         bin rd_den                                          5          1          -    Covered              
+#         bin rd_en                                         151          1          -    Covered              
+#         bin rd_den                                          6          1          -    Covered              
 #     Coverpoint #coverpoint__2#                         50.00%        100          -    Uncovered            
 #         covered/total bins:                                 1          2          -                      
 #         missing/total bins:                                 1          2          -                      
 #         % Hit:                                         50.00%        100          -                      
 #         bin full_true                                       0          1          -    ZERO                 
-#         bin full_false                                    124          1          -    Covered              
-#     Coverpoint #coverpoint__3#                         50.00%        100          -    Uncovered            
-#         covered/total bins:                                 1          2          -                      
-#         missing/total bins:                                 1          2          -                      
-#         % Hit:                                         50.00%        100          -                      
-#         bin empty_true                                      0          1          -    ZERO                 
-#         bin empty_false                                   124          1          -    Covered              
+#         bin full_false                                    157          1          -    Covered              
+#     Coverpoint #coverpoint__3#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin empty_true                                      2          1          -    Covered              
+#         bin empty_false                                   155          1          -    Covered              
 #     Coverpoint #coverpoint__4#                        100.00%        100          -    Covered              
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin half_full_true                                  4          1          -    Covered              
-#         bin half_full_false                               120          1          -    Covered              
+#         bin half_full_true                                  5          1          -    Covered              
+#         bin half_full_false                               152          1          -    Covered              
 #  Covergroup instance \/fifo_pkg::fifo_coverage::cg_fifo  
-#                                                        60.00%        100          -    Uncovered            
-#     covered/total bins:                                     6         10          -                      
-#     missing/total bins:                                     4         10          -                      
-#     % Hit:                                             60.00%        100          -                      
+#                                                        70.00%        100          -    Uncovered            
+#     covered/total bins:                                     7         10          -                      
+#     missing/total bins:                                     3         10          -                      
+#     % Hit:                                             70.00%        100          -                      
 #     Coverpoint #coverpoint__0#                          0.00%        100          -    ZERO                 
 #         covered/total bins:                                 0          2          -                      
 #         missing/total bins:                                 2          2          -                      
@@ -1136,26 +1659,26 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin rd_en                                         119          1          -    Covered              
-#         bin rd_den                                          5          1          -    Covered              
+#         bin rd_en                                         151          1          -    Covered              
+#         bin rd_den                                          6          1          -    Covered              
 #     Coverpoint #coverpoint__2#                         50.00%        100          -    Uncovered            
 #         covered/total bins:                                 1          2          -                      
 #         missing/total bins:                                 1          2          -                      
 #         % Hit:                                         50.00%        100          -                      
 #         bin full_true                                       0          1          -    ZERO                 
-#         bin full_false                                    124          1          -    Covered              
-#     Coverpoint #coverpoint__3#                         50.00%        100          -    Uncovered            
-#         covered/total bins:                                 1          2          -                      
-#         missing/total bins:                                 1          2          -                      
-#         % Hit:                                         50.00%        100          -                      
-#         bin empty_true                                      0          1          -    ZERO                 
-#         bin empty_false                                   124          1          -    Covered              
+#         bin full_false                                    157          1          -    Covered              
+#     Coverpoint #coverpoint__3#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin empty_true                                      2          1          -    Covered              
+#         bin empty_false                                   155          1          -    Covered              
 #     Coverpoint #coverpoint__4#                        100.00%        100          -    Covered              
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin half_full_true                                  4          1          -    Covered              
-#         bin half_full_false                               120          1          -    Covered              
+#         bin half_full_true                                  5          1          -    Covered              
+#         bin half_full_false                               152          1          -    Covered              
 #  TYPE /fifo_pkg/fifo_coverage/cg_half_full_empty      100.00%        100          -    Covered              
 #     covered/total bins:                                     2          2          -                      
 #     missing/total bins:                                     0          2          -                      
@@ -1164,8 +1687,8 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin half_full_true                                  4          1          -    Covered              
-#         bin half_full_false                               120          1          -    Covered              
+#         bin half_full_true                                  5          1          -    Covered              
+#         bin half_full_false                               152          1          -    Covered              
 #  Covergroup instance \/fifo_pkg::fifo_coverage::cg_half_full_empty  
 #                                                       100.00%        100          -    Covered              
 #     covered/total bins:                                     2          2          -                      
@@ -1175,8 +1698,8 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin half_full_true                                  4          1          -    Covered              
-#         bin half_full_false                               120          1          -    Covered              
+#         bin half_full_true                                  5          1          -    Covered              
+#         bin half_full_false                               152          1          -    Covered              
 #  TYPE /fifo_pkg/fifo_coverage/cg_data_integrity       100.00%        100          -    Covered              
 #     covered/total bins:                                     4          4          -                      
 #     missing/total bins:                                     0          4          -                      
@@ -1185,10 +1708,10 @@
 #         covered/total bins:                                 4          4          -                      
 #         missing/total bins:                                 0          4          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin data_low                                       35          1          -    Covered              
-#         bin data_mid                                       25          1          -    Covered              
-#         bin data_high                                      23          1          -    Covered              
-#         bin data_max                                       41          1          -    Covered              
+#         bin data_low                                       49          1          -    Covered              
+#         bin data_mid                                       28          1          -    Covered              
+#         bin data_high                                      30          1          -    Covered              
+#         bin data_max                                       50          1          -    Covered              
 #  Covergroup instance \/fifo_pkg::fifo_coverage::cg_data_integrity  
 #                                                       100.00%        100          -    Covered              
 #     covered/total bins:                                     4          4          -                      
@@ -1198,10 +1721,10 @@
 #         covered/total bins:                                 4          4          -                      
 #         missing/total bins:                                 0          4          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin data_low                                       35          1          -    Covered              
-#         bin data_mid                                       25          1          -    Covered              
-#         bin data_high                                      23          1          -    Covered              
-#         bin data_max                                       41          1          -    Covered              
+#         bin data_low                                       49          1          -    Covered              
+#         bin data_mid                                       28          1          -    Covered              
+#         bin data_high                                      30          1          -    Covered              
+#         bin data_max                                       50          1          -    Covered              
 #  TYPE /fifo_pkg/fifo_coverage/cg_data_patterns         33.33%        100          -    Uncovered            
 #     covered/total bins:                                     2          6          -                      
 #     missing/total bins:                                     4          6          -                      
@@ -1252,7 +1775,7 @@
 #         covered/total bins:                                 1          1          -                      
 #         missing/total bins:                                 0          1          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin burst_read                                    119          1          -    Covered              
+#         bin burst_read                                    151          1          -    Covered              
 #  Covergroup instance \/fifo_pkg::fifo_coverage::cg_burst_ops  
 #                                                        50.00%        100          -    Uncovered            
 #     covered/total bins:                                     1          2          -                      
@@ -1267,7 +1790,7 @@
 #         covered/total bins:                                 1          1          -                      
 #         missing/total bins:                                 0          1          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin burst_read                                    119          1          -    Covered              
+#         bin burst_read                                    151          1          -    Covered              
 #  TYPE /fifo_pkg/fifo_coverage/cg_idle_cycles           50.00%        100          -    Uncovered            
 #     covered/total bins:                                     1          2          -                      
 #     missing/total bins:                                     1          2          -                      
@@ -1296,8 +1819,8 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin rd_en_change                                  119          1          -    Covered              
-#         bin rd_en_stable                                    5          1          -    Covered              
+#         bin rd_en_change                                  151          1          -    Covered              
+#         bin rd_en_stable                                    6          1          -    Covered              
 #  Covergroup instance \/fifo_pkg::fifo_coverage::cg_abrupt_change  
 #                                                        50.00%        100          -    Uncovered            
 #     covered/total bins:                                     2          4          -                      
@@ -1313,8 +1836,8 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin rd_en_change                                  119          1          -    Covered              
-#         bin rd_en_stable                                    5          1          -    Covered              
+#         bin rd_en_change                                  151          1          -    Covered              
+#         bin rd_en_stable                                    6          1          -    Covered              
 #  TYPE /fifo_pkg/fifo_coverage/cg_throughput            50.00%        100          -    Uncovered            
 #     covered/total bins:                                     2          4          -                      
 #     missing/total bins:                                     2          4          -                      
@@ -1329,8 +1852,8 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin rd_en_active                                  119          1          -    Covered              
-#         bin rd_en_inactive                                  5          1          -    Covered              
+#         bin rd_en_active                                  151          1          -    Covered              
+#         bin rd_en_inactive                                  6          1          -    Covered              
 #  Covergroup instance \/fifo_pkg::fifo_coverage::cg_throughput  
 #                                                        50.00%        100          -    Uncovered            
 #     covered/total bins:                                     2          4          -                      
@@ -1346,18 +1869,18 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin rd_en_active                                  119          1          -    Covered              
-#         bin rd_en_inactive                                  5          1          -    Covered              
+#         bin rd_en_active                                  151          1          -    Covered              
+#         bin rd_en_inactive                                  6          1          -    Covered              
 # 
 # COVERGROUP COVERAGE:
 # ----------------------------------------------------------------------------------------------------------
 # Covergroup                                             Metric       Goal       Bins    Status               
 #                                                                                                          
 # ----------------------------------------------------------------------------------------------------------
-#  TYPE /fifo_pkg/fifo_coverage/cg_fifo                  60.00%        100          -    Uncovered            
-#     covered/total bins:                                     6         10          -                      
-#     missing/total bins:                                     4         10          -                      
-#     % Hit:                                             60.00%        100          -                      
+#  TYPE /fifo_pkg/fifo_coverage/cg_fifo                  70.00%        100          -    Uncovered            
+#     covered/total bins:                                     7         10          -                      
+#     missing/total bins:                                     3         10          -                      
+#     % Hit:                                             70.00%        100          -                      
 #     Coverpoint #coverpoint__0#                          0.00%        100          -    ZERO                 
 #         covered/total bins:                                 0          2          -                      
 #         missing/total bins:                                 2          2          -                      
@@ -1368,31 +1891,31 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin rd_en                                         119          1          -    Covered              
-#         bin rd_den                                          5          1          -    Covered              
+#         bin rd_en                                         151          1          -    Covered              
+#         bin rd_den                                          6          1          -    Covered              
 #     Coverpoint #coverpoint__2#                         50.00%        100          -    Uncovered            
 #         covered/total bins:                                 1          2          -                      
 #         missing/total bins:                                 1          2          -                      
 #         % Hit:                                         50.00%        100          -                      
 #         bin full_true                                       0          1          -    ZERO                 
-#         bin full_false                                    124          1          -    Covered              
-#     Coverpoint #coverpoint__3#                         50.00%        100          -    Uncovered            
-#         covered/total bins:                                 1          2          -                      
-#         missing/total bins:                                 1          2          -                      
-#         % Hit:                                         50.00%        100          -                      
-#         bin empty_true                                      0          1          -    ZERO                 
-#         bin empty_false                                   124          1          -    Covered              
+#         bin full_false                                    157          1          -    Covered              
+#     Coverpoint #coverpoint__3#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin empty_true                                      2          1          -    Covered              
+#         bin empty_false                                   155          1          -    Covered              
 #     Coverpoint #coverpoint__4#                        100.00%        100          -    Covered              
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin half_full_true                                  4          1          -    Covered              
-#         bin half_full_false                               120          1          -    Covered              
+#         bin half_full_true                                  5          1          -    Covered              
+#         bin half_full_false                               152          1          -    Covered              
 #  Covergroup instance \/fifo_pkg::fifo_coverage::cg_fifo  
-#                                                        60.00%        100          -    Uncovered            
-#     covered/total bins:                                     6         10          -                      
-#     missing/total bins:                                     4         10          -                      
-#     % Hit:                                             60.00%        100          -                      
+#                                                        70.00%        100          -    Uncovered            
+#     covered/total bins:                                     7         10          -                      
+#     missing/total bins:                                     3         10          -                      
+#     % Hit:                                             70.00%        100          -                      
 #     Coverpoint #coverpoint__0#                          0.00%        100          -    ZERO                 
 #         covered/total bins:                                 0          2          -                      
 #         missing/total bins:                                 2          2          -                      
@@ -1403,26 +1926,26 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin rd_en                                         119          1          -    Covered              
-#         bin rd_den                                          5          1          -    Covered              
+#         bin rd_en                                         151          1          -    Covered              
+#         bin rd_den                                          6          1          -    Covered              
 #     Coverpoint #coverpoint__2#                         50.00%        100          -    Uncovered            
 #         covered/total bins:                                 1          2          -                      
 #         missing/total bins:                                 1          2          -                      
 #         % Hit:                                         50.00%        100          -                      
 #         bin full_true                                       0          1          -    ZERO                 
-#         bin full_false                                    124          1          -    Covered              
-#     Coverpoint #coverpoint__3#                         50.00%        100          -    Uncovered            
-#         covered/total bins:                                 1          2          -                      
-#         missing/total bins:                                 1          2          -                      
-#         % Hit:                                         50.00%        100          -                      
-#         bin empty_true                                      0          1          -    ZERO                 
-#         bin empty_false                                   124          1          -    Covered              
+#         bin full_false                                    157          1          -    Covered              
+#     Coverpoint #coverpoint__3#                        100.00%        100          -    Covered              
+#         covered/total bins:                                 2          2          -                      
+#         missing/total bins:                                 0          2          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin empty_true                                      2          1          -    Covered              
+#         bin empty_false                                   155          1          -    Covered              
 #     Coverpoint #coverpoint__4#                        100.00%        100          -    Covered              
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin half_full_true                                  4          1          -    Covered              
-#         bin half_full_false                               120          1          -    Covered              
+#         bin half_full_true                                  5          1          -    Covered              
+#         bin half_full_false                               152          1          -    Covered              
 #  TYPE /fifo_pkg/fifo_coverage/cg_half_full_empty      100.00%        100          -    Covered              
 #     covered/total bins:                                     2          2          -                      
 #     missing/total bins:                                     0          2          -                      
@@ -1431,8 +1954,8 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin half_full_true                                  4          1          -    Covered              
-#         bin half_full_false                               120          1          -    Covered              
+#         bin half_full_true                                  5          1          -    Covered              
+#         bin half_full_false                               152          1          -    Covered              
 #  Covergroup instance \/fifo_pkg::fifo_coverage::cg_half_full_empty  
 #                                                       100.00%        100          -    Covered              
 #     covered/total bins:                                     2          2          -                      
@@ -1442,8 +1965,8 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin half_full_true                                  4          1          -    Covered              
-#         bin half_full_false                               120          1          -    Covered              
+#         bin half_full_true                                  5          1          -    Covered              
+#         bin half_full_false                               152          1          -    Covered              
 #  TYPE /fifo_pkg/fifo_coverage/cg_data_integrity       100.00%        100          -    Covered              
 #     covered/total bins:                                     4          4          -                      
 #     missing/total bins:                                     0          4          -                      
@@ -1452,10 +1975,10 @@
 #         covered/total bins:                                 4          4          -                      
 #         missing/total bins:                                 0          4          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin data_low                                       35          1          -    Covered              
-#         bin data_mid                                       25          1          -    Covered              
-#         bin data_high                                      23          1          -    Covered              
-#         bin data_max                                       41          1          -    Covered              
+#         bin data_low                                       49          1          -    Covered              
+#         bin data_mid                                       28          1          -    Covered              
+#         bin data_high                                      30          1          -    Covered              
+#         bin data_max                                       50          1          -    Covered              
 #  Covergroup instance \/fifo_pkg::fifo_coverage::cg_data_integrity  
 #                                                       100.00%        100          -    Covered              
 #     covered/total bins:                                     4          4          -                      
@@ -1465,10 +1988,10 @@
 #         covered/total bins:                                 4          4          -                      
 #         missing/total bins:                                 0          4          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin data_low                                       35          1          -    Covered              
-#         bin data_mid                                       25          1          -    Covered              
-#         bin data_high                                      23          1          -    Covered              
-#         bin data_max                                       41          1          -    Covered              
+#         bin data_low                                       49          1          -    Covered              
+#         bin data_mid                                       28          1          -    Covered              
+#         bin data_high                                      30          1          -    Covered              
+#         bin data_max                                       50          1          -    Covered              
 #  TYPE /fifo_pkg/fifo_coverage/cg_data_patterns         33.33%        100          -    Uncovered            
 #     covered/total bins:                                     2          6          -                      
 #     missing/total bins:                                     4          6          -                      
@@ -1519,7 +2042,7 @@
 #         covered/total bins:                                 1          1          -                      
 #         missing/total bins:                                 0          1          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin burst_read                                    119          1          -    Covered              
+#         bin burst_read                                    151          1          -    Covered              
 #  Covergroup instance \/fifo_pkg::fifo_coverage::cg_burst_ops  
 #                                                        50.00%        100          -    Uncovered            
 #     covered/total bins:                                     1          2          -                      
@@ -1534,7 +2057,7 @@
 #         covered/total bins:                                 1          1          -                      
 #         missing/total bins:                                 0          1          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin burst_read                                    119          1          -    Covered              
+#         bin burst_read                                    151          1          -    Covered              
 #  TYPE /fifo_pkg/fifo_coverage/cg_idle_cycles           50.00%        100          -    Uncovered            
 #     covered/total bins:                                     1          2          -                      
 #     missing/total bins:                                     1          2          -                      
@@ -1563,8 +2086,8 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin rd_en_change                                  119          1          -    Covered              
-#         bin rd_en_stable                                    5          1          -    Covered              
+#         bin rd_en_change                                  151          1          -    Covered              
+#         bin rd_en_stable                                    6          1          -    Covered              
 #  Covergroup instance \/fifo_pkg::fifo_coverage::cg_abrupt_change  
 #                                                        50.00%        100          -    Uncovered            
 #     covered/total bins:                                     2          4          -                      
@@ -1580,8 +2103,8 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin rd_en_change                                  119          1          -    Covered              
-#         bin rd_en_stable                                    5          1          -    Covered              
+#         bin rd_en_change                                  151          1          -    Covered              
+#         bin rd_en_stable                                    6          1          -    Covered              
 #  TYPE /fifo_pkg/fifo_coverage/cg_throughput            50.00%        100          -    Uncovered            
 #     covered/total bins:                                     2          4          -                      
 #     missing/total bins:                                     2          4          -                      
@@ -1596,8 +2119,8 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin rd_en_active                                  119          1          -    Covered              
-#         bin rd_en_inactive                                  5          1          -    Covered              
+#         bin rd_en_active                                  151          1          -    Covered              
+#         bin rd_en_inactive                                  6          1          -    Covered              
 #  Covergroup instance \/fifo_pkg::fifo_coverage::cg_throughput  
 #                                                        50.00%        100          -    Uncovered            
 #     covered/total bins:                                     2          4          -                      
@@ -1613,14 +2136,16 @@
 #         covered/total bins:                                 2          2          -                      
 #         missing/total bins:                                 0          2          -                      
 #         % Hit:                                        100.00%        100          -                      
-#         bin rd_en_active                                  119          1          -    Covered              
-#         bin rd_en_inactive                                  5          1          -    Covered              
+#         bin rd_en_active                                  151          1          -    Covered              
+#         bin rd_en_inactive                                  6          1          -    Covered              
 # 
-# TOTAL COVERGROUP COVERAGE: 61.66%  COVERGROUP TYPES: 8
+# TOTAL COVERGROUP COVERAGE: 62.91%  COVERGROUP TYPES: 8
 # 
-# Total Coverage By Instance (filtered view): 61.66%
+# Total Coverage By Instance (filtered view): 62.91%
 # 
-# End time: 01:05:59 on Jun 08,2024, Elapsed time: 0:00:00
+# End time: 22:35:11 on Jun 08,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 01:06:09 on Jun 08,2024, Elapsed time: 0:00:13
+# invalid command name ":q"
+# invalid command name "vexit"
+# End time: 22:36:13 on Jun 08,2024, Elapsed time: 0:01:05
 # Errors: 0, Warnings: 0

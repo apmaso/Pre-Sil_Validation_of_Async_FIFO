@@ -46,16 +46,16 @@ class burst_test extends uvm_test;
         phase.drop_objection(this); 
     endtask
 endclass
-class half_test extends burst_test;
+class flag_test extends burst_test;
     // Register the class with the factory 
-    `uvm_component_utils(half_test);
+    `uvm_component_utils(flag_test);
 
     // Declare handles to the new components
-    fifo_half_wr_seq half_wr_seq_h;
-    fifo_half_rd_seq half_rd_seq_h;
+    fifo_flag_wr_seq flag_wr_seq_h;
+    fifo_flag_rd_seq flag_rd_seq_h;
 
     // Define the constructor
-    function new(string name = "half_test", uvm_component parent);
+    function new(string name = "flag_test", uvm_component parent);
         super.new(name, parent);
         `uvm_info(get_type_name(), $sformatf("Constructing %s", get_full_name()), UVM_HIGH);
     endfunction : new
@@ -64,19 +64,19 @@ class half_test extends burst_test;
     task run_phase(uvm_phase phase);
         super.run_phase(phase);
         `uvm_info(get_type_name(), $sformatf("Running %s", get_full_name()), UVM_HIGH);
-        half_wr_seq_h = fifo_half_wr_seq::type_id::create("half_wr_seq_h");
-        half_rd_seq_h = fifo_half_rd_seq::type_id::create("half_rd_seq_h");
+        flag_wr_seq_h = fifo_flag_wr_seq::type_id::create("flag_wr_seq_h");
+        flag_rd_seq_h = fifo_flag_rd_seq::type_id::create("flag_rd_seq_h");
 
         phase.raise_objection(this);
         // Run the sequences in parallel
         fork
-            half_wr_seq_h.start(environment_h.agent_h.sequencer_wr_h);
-            half_rd_seq_h.start(environment_h.agent_h.sequencer_rd_h);
+            flag_wr_seq_h.start(environment_h.agent_h.sequencer_wr_h);
+            flag_rd_seq_h.start(environment_h.agent_h.sequencer_rd_h);
         join
         phase.drop_objection(this); 
     endtask
 endclass
-class random_test extends half_test;
+class random_test extends flag_test;
     // Register the class with the factory 
     `uvm_component_utils(random_test);
 

@@ -18,7 +18,7 @@ class fifo_read_monitor extends uvm_monitor;
   uvm_analysis_port #(fifo_transaction) monitor_port_rd;
 
   // Flag for last read enable
-  bit last_rd_en = 0;
+  bit last_empty = 0;
 
   // Constructor
   function new(string name = "fifo_read_monitor", uvm_component parent);
@@ -52,8 +52,6 @@ class fifo_read_monitor extends uvm_monitor;
     super.run_phase(phase); 
     `uvm_info(get_type_name(), $sformatf("Running %s", get_full_name()), UVM_DEBUG);
     
-
-    //repeat(TX_COUNT_RD+2) begin
     forever begin
       mon_tx_rd = fifo_transaction::type_id::create("mon_tx_rd");
       mon_tx_rd.op = READ;
@@ -62,17 +60,14 @@ class fifo_read_monitor extends uvm_monitor;
           mon_tx_rd.rd_en = bfm.rd_en;
           mon_tx_rd.empty = bfm.empty;
           mon_tx_rd.half = bfm.half;
-          if (last_rd_en == 1) begin // If last read was also enabled, data will be available next cycle
+          if (last_empty == 0) begin // If last empty signal wasn't asserted, data will be available next cycle
             #(CYCLE_TIME_RD);
-            mon_tx_rd.data_out = bfm.data_out; 
-          end
-          else begin // If not, data will be available now
             mon_tx_rd.data_out = bfm.data_out; 
           end
           `uvm_info(get_type_name(), $sformatf("Monitor mon_tx_rd \t|  rd_en: %b  |  data_out: %h  |  full: %b  |  empty: %b  |  half: %b", mon_tx_rd.rd_en, mon_tx_rd.data_out, mon_tx_rd.full, mon_tx_rd.empty, mon_tx_rd.half), UVM_HIGH);
           monitor_port_rd.write(mon_tx_rd);
         end
-        last_rd_en = bfm.rd_en;
+        last_empty = bfm.empty;
       end
   endtask : run_phase
 endclass : fifo_read_monitor
@@ -123,7 +118,6 @@ class fifo_write_monitor extends uvm_monitor;
       mon_tx_wr.op = WRITE;
       @(posedge bfm.clk_wr);
         mon_tx_wr.wr_en = bfm.wr_en;
-        //mon_tx_wr.empty = bfm.empty;
         mon_tx_wr.full = bfm.full;
         mon_tx_wr.half = bfm.half;
         if (bfm.wr_en) begin

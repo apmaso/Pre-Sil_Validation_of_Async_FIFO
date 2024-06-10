@@ -71,8 +71,8 @@ class fifo_read_monitor extends uvm_monitor;
           end
           `uvm_info(get_type_name(), $sformatf("Monitor mon_tx_rd \t|  rd_en: %b  |  data_out: %h  |  full: %b  |  empty: %b  |  half: %b", mon_tx_rd.rd_en, mon_tx_rd.data_out, mon_tx_rd.full, mon_tx_rd.empty, mon_tx_rd.half), UVM_HIGH);
           monitor_port_rd.write(mon_tx_rd);
-          last_rd_en = bfm.rd_en;
         end
+        last_rd_en = bfm.rd_en;
       end
   endtask : run_phase
 endclass : fifo_read_monitor

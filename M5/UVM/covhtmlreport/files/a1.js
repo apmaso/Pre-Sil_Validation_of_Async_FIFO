@@ -1,0 +1,2 @@
+var g_data = {"18":{"pr":"/fifo_pkg","ty":2,"dui":2,"dun":"work.fifo_pkg","asserts":[{"n":["fifo_burst_wr_seq/body/#ublk#265642455#24/immed__28",4,28],"h":[0,1]},{"n":["fifo_flag_wr_seq/body/#ublk#265642455#119/immed__122",4,122],"h":[0,1]},{"n":["fifo_flag_wr_seq/body/#ublk#265642455#149/immed__151",4,151],"h":[0,1]}],"ad":0}}
+processAssertionsData(g_data);

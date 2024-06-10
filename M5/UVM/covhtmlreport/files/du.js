@@ -1,0 +1,2 @@
+var g_data = {"data":[{"n":"work.fifo_bfm","id":1,"zf":1,"tc":100.00,"s":100.00},{"n":"work.fifo_memory","id":5,"zf":1,"tc":100.00,"s":100.00,"b":100.00,"fe":100.00},{"n":"work.fifo_pkg","id":2,"zf":1,"tc":86.25,"g":72.50,"a":100.00},{"n":"work.fifo_top","id":4,"zf":1,"tc":100.00,"fe":100.00},{"n":"work.read_pointer","id":7,"zf":1,"tc":100.00,"s":100.00,"b":100.00,"fe":100.00},{"n":"work.sync","id":8,"zf":1,"tc":100.00,"s":100.00,"b":100.00},{"n":"work.write_pointer","id":6,"zf":1,"tc":100.00,"s":100.00,"b":100.00,"fe":100.00}]};
+processDuData(g_data);

@@ -35,7 +35,7 @@ class fifo_environment extends uvm_env;
 
         // Connect the analysis port to the coverage
         // TODO: Not sure if I can connect the same port to two different components
-        // agent_h.monitor_wr_h.monitor_port_wr.connect(coverage_h.analysis_export);
+        agent_h.monitor_wr_h.monitor_port_wr.connect(coverage_h.analysis_export);
         agent_h.monitor_rd_h.monitor_port_rd.connect(coverage_h.analysis_export);
 
     endfunction : connect_phase

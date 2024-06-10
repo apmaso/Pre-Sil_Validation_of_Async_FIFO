@@ -1,0 +1,2 @@
+var g_data = {"1":["work.fifo_bfm",100.00,1],"5":["work.fifo_memory",100.00,1],"2":["work.fifo_pkg",86.25,1],"4":["work.fifo_top",100.00,1],"7":["work.read_pointer",100.00,1],"8":["work.sync",100.00,1],"6":["work.write_pointer",100.00,1]};
+processDuLinks(g_data);

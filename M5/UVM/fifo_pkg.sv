@@ -8,14 +8,14 @@ package fifo_pkg;
 	parameter CYCLE_TIME_RD = 20;    // 50 MHz
 	
 	// Parameters for the Burst testbench	
-	parameter BURST_TX_CNT	= 1;
+	parameter BURST_TX_CNT	= 5;
 	parameter BURST_SIZE   	= 120;
-	parameter BUFFER_CNT	= 5;
+	parameter BUFFER_CNT	= 10;
 
+    parameter FLAG_TX_CNT   = 1;
 
 	parameter RANDOM_TX_CNT = 2000;
 
-    parameter FLAG_TX_CNT   = 1;
 
 	`include "transaction.sv"
 	`include "sequence.sv"

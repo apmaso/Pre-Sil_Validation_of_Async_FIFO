@@ -1,0 +1,2 @@
+var g_data = {"name":"dut/sync.sv","src":"module sync #(\n    parameter ADDR_WIDTH = 6\n)(\n    input  logic             clk, rst_n,\n    input  logic [ADDR_WIDTH:0] data_in,\n    output logic [ADDR_WIDTH:0] data_out\n);\n\n    logic [ADDR_WIDTH:0] buffer;\n\n    always_ff @(posedge clk or negedge rst_n) begin\n        if (!rst_n) begin\n            data_out <= 0;\n            buffer <= 0;\n        end else begin\n            buffer <= data_in;\n            data_out <= buffer;\n        end\n    end\n\nendmodule\n","lang":"verilog"};
+processSrcData(g_data);

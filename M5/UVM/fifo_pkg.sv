@@ -8,7 +8,7 @@ package fifo_pkg;
 	parameter CYCLE_TIME_RD = 20;    // 50 MHz
 	
 	// Parameters for the Burst testbench	
-	parameter BURST_TX_CNT	= 2;
+	parameter BURST_TX_CNT	= 5;
 	parameter BURST_SIZE   	= 120;
 	parameter BUFFER_CNT	= 2;
 

@@ -92,7 +92,7 @@ class fifo_read_driver extends uvm_driver #(fifo_transaction);
     bfm.reset_fifo();
     #(5*CYCLE_TIME_RD);
 
-  //  #(5*CYCLE_TIME_RD); // Wait 5 ticks for FIFO to have data
+    #(5*CYCLE_TIME_RD); // Wait 5 ticks for FIFO to have data
     forever begin
       seq_item_port.get_next_item(tx_rd);
       // Drive data to FIFO

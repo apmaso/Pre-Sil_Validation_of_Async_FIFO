@@ -1,2 +1,0 @@
-var g_data = {"12":[11,"bfm",1],"13":[11,"mem_inst",1],"14":[11,"write_ptr",1],"15":[11,"read_ptr",1],"16":[11,"sync_w2r",1],"17":[11,"sync_r2w",1],"11":[9,"dut",1],"9":[-1,"top",1],"18":[-1,"fifo_pkg",1]};
-processInstLinks(g_data);

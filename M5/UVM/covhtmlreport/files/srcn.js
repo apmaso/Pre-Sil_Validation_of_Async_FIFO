@@ -1,2 +1,0 @@
-var g_data = ["","fifo_bfm.sv","fifo_pkg.sv","classes/transaction.sv","classes/sequence.sv","classes/sequencer.sv","classes/driver.sv","classes/monitor.sv","classes/agent.sv","classes/scoreboard.sv","classes/coverage.sv","classes/environment.sv","classes/test.sv","top.sv","dut/fifo_top.sv","dut/fifo_memory.sv","dut/write_pointer.sv","dut/read_pointer.sv","dut/sync.sv"];
-processSrcNamesData(g_data);

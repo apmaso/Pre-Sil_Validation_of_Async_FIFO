@@ -32,9 +32,8 @@ class fifo_burst_wr_seq extends uvm_sequence #(fifo_transaction);
         finish_item(tx_wr);
       end
       // 72 No-write tx to allow FIFO to be emptied -> 72*12.5 = 900 ticks (Delta btw read and write bursts)
-      // Plus 8 dummy txs to compensate for the initial read delay (in read driver)
       // Plus 8 dummy txs per buffer count (8 Write Clks = 5 Read Clks)
-      repeat (72+8+(8*BUFFER_CNT)) begin
+      repeat (72+(8*BUFFER_CNT)) begin
         start_item(tx_wr);
         tx_wr.wr_en = 0;
         `uvm_info("GENERATE", tx_wr.convert2string(), UVM_HIGH)

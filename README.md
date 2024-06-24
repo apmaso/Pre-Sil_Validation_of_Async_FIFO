@@ -4,7 +4,7 @@
 
 This project focuses on the design and verification of an Asynchronous FIFO memory system. The implementation incorporates enhancements to Clifford E. Cummings' foundational FIFO design, including improved pointer management, synchronization logic, and flexible memory buffer configurations. Verification is performed using both class-based and Universal Verification Methodology (UVM) approaches.
 
-## Authors
+## Collaborators
 
 - **Nick Allmeyer**
 - **Alexander Maso** 

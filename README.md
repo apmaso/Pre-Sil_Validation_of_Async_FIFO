@@ -7,7 +7,7 @@ This project focuses on the design and verification of an Asynchronous FIFO memo
 ## Authors
 
 - **Nick Allmeyer**
-- **Alexander Maso** (amaso@pdx.edu)
+- **Alexander Maso** 
 - **Ahliah Nordstrom**
 
 Graduate Students, Department of Electrical and Computer Engineering, Portland State University
